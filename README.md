@@ -1,4 +1,5 @@
-## A101_T6_PhanMemQuanLyQuanAn
+## Phần mềm quản lý quán ăn
+
 ### Thành viên:
 <table>
   <thead>
@@ -33,7 +34,40 @@
 
 ### Description:
 
-### Phân công
+**Database:**
++ Thiết kế cơ sở dữ liệu
+
+**Nghiệp vụ quản lý:**
++ Quản lý tài khoản, chức năng đăng nhập, đăng ký (CRUD Ops)
++ Quản lý món ăn
++ Quản lý nhân viên
++ Quản lý xuất, nhập kho
++ Quản lý bàn
+> still updating...
+
+**Chức năng:**
++ Chức năng thanh toán
++ Chức năng gọi món
++ Chức năng đặt bàn
++ Chức năng chấm công
+> still updating...
+
+**Nghiệp vụ hệ thống:**
++ Report (Lương, thưởng, kỷ luật, xuất hóa đơn, doanh số, chi phí nhập xuất,...)
++ Graph Statistic Report (Doanh số, chi phí nhập xuất)
++ Backup database
++ Bash CMD (Nếu việc xây dựng SqlLocalDB là cần thiết)
++ Installation Setup
+> still updating...
+
+**AI:**
++ Dự đoán doanh thu
+
+**Cố gắng thực hiện thêm các yêu cầu sau:**
++ Xây dựng App Mobile cho nhân viên phục vụ?!?! Lược bớt các chức năng, chỉ giữ lại các chức năng chính như gọi món, gửi request thanh toán tới Administrator, đặt bàn,...
+
+
+### Phân công:
 <table>
   <thead>
     <tr>
@@ -51,7 +85,7 @@
         Vũ Thanh Dương
       </td>
       <td>
-        +<br>+
+        Đang phân công...
       </td>
     </tr>
     <tr>
@@ -59,7 +93,7 @@
         Phạm Hải Đăng
       </td>
       <td>
-        +<br>+
+        Đang phân công...
       </td>
     </tr>
   </tbody>
