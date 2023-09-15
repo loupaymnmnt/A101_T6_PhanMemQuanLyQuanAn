@@ -35,7 +35,7 @@
 ### Description:
 
 **Database:**
-+ Thiết kế cơ sở dữ liệu
++ Thiết kế cơ sở dữ liệu SQL Server
 
 **Nghiệp vụ quản lý:**
 + Quản lý tài khoản, chức năng đăng nhập, đăng ký (CRUD Ops)
