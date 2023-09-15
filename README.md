@@ -35,7 +35,7 @@
 ### Description:
 
 :fire_engine:**Database:**
-+ Thiết kế cơ sở dữ liệu SQL Server **(W1.1)**
++ **(W1.1)** Thiết kế cơ sở dữ liệu SQL Server
 
 :motor_scooter:**Nghiệp vụ quản lý:**
 + **(W2.1)** Quản lý tài khoản, chức năng đăng nhập, đăng ký (CRUD Ops) 
