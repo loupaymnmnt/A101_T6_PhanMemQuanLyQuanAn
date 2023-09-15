@@ -38,34 +38,34 @@
 + Thiết kế cơ sở dữ liệu SQL Server **(W1.1)**
 
 :motor_scooter:**Nghiệp vụ quản lý:**
-+ Quản lý tài khoản, chức năng đăng nhập, đăng ký (CRUD Ops) **(W2.1)**
-+ Quản lý món ăn **(W2.2)**
-+ Quản lý nhân viên **(W2.3)**
-+ Quản lý xuất, nhập kho **(W2.4)**
-+ Quản lý bàn **(W2.5)**
++ **(W2.1)** Quản lý tài khoản, chức năng đăng nhập, đăng ký (CRUD Ops) 
++ **(W2.2)** Quản lý món ăn 
++ **(W2.3)** Quản lý nhân viên 
++ **(W2.4)** Quản lý xuất, nhập kho
++ **(W2.5)** Quản lý bàn
 > still updating...
 
 :minibus:**Chức năng:**
-+ Chức năng thanh toán **(W3.1)**
-+ Chức năng gọi món **(W3.2)**
-+ Chức năng đặt bàn **(W3.3)**
-+ Chức năng chấm công **(W3.4)**
++ **(W3.1)** Chức năng thanh toán
++ **(W3.2)** Chức năng gọi món
++ **(W3.3)** Chức năng đặt bàn
++ **(W3.4)** Chức năng chấm công
 > still updating...
 
 :monorail:**Nghiệp vụ hệ thống:**
-+ Report (Lương, thưởng, kỷ luật, xuất hóa đơn, doanh số, chi phí nhập xuất,...) **(W4.1)**
-+ Graph Statistic Report (Doanh số, chi phí nhập xuất) **(W4.2)**
-+ Backup database **(W4.3)**
-+ Bash CMD (Nếu việc xây dựng SqlLocalDB là cần thiết) **(W4.4)**
-+ Installation Setup **(W4.5)**
++ **(W4.1)** Report (Lương, thưởng, kỷ luật, xuất hóa đơn, doanh số, chi phí nhập xuất,...)
++ **(W4.2)** Graph Statistic Report (Doanh số, chi phí nhập xuất)
++ **(W4.3)** Backup database
++ **(W4.4)** Bash CMD (Nếu việc xây dựng SqlLocalDB là cần thiết)
++ **(W4.5)** Installation Setup
 > still updating...
 
 :oncoming_police_car:**AI:**
-+ Dự báo doanh thu **(W5.1)**
++ **(W5.1)** Dự báo doanh thu
 > still updating...
 
 :racing_car:**Cố gắng thực hiện thêm các yêu cầu sau:**
-+ Xây dựng App Mobile cho nhân viên phục vụ?!?! Lược bớt các chức năng, chỉ giữ lại các chức năng chính như gọi món, gửi request thanh toán tới Administrator, đặt bàn,... **(Possible_W)**
++ **(Possible_W)** Xây dựng App Mobile cho nhân viên phục vụ?!?! Lược bớt các chức năng, chỉ giữ lại các chức năng chính như gọi món, gửi request thanh toán tới Administrator, đặt bàn,...
 
 
 ### Phân công:
