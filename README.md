@@ -1,5 +1,4 @@
 ## A101_T6_PhanMemQuanLyQuanAn
-### Description:
 ### Thành viên:
 <table>
   <thead>
@@ -32,15 +31,17 @@
   </tbody>
 </table>
 
+### Description:
+
 ### Phân công
 <table>
   <thead>
     <tr>
       <td>
-        **Thành viên**
+        <h6>Thành viên</h6>
       </td>
       <td>
-        **Nhiệm vụ**
+        <h6>Nhiệm vụ</h6>
       </td>
     </tr>
   </thead>
@@ -50,7 +51,7 @@
         Vũ Thanh Dương
       </td>
       <td>
-        +\n+
+        +<br>+
       </td>
     </tr>
     <tr>
@@ -58,7 +59,7 @@
         Phạm Hải Đăng
       </td>
       <td>
-        +\n+
+        +<br>+
       </td>
     </tr>
   </tbody>
