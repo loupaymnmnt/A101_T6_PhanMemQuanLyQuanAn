@@ -5,10 +5,10 @@
   <thead>
     <tr>
       <td>
-        **MSSV**
+        <p>**MSSV**</p>
       </td>
       <td>
-        **Họ và tên**
+        <p>**Họ và tên**</p>
       </td>
     </tr>
   </thead>
