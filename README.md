@@ -34,10 +34,10 @@
 
 ### Description:
 
-**Database:**
+:fire_engine:**Database:**
 + Thiết kế cơ sở dữ liệu SQL Server
 
-**Nghiệp vụ quản lý:**
+:motor_scooter:**Nghiệp vụ quản lý:**
 + Quản lý tài khoản, chức năng đăng nhập, đăng ký (CRUD Ops)
 + Quản lý món ăn
 + Quản lý nhân viên
@@ -45,14 +45,14 @@
 + Quản lý bàn
 > still updating...
 
-**Chức năng:**
+:minibus:**Chức năng:**
 + Chức năng thanh toán
 + Chức năng gọi món
 + Chức năng đặt bàn
 + Chức năng chấm công
 > still updating...
 
-**Nghiệp vụ hệ thống:**
+:monorail:**Nghiệp vụ hệ thống:**
 + Report (Lương, thưởng, kỷ luật, xuất hóa đơn, doanh số, chi phí nhập xuất,...)
 + Graph Statistic Report (Doanh số, chi phí nhập xuất)
 + Backup database
@@ -60,10 +60,10 @@
 + Installation Setup
 > still updating...
 
-**AI:**
+:oncoming_police_car:**AI:**
 + Dự đoán doanh thu
 
-**Cố gắng thực hiện thêm các yêu cầu sau:**
+:racing_car:**Cố gắng thực hiện thêm các yêu cầu sau:**
 + Xây dựng App Mobile cho nhân viên phục vụ?!?! Lược bớt các chức năng, chỉ giữ lại các chức năng chính như gọi món, gửi request thanh toán tới Administrator, đặt bàn,...
 
 
