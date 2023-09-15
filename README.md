@@ -5,10 +5,10 @@
   <thead>
     <tr>
       <td>
-        MSSV
+        **MSSV**
       </td>
       <td>
-        Họ và tên
+        **Họ và tên**
       </td>
     </tr>
   </thead>
@@ -27,6 +27,38 @@
       </td>
       <td>
         Phạm Hải Đăng
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Phân công
+<table>
+  <thead>
+    <tr>
+      <td>
+        **Thành viên**
+      </td>
+      <td>
+        **Nhiệm vụ**
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Vũ Thanh Dương
+      </td>
+      <td>
+        +\n+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Phạm Hải Đăng
+      </td>
+      <td>
+        +\n+
       </td>
     </tr>
   </tbody>
