@@ -61,7 +61,8 @@
 > still updating...
 
 :oncoming_police_car:**AI:**
-+ Dự đoán doanh thu
++ Dự báo doanh thu
+> still updating...
 
 :racing_car:**Cố gắng thực hiện thêm các yêu cầu sau:**
 + Xây dựng App Mobile cho nhân viên phục vụ?!?! Lược bớt các chức năng, chỉ giữ lại các chức năng chính như gọi món, gửi request thanh toán tới Administrator, đặt bàn,...
