@@ -1,0 +1,16 @@
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.csproj.AssemblyReference.cache
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.BaseFormMain.resources
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.Properties.Resources.resources
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.csproj.GenerateResource.cache
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.csproj.CoreCompileInputs.cache
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\BaseForms.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\BaseForms.pdb
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\ComponentFactory.Krypton.Design.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\ComponentFactory.Krypton.Docking.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\bin\Debug\ComponentFactory.Krypton.Workspace.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.csproj.CopyComplete
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\BaseForms\obj\Debug\BaseForms.pdb
