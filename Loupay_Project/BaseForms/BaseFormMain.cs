@@ -19,6 +19,7 @@ namespace BaseForms
         public BaseFormMain()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.Fixed3D;
         }
 
         public BaseFormMain(IContainer container)
@@ -26,11 +27,6 @@ namespace BaseForms
             container.Add(this);
 
             InitializeComponent();
-        }
-
-        public void LockResizing()
-        {
-            FormBorderStyle = FormBorderStyle.Fixed3D;
         }
     }
 }
