@@ -13,3 +13,4 @@ C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\BaseForms.pdb
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.csproj.CopyComplete
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.Forms.MainForms.MainForm.resources

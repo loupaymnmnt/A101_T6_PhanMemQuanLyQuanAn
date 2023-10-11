@@ -13,7 +13,6 @@ namespace Loupay_Application.Forms.MainForms
         public MainForm()
         {
             InitializeComponent();
-            LockResizing();
         }
     }
 }
