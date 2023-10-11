@@ -7,11 +7,18 @@ using System.Threading.Tasks;
 
 namespace BaseForms
 {
-    public class FormSize
+    /// <summary>
+    /// Get the defined Form Size of BaseFormsMain inherited forms. Author: deethesaint
+    /// </summary>
+    public static class FormSize
     {
-        public Size LoginFormSize()
+        /// <summary>
+        /// Return new Size 420 x 350
+        /// </summary>
+        /// <returns></returns>
+        public static Size LoginFormSize()
         {
-            return new Size(250, 400);
+            return new Size(420, 350);
         }
     }
 }
