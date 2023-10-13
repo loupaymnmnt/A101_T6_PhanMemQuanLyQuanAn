@@ -15,3 +15,6 @@ C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.csproj.CopyComplete
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.Forms.MainForms.MainForm.resources
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.Forms.LoginForms.LoginForm.resources
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\ComponentFactory.Krypton.Docking.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\ComponentFactory.Krypton.Navigator.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\ComponentFactory.Krypton.Workspace.dll

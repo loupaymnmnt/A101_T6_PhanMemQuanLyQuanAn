@@ -20,6 +20,7 @@ namespace BaseForms
         {
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = MinimizeBox = false;
         }
 
         public BaseFormMain(IContainer container)
@@ -27,6 +28,8 @@ namespace BaseForms
             container.Add(this);
 
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = MinimizeBox = false;
         }
     }
 }

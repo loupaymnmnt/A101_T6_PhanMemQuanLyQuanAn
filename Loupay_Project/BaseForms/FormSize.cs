@@ -18,7 +18,7 @@ namespace BaseForms
         /// <returns></returns>
         public static Size LoginFormSize()
         {
-            return new Size(420, 350);
+            return new Size(420, 380);
         }
     }
 }

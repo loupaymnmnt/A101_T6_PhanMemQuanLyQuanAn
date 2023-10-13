@@ -28,6 +28,21 @@ namespace BaseForms
             return new Size(85, 40);
         }
 
+        public static Size RegularWideButton()
+        {
+            return new Size(155, 40);
+        }
+
+        public static Size SmallButton()
+        {
+            return new Size(70, 30);
+        }
+
+        public static Size SmallWideButton()
+        {
+            return new Size(140, 30);
+        }
+
         public static void CenterChildControl(Control child, Control parent)
         {
             child.Left = (parent.Width - child.Width) / 2 - 10;

@@ -10,6 +10,8 @@ namespace Loupay_Application
 {
     internal static class Program
     {
+        public static MainForm mainForm;
+        public static LoginForm loginForm;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,7 +20,8 @@ namespace Loupay_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            loginForm = new LoginForm();
+            Application.Run(loginForm);
         }
     }
 }
