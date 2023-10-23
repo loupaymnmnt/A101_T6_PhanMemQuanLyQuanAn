@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loupay_Application", "Loupa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseForms", "BaseForms\BaseForms.csproj", "{F9A2213E-6EFD-49F9-91B2-49284AFCE68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityHandler", "SecurityHandler\SecurityHandler.csproj", "{57402FE5-A542-4212-8570-02A2B24715E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loupay_Service", "Loupay_Service\Loupay_Service.csproj", "{FE2015AD-A036-4B25-A9C7-98D8F900383A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{F9A2213E-6EFD-49F9-91B2-49284AFCE68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9A2213E-6EFD-49F9-91B2-49284AFCE68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9A2213E-6EFD-49F9-91B2-49284AFCE68C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57402FE5-A542-4212-8570-02A2B24715E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57402FE5-A542-4212-8570-02A2B24715E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57402FE5-A542-4212-8570-02A2B24715E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57402FE5-A542-4212-8570-02A2B24715E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2015AD-A036-4B25-A9C7-98D8F900383A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2015AD-A036-4B25-A9C7-98D8F900383A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2015AD-A036-4B25-A9C7-98D8F900383A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2015AD-A036-4B25-A9C7-98D8F900383A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

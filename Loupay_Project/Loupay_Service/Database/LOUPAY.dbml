@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LOUPAYDB" Class="LOUPAYDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VUTHANHDUONG\D_DB_2012;Initial Catalog=LOUPAYDB;User ID=sa" SettingsObjectName="Loupay_Service.Properties.Settings" SettingsPropertyName="LOUPAYDBConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_User" Member="tbl_Users">
+    <Type Name="tbl_User">
+      <Column Name="UserId" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UserRoleId" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="IsDisabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tbl_User_tbl_UserInformation" Member="tbl_UserInformation" ThisKey="UserId" OtherKey="UserId" Type="tbl_UserInformation" Cardinality="One" />
+      <Association Name="tbl_UserRole_tbl_User" Member="tbl_UserRole" ThisKey="UserRoleId" OtherKey="UserRoleId" Type="tbl_UserRole" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_UserRole" Member="tbl_UserRoles">
+    <Type Name="tbl_UserRole">
+      <Column Name="UserRoleId" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserRoleName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="tbl_UserRole_tbl_User" Member="tbl_Users" ThisKey="UserRoleId" OtherKey="UserRoleId" Type="tbl_User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_UserInformation" Member="tbl_UserInformations">
+    <Type Name="tbl_UserInformation">
+      <Column Name="UserId" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CIDNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(6)" CanBeNull="true" />
+      <Association Name="tbl_User_tbl_UserInformation" Member="tbl_User" ThisKey="UserId" OtherKey="UserId" Type="tbl_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

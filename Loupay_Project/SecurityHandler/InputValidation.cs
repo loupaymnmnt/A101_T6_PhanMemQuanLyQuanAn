@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SecurityHandler
 {
-    public static class InputValidation
+    namespace Validation
     {
-
+        public static class InputValidation
+        {
+            
+        }
     }
 }

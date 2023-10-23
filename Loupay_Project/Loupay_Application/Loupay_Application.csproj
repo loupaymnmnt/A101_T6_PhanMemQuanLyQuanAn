@@ -44,6 +44,9 @@
     <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
     <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+    <Reference Include="Loupay_Service">
+      <HintPath>..\Loupay_Service\bin\Debug\Loupay_Service.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -80,13 +83,6 @@
     <Compile Include="Forms\MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\CurrentAccount.cs" />
-    <Compile Include="Models\DatabaseContext\LOUPAYDB.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LOUPAYDB.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Models\LoginProcessing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\LoginForms\LoginForm.resx">
@@ -106,14 +102,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AssemblyInfo.manifest" />
-    <None Include="Models\DatabaseContext\LOUPAYDB.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LOUPAYDB.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Models\DatabaseContext\LOUPAYDB.dbml.layout">
-      <DependentUpon>LOUPAYDB.dbml</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,7 +115,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\Global\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loupaybanner.png" />
     <Content Include="Utils\ComponentFactory.Krypton.Design.dll" />

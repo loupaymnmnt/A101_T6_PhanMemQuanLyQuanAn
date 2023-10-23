@@ -8,6 +8,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Loupay_Service.Account;
+using Loupay_Service.Security;
 
 namespace Loupay_Application.Forms.LoginForms
 {
@@ -81,9 +83,23 @@ namespace Loupay_Application.Forms.LoginForms
 
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-            Program.mainForm = new MainForm();
-            Program.mainForm.Show();
-            this.Visible = false;
+            LoginProcessing process = new LoginProcessing();
+            LoginResult result = process.Process(tBox_Username.Text, tBox_Password.Text);
+
+            if (result == LoginResult.FAILED)
+            {
+                MessageBox.Show("Tài khoản hoặc mật khẩu sai!");
+            }
+            else if (result == LoginResult.DISABLED)
+            {
+                MessageBox.Show("Tài khoản bị khóa!");
+            }
+            else
+            {
+                Program.mainForm = new MainForm();
+                Program.mainForm.Show();
+                this.Visible = false;
+            }
         }
     }
 }

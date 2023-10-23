@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Loupay_Application.Models
+namespace Loupay_Service.Account
 {
-    public static class LoginProcessing
+    public enum LoginResult : byte
     {
-
+        DISABLED,
+        SUCCESSFUL,
+        FAILED
     }
 }

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LOUPAY">
+  <DataContextMoniker Name="/LOUPAYDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3ca70757-45b2-43ac-bd3c-78b6e6401a20" absoluteBounds="3.5, 1.125, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/LOUPAYDataContext/tbl_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abf264d5-488e-4e40-b41e-ee193b99fee7" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="140df659-73da-4fec-a845-f821a8596fb9" absoluteBounds="0.75, 1.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/LOUPAYDataContext/tbl_UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8f8ed34-ee51-4efb-8927-e1c506a11204" absoluteBounds="0.765, 1.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="836540e7-1435-4d2b-8a14-1309697f2d26" absoluteBounds="6.25, 0.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/LOUPAYDataContext/tbl_UserInformation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5e4cf7c6-d2c7-4030-b0c1-5323e6f53eae" absoluteBounds="6.265, 1.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.97199625651042); (3.5 : 1.97199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LOUPAYDataContext/tbl_UserRole/tbl_UserRole_tbl_User" />
+      <nodes>
+        <classShapeMoniker Id="140df659-73da-4fec-a845-f821a8596fb9" />
+        <classShapeMoniker Id="3ca70757-45b2-43ac-bd3c-78b6e6401a20" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.01044840494792); (6.25 : 2.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LOUPAYDataContext/tbl_User/tbl_User_tbl_UserInformation" />
+      <nodes>
+        <classShapeMoniker Id="3ca70757-45b2-43ac-bd3c-78b6e6401a20" />
+        <classShapeMoniker Id="836540e7-1435-4d2b-8a14-1309697f2d26" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
