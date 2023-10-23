@@ -8,10 +8,8 @@ C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.csproj.CoreCompileInputs.cache
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.exe
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.pdb
-C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\BaseForms.dll
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\ComponentFactory.Krypton.Ribbon.dll
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
-C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\BaseForms.pdb
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.csproj.CopyComplete
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.Forms.MainForms.MainForm.resources
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.Forms.LoginForms.LoginForm.resources
@@ -21,3 +19,5 @@ C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\Loupay_Service.dll
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\Loupay_Service.pdb
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\Loupay_Service.dll.config
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\Loupay_Component.dll
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\bin\Debug\Loupay_Component.pdb

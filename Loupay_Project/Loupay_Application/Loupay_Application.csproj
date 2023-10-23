@@ -36,14 +36,14 @@
     <ApplicationManifest>AssemblyInfo.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BaseForms">
-      <HintPath>..\BaseForms\bin\Debug\BaseForms.dll</HintPath>
-    </Reference>
     <Reference Include="ComponentFactory.Krypton.Docking, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
     <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
     <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL" />
     <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+    <Reference Include="Loupay_Component">
+      <HintPath>..\Loupay_Component\bin\Debug\Loupay_Component.dll</HintPath>
+    </Reference>
     <Reference Include="Loupay_Service">
       <HintPath>..\Loupay_Service\bin\Debug\Loupay_Service.dll</HintPath>
     </Reference>

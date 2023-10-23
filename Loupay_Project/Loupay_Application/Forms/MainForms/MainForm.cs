@@ -10,7 +10,7 @@ using Loupay_Service.Account;
 
 namespace Loupay_Application.Forms.MainForms
 {
-    public partial class MainForm : BaseForms.BaseFormMain
+    public partial class MainForm : Loupay_Component.BaseFormMain
     {
         public MainForm()
         {
@@ -20,17 +20,19 @@ namespace Loupay_Application.Forms.MainForms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.Tag = "FORM_2";
             ControlInit();
             ControlEventsInit();
         }
 
         private void ControlInit()
         {
+            
         }
 
         private void ControlEventsInit()
         {
-            MessageBox.Show(CurrentAccount.Instance.Username);
+
         }
     }
 }
