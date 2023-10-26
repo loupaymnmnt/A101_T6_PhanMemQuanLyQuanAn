@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace Loupay_Component
 {
@@ -45,7 +46,12 @@ namespace Loupay_Component
 
         public static void CenterChildControl(Control child, Control parent)
         {
-            child.Left = (parent.Width - child.Width) / 2 - 10;
+            child.Left = (parent.Width - child.Width) / 2 - (child.Width / 30);
+        }
+
+        public static void CenterChildControlVertical(Control child, Control parent)
+        {
+            child.Top = (parent.Height - child.Height) / 2 - (child.Height / 30);
         }
     }
 }

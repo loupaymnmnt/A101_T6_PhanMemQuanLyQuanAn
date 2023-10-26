@@ -19,27 +19,38 @@ namespace Loupay_Component.SubControl
 
         #region CONTROLS
         KryptonLabel label = new KryptonLabel();
-        PictureBox pictureBox = new PictureBox();
-        KryptonButton orderButton = new KryptonButton();
-        KryptonButton payButton = new KryptonButton();
         #endregion CONTROLS
 
         public Table()
         {
             InitializeComponent();
             this.Load += Table_Load;
+            this.MouseHover += Table_MouseHover;
+            this.MouseLeave += Table_MouseLeave;
+        }
+
+        private void Table_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = DefaultBackColor;
+        }
+
+        private void Table_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Aqua;
         }
 
         private void Table_Load(object sender, EventArgs e)
         {
-            this.label.Text = "BÀN XXX";
+            this.BackColor = DefaultBackColor;
+            this.label.StateCommon.ShortText.Font = new Font("Arial", 16, FontStyle.Bold);
+            this.label.StateCommon.ShortText.Color1 = Color.Black;
+            this.label.Text = "BÀN " + Id.ToString();
+            this.Width = 110;
+            this.Height = 110;
+            this.BorderStyle = BorderStyle.FixedSingle;
             FormComponentSize.CenterChildControl(this.label, this);
+            FormComponentSize.CenterChildControlVertical(this.label, this);
             this.Controls.Add(this.label);
-            Image image = new Bitmap(Properties.Resources.diningTable, 80, 80);
-            this.pictureBox.Image = image;
-            this.pictureBox.Top = this.label.Height + 15;
-            FormComponentSize.CenterChildControl(this.pictureBox, this);
-            this.Controls.Add(this.pictureBox);
         }
     }
 }

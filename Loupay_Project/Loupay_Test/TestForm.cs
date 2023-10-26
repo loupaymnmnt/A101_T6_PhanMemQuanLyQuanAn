@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Loupay_Component;
 using Loupay_Component.SubControl;
 
 namespace Loupay_Test
@@ -12,7 +13,7 @@ namespace Loupay_Test
     public partial class TestForm : Loupay_Component.BaseFormMain
     {
         #region CONTROLS
-        Table t = new Table();
+        TablesPanel tablePanel = new TablesPanel();
         #endregion CONTROLS
         public TestForm()
         {
@@ -22,7 +23,8 @@ namespace Loupay_Test
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            this.Controls.Add(t);
+            this.Text = Global.Title;
+            this.Controls.Add(tablePanel);
         }
     }
 }
