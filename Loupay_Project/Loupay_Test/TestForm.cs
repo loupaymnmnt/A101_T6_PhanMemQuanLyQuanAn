@@ -14,6 +14,8 @@ namespace Loupay_Test
     {
         #region CONTROLS
         TablesPanel tablePanel = new TablesPanel();
+        TableMainBoard board = new TableMainBoard();
+        MenuStrip menuStrip = new MenuStrip();
         #endregion CONTROLS
         public TestForm()
         {
@@ -23,8 +25,14 @@ namespace Loupay_Test
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            this.Text = Global.Title;
+            this.Text = Global.AppTitle;
+            tablePanel.TableMainBoard = board;
+            this.Controls.Add(menuStrip);
+            tablePanel.Top = 35;
             this.Controls.Add(tablePanel);
+            board.Top = 55;
+            board.Left = 600;
+            this.Controls.Add(board);
         }
     }
 }

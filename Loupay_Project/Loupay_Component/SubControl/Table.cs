@@ -15,7 +15,10 @@ namespace Loupay_Component.SubControl
     public partial class Table : UserControl
     {
         private string _id = string.Empty;
+        private byte _seats = 0;
         public string Id { get => _id; set => _id = value; }
+        public byte Seats { get => _seats; set => _seats = value; }
+
 
         #region CONTROLS
         KryptonLabel label = new KryptonLabel();

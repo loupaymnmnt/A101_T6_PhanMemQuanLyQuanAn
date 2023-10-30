@@ -83,6 +83,12 @@
     <Compile Include="SubControl\Table.Designer.cs">
       <DependentUpon>Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubControl\TableMainBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubControl\TableMainBoard.Designer.cs">
+      <DependentUpon>TableMainBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubControl\TablesPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>

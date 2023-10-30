@@ -16,7 +16,10 @@ namespace Loupay_Component.SubControl
     {
         private string _id = string.Empty;
 
+        private TableMainBoard mainBoard;
+
         public string Id { get => _id; set => _id = value; }
+        public TableMainBoard TableMainBoard { get => mainBoard; set => mainBoard = value; }
 
         Panel panel = new Panel();
         List<Table> tables = new List<Table>();
@@ -30,6 +33,7 @@ namespace Loupay_Component.SubControl
         private void TablesPanel_Load(object sender, EventArgs e)
         {
             ControlInit();
+            ControlEventsInit();
         }
 
         private void ControlInit()
@@ -54,7 +58,7 @@ namespace Loupay_Component.SubControl
                 table.Top = currentTop;
                 table.Left = currentLeft;
                 this.panel.Controls.Add(table);
-
+                tables.Add(table);
                 ++position;
                 currentLeft += table.Width + 5;
                 if (position == 4)
@@ -66,5 +70,17 @@ namespace Loupay_Component.SubControl
             }
         }
 
+        private void ControlEventsInit()
+        {
+            foreach (Table table in tables)
+            {
+                table.Click += Table_Click;
+            }
+        }
+
+        private void Table_Click(object sender, EventArgs e)
+        {
+            mainBoard.Reload((Table)sender);
+        }
     }
 }
