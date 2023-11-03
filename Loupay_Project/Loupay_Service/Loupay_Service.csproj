@@ -45,6 +45,7 @@
     <Compile Include="Account\CurrentAccount.cs" />
     <Compile Include="Account\LoginProcessing.cs" />
     <Compile Include="Account\LoginResult.cs" />
+    <Compile Include="Database\DatabaseHandler.cs" />
     <Compile Include="Database\LOUPAY.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,5 +78,6 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

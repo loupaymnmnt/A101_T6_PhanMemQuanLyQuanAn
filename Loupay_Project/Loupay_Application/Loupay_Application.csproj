@@ -118,6 +118,13 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\loupaybanner.png" />
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\drink.png" />
+    <None Include="Resources\table.png" />
+    <None Include="Resources\import.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\home.png" />
     <Content Include="Utils\ComponentFactory.Krypton.Design.dll" />
     <Content Include="Utils\ComponentFactory.Krypton.Docking.dll" />
     <Content Include="Utils\ComponentFactory.Krypton.Navigator.dll" />

@@ -28,8 +28,10 @@ namespace Loupay_Component.SubControl
         {
             InitializeComponent();
             this.Load += Table_Load;
-            this.MouseHover += Table_MouseHover;
             this.MouseLeave += Table_MouseLeave;
+            this.MouseHover += Table_MouseHover;
+            this.MouseMove += Table_MouseHover;
+            this.MouseEnter += Table_MouseHover;
         }
 
         private void Table_MouseLeave(object sender, EventArgs e)
@@ -44,6 +46,7 @@ namespace Loupay_Component.SubControl
 
         private void Table_Load(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.Hand;
             this.BackColor = DefaultBackColor;
             this.label.StateCommon.ShortText.Font = new Font("Arial", 16, FontStyle.Bold);
             this.label.StateCommon.ShortText.Color1 = Color.Black;

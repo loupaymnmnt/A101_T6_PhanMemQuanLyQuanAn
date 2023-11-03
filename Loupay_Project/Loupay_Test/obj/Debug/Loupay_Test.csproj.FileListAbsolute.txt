@@ -17,3 +17,4 @@ C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\bin\De
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.csproj.CopyComplete
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.exe
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.pdb
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.TestForm.resources

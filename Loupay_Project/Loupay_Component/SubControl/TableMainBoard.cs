@@ -15,6 +15,7 @@ namespace Loupay_Component.SubControl
     public partial class TableMainBoard : UserControl
     {
         #region CONTROLS
+        KryptonGroupBox groupBox = new KryptonGroupBox();
         KryptonTextBox tableId = new KryptonTextBox();
         
         #endregion CONTROLS
@@ -31,11 +32,14 @@ namespace Loupay_Component.SubControl
 
         private void TableMainBoard_Load(object sender, EventArgs e)
         {
+            this.BorderStyle = BorderStyle.Fixed3D;
             this.tableId.Top = 0;
-            this.tableId.ReadOnly = true;
             this.tableId.Text = "";
             this.tableId.Left = 0;
-            this.Controls.Add(this.tableId);
+            this.groupBox.Top = 25;
+            this.groupBox.Text = "Thông tin bàn";
+            this.groupBox.Panel.Controls.Add(this.tableId);
+            this.Controls.Add(this.groupBox);
         }
     }
 }
