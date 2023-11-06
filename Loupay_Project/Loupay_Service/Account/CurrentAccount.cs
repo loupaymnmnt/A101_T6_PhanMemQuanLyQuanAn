@@ -10,18 +10,14 @@ namespace Loupay_Service.Account
     /// <summary>
     /// Singleton class use for storing current application logged in account
     /// </summary>
-    public class CurrentAccount
+    public static class CurrentAccount
     {
-        private static tbl_User _instance;
+        private static NguoiDung _instance;
 
-        public static tbl_User Instance
+        public static NguoiDung Instance
         {
-            get { if ( _instance == null ) _instance = new tbl_User(); return _instance; }
+            get { if ( _instance == null ) _instance = new NguoiDung(); return _instance; }
             set { _instance = value; }
-        }
-        private CurrentAccount()
-        {
-            
         }
     }
 }

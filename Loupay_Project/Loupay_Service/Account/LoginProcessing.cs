@@ -19,13 +19,13 @@ namespace Loupay_Service.Account
 
         public LoginResult Process(string inputUsername, string inputPassword)
         {
-            var loginUsers = from user in loupay.tbl_Users
-                            where (user.Username == inputUsername && user.Password == inputPassword)
+            var loginUsers = from user in loupay.NguoiDungs
+                            where (user.TenNguoiDung == inputUsername && user.MatKhau == inputPassword)
                             select user;
             var loginUser = loginUsers.FirstOrDefault();
             if (loginUser != null)
             {
-                if ((bool)loginUser.IsDisabled == true)
+                if ((bool)loginUser.BiKhoa == true)
                 {
                     return LoginResult.DISABLED;
                 }
