@@ -32,7 +32,12 @@ namespace Loupay_Component.SubControl
 
         private void TableMainBoard_Load(object sender, EventArgs e)
         {
-            this.BorderStyle = BorderStyle.Fixed3D;
+            this.groupBox.Top = 15;
+            this.groupBox.Width = 280;
+            this.groupBox.Height = 520;
+            this.Top = 0;
+            this.Width = 300;
+            this.Height = 600;
             this.tableId.Top = 0;
             this.tableId.Text = "";
             this.tableId.Left = 0;

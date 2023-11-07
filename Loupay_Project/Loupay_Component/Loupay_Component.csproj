@@ -77,6 +77,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SubControl\Dish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubControl\Dish.Designer.cs">
+      <DependentUpon>Dish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubControl\DishListBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubControl\DishListBox.Designer.cs">
+      <DependentUpon>DishListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubControl\OrderPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubControl\OrderPanel.Designer.cs">
+      <DependentUpon>OrderPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubControl\Table.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -113,6 +131,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noimage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,7 +29,6 @@ namespace Loupay_Component.SubControl
             InitializeComponent();
             this.Load += Table_Load;
             this.MouseLeave += Table_MouseLeave;
-            this.MouseHover += Table_MouseHover;
             this.MouseMove += Table_MouseHover;
             this.MouseEnter += Table_MouseHover;
         }
@@ -41,18 +40,20 @@ namespace Loupay_Component.SubControl
 
         private void Table_MouseHover(object sender, EventArgs e)
         {
-            this.BackColor = Color.Aqua;
+            if (this.BackColor != Color.Aqua)
+                this.BackColor = Color.Aqua;
         }
 
         private void Table_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Hand;
             this.BackColor = DefaultBackColor;
-            this.label.StateCommon.ShortText.Font = new Font("Arial", 16, FontStyle.Bold);
+            this.label.StateCommon.ShortText.Font = new Font("Arial", 10, FontStyle.Bold);
             this.label.StateCommon.ShortText.Color1 = Color.Black;
+            this.label.Width = 50;
             this.label.Text = "BÀN " + Id.ToString();
-            this.Width = 110;
-            this.Height = 110;
+            this.Width = 70;
+            this.Height = 50;
             this.BorderStyle = BorderStyle.FixedSingle;
             FormComponentSize.CenterChildControl(this.label, this);
             FormComponentSize.CenterChildControlVertical(this.label, this);

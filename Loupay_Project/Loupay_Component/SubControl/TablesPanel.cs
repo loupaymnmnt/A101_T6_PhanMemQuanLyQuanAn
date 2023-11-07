@@ -38,8 +38,8 @@ namespace Loupay_Component.SubControl
 
         private void ControlInit()
         {
-            this.Width = 500;
-            this.Height = 400;
+            this.Width = 310;
+            this.Height = 515;
             this.BorderStyle = BorderStyle.Fixed3D;
 
             this.panel.Top = 0;
