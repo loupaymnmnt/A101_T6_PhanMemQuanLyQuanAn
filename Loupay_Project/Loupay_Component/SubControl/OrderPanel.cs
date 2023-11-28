@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Loupay_Service.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,12 +19,13 @@ namespace Loupay_Component.SubControl
         KryptonLabel prodNameLabel = new KryptonLabel();
         KryptonTextBox prodNameTextBox = new KryptonTextBox();
         KryptonButton orderButton = new KryptonButton();
-        DishListBox dishListBox = new DishListBox();
+        DishListBox dishListBox;
 
-        public OrderPanel()
+        public OrderPanel(List<Mon> mons)
         {
             InitializeComponent();
             this.Load += OrderPanel_Load;
+            this.dishListBox = new DishListBox(mons);
         }
 
         private void OrderPanel_Load(object sender, EventArgs e)

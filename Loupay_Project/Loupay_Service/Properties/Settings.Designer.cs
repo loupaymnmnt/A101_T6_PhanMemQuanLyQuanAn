@@ -44,5 +44,16 @@ namespace Loupay_Service.Properties {
                 return ((string)(this["LOUPAYConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=VUTHANHDUONG\\D_DB_2012;Initial Catalog=LOUPAY;Integrated Security=Tru" +
+            "e")]
+        public string LOUPAYConnectionString1 {
+            get {
+                return ((string)(this["LOUPAYConnectionString1"]));
+            }
+        }
     }
 }

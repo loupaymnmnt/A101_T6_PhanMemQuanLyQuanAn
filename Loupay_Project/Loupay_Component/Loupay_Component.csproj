@@ -49,6 +49,9 @@
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\Loupay_Application\Utils\ComponentFactory.Krypton.Workspace.dll</HintPath>
     </Reference>
+    <Reference Include="Loupay_Service">
+      <HintPath>..\Loupay_Service\bin\Debug\Loupay_Service.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />

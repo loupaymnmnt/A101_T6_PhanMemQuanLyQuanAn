@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Toolkit;
+using Loupay_Service.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,14 +23,15 @@ namespace Loupay_Component.SubControl
         KryptonLabel dishPriceLabelMain = new KryptonLabel();
         KryptonLabel dishNameLabelMain = new KryptonLabel();
 
-        private string _id;
-        public string Id { get => _id; set => _id = value; }
+        private Mon mon;
+
+        public Mon Mon { get => mon; set => mon = value; }
+
         public Dish()
         {
             InitializeComponent();
             this.Load += Dish_Load;
         }
-
 
         private void Dish_Load(object sender, EventArgs e)
         {

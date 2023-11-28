@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Toolkit;
+using Loupay_Service.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,8 @@ namespace Loupay_Component.SubControl
 {
     public partial class Table : UserControl
     {
-        private string _id = string.Empty;
-        private byte _seats = 0;
-        public string Id { get => _id; set => _id = value; }
-        public byte Seats { get => _seats; set => _seats = value; }
-
+        private Ban ban;
+        public Ban Ban { get => ban; set => ban = value; }
 
         #region CONTROLS
         KryptonLabel label = new KryptonLabel();
@@ -51,7 +49,8 @@ namespace Loupay_Component.SubControl
             this.label.StateCommon.ShortText.Font = new Font("Arial", 10, FontStyle.Bold);
             this.label.StateCommon.ShortText.Color1 = Color.Black;
             this.label.Width = 50;
-            this.label.Text = "BÀN " + Id.ToString();
+            this.label.Text = "BÀN " + ban.IDBan.ToString();
+            this.label.Enabled = false;
             this.Width = 70;
             this.Height = 50;
             this.BorderStyle = BorderStyle.FixedSingle;

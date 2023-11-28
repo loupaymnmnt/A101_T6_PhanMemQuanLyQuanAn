@@ -1,4 +1,5 @@
 ﻿using Loupay_Component.Interfaces;
+using Loupay_Service.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,8 +16,8 @@ namespace Loupay_Component.SubControl
     public partial class TablesPanel : UserControl
     {
         private string _id = string.Empty;
-
         private TableMainBoard mainBoard;
+        private List<Ban> bans;
 
         public string Id { get => _id; set => _id = value; }
         public TableMainBoard TableMainBoard { get => mainBoard; set => mainBoard = value; }
@@ -28,6 +29,13 @@ namespace Loupay_Component.SubControl
         {
             InitializeComponent();
             this.Load += TablesPanel_Load;
+        }
+
+        public TablesPanel(List<Ban> bans)
+        {
+            InitializeComponent();
+            this.Load += TablesPanel_Load;
+            this.bans = bans;
         }
 
         private void TablesPanel_Load(object sender, EventArgs e)
@@ -51,10 +59,10 @@ namespace Loupay_Component.SubControl
             int position = 0;
             int currentTop = 5;
             int currentLeft = 5;
-            for (int i = 0; i < 19; ++i)
+            for (int i = 0; i < bans.Count; ++i)
             {
                 Table table = new Table();
-                table.Id = i.ToString();
+                table.Ban = bans[i];
                 table.Top = currentTop;
                 table.Left = currentLeft;
                 this.panel.Controls.Add(table);

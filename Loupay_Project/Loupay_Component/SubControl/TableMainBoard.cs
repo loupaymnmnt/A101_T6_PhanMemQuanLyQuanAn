@@ -27,7 +27,7 @@ namespace Loupay_Component.SubControl
 
         public void Reload(Table table)
         {
-            this.tableId.Text = table.Id;
+            this.tableId.Text = table.Ban.IDBan;
         }
 
         private void TableMainBoard_Load(object sender, EventArgs e)

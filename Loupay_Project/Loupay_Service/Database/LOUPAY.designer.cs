@@ -72,7 +72,7 @@ namespace Loupay_Service.Database
     #endregion
 		
 		public LOUPAYDataContext() : 
-				base(global::Loupay_Service.Properties.Settings.Default.LOUPAYConnectionString, mappingSource)
+				base(global::Loupay_Service.Properties.Settings.Default.LOUPAYConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
