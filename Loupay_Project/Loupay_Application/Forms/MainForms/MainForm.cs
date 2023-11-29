@@ -10,6 +10,7 @@ using Loupay_Service.Account;
 using Loupay_Component.SubControl;
 using Loupay_Component;
 using Loupay_Service.Database;
+using Loupay_Application.Forms.ManagerForm;
 
 namespace Loupay_Application.Forms.MainForms
 {
@@ -55,7 +56,8 @@ namespace Loupay_Application.Forms.MainForms
 
         private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            NhanVienForms form = new NhanVienForms();
+            form.ShowDialog();
         }
     }
 }

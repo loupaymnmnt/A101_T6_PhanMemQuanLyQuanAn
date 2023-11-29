@@ -16,7 +16,5 @@ namespace Loupay_Application.Forms.ManagerForm
         {
             InitializeComponent();
         }
-
-        
     }
 }

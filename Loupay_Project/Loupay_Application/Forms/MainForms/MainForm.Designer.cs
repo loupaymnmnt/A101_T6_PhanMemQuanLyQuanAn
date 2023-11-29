@@ -30,8 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cài_đặt_tài_khoản = new System.Windows.Forms.ToolStripMenuItem();
-            this.phân_quyền = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,26 +59,11 @@
             // 
             // quảnLýNgườiDùngToolStripMenuItem
             // 
-            this.quảnLýNgườiDùngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cài_đặt_tài_khoản,
-            this.phân_quyền});
             this.quảnLýNgườiDùngToolStripMenuItem.Image = global::Loupay_Application.Properties.Resources.userIcon;
             this.quảnLýNgườiDùngToolStripMenuItem.Name = "quảnLýNgườiDùngToolStripMenuItem";
-            this.quảnLýNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(132, 24);
+            this.quảnLýNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.quảnLýNgườiDùngToolStripMenuItem.Text = "Quản lý tài khoản";
             this.quảnLýNgườiDùngToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNgườiDùngToolStripMenuItem_Click);
-            // 
-            // cài_đặt_tài_khoản
-            // 
-            this.cài_đặt_tài_khoản.Name = "cài_đặt_tài_khoản";
-            this.cài_đặt_tài_khoản.Size = new System.Drawing.Size(180, 22);
-            this.cài_đặt_tài_khoản.Text = "Cài đặt tài khoản";
-            // 
-            // phân_quyền
-            // 
-            this.phân_quyền.Name = "phân_quyền";
-            this.phân_quyền.Size = new System.Drawing.Size(180, 22);
-            this.phân_quyền.Text = "Phân quyền";
             // 
             // quảnLýToolStripMenuItem
             // 
@@ -88,41 +71,41 @@
             this.toolStripMenuItem1});
             this.quảnLýToolStripMenuItem.Image = global::Loupay_Application.Properties.Resources.importIcon;
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(162, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý nhập xuất";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(225, 26);
             this.toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
             // quảnLýToolStripMenuItem1
             // 
             this.quảnLýToolStripMenuItem1.Image = global::Loupay_Application.Properties.Resources.tableIcon;
             this.quảnLýToolStripMenuItem1.Name = "quảnLýToolStripMenuItem1";
-            this.quảnLýToolStripMenuItem1.Size = new System.Drawing.Size(119, 24);
+            this.quảnLýToolStripMenuItem1.Size = new System.Drawing.Size(142, 24);
             this.quảnLýToolStripMenuItem1.Text = "Quản lý bàn ăn";
             // 
             // quảnLýMónToolStripMenuItem
             // 
             this.quảnLýMónToolStripMenuItem.Image = global::Loupay_Application.Properties.Resources.foodanddrinkIcon;
             this.quảnLýMónToolStripMenuItem.Name = "quảnLýMónToolStripMenuItem";
-            this.quảnLýMónToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.quảnLýMónToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.quảnLýMónToolStripMenuItem.Text = "Quản lý món";
             // 
             // báoCáoToolStripMenuItem
             // 
             this.báoCáoToolStripMenuItem.Image = global::Loupay_Application.Properties.Resources.reportIcon;
             this.báoCáoToolStripMenuItem.Name = "báoCáoToolStripMenuItem";
-            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.báoCáoToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
             this.báoCáoToolStripMenuItem.Text = "Báo cáo";
             // 
             // càiĐặtỨngDụngToolStripMenuItem
             // 
             this.càiĐặtỨngDụngToolStripMenuItem.Image = global::Loupay_Application.Properties.Resources.settingsIcon;
             this.càiĐặtỨngDụngToolStripMenuItem.Name = "càiĐặtỨngDụngToolStripMenuItem";
-            this.càiĐặtỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(131, 24);
+            this.càiĐặtỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.càiĐặtỨngDụngToolStripMenuItem.Text = "Cài đặt ứng dụng";
             // 
             // button1
@@ -162,8 +145,6 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýMónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem báoCáoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem càiĐặtỨngDụngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cài_đặt_tài_khoản;
-        private System.Windows.Forms.ToolStripMenuItem phân_quyền;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.Button button1;
     }
