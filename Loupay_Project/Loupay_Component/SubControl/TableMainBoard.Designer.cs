@@ -31,11 +31,11 @@
             this.groupbox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tableId = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tableStatus = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.soMonDat = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tienThanhToan = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btn_Thanhtoan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btn_xuatHoaDon = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -58,11 +58,11 @@
             this.groupbox.Panel.Controls.Add(this.btn_lamMoi);
             this.groupbox.Panel.Controls.Add(this.btn_xuatHoaDon);
             this.groupbox.Panel.Controls.Add(this.btn_Thanhtoan);
-            this.groupbox.Panel.Controls.Add(this.kryptonLabel6);
+            this.groupbox.Panel.Controls.Add(this.tienThanhToan);
             this.groupbox.Panel.Controls.Add(this.kryptonLabel7);
-            this.groupbox.Panel.Controls.Add(this.kryptonLabel4);
+            this.groupbox.Panel.Controls.Add(this.soMonDat);
             this.groupbox.Panel.Controls.Add(this.kryptonLabel5);
-            this.groupbox.Panel.Controls.Add(this.kryptonLabel2);
+            this.groupbox.Panel.Controls.Add(this.tableStatus);
             this.groupbox.Panel.Controls.Add(this.kryptonLabel3);
             this.groupbox.Panel.Controls.Add(this.tableId);
             this.groupbox.Panel.Controls.Add(this.kryptonLabel1);
@@ -87,15 +87,15 @@
             this.tableId.TabIndex = 2;
             this.tableId.Values.Text = "MA_BAN";
             // 
-            // kryptonLabel2
+            // tableStatus
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(189, 42);
-            this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(164, 31);
-            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel2.TabIndex = 4;
-            this.kryptonLabel2.Values.Text = "TRANG_THAI";
+            this.tableStatus.Location = new System.Drawing.Point(189, 42);
+            this.tableStatus.Name = "tableStatus";
+            this.tableStatus.Size = new System.Drawing.Size(164, 31);
+            this.tableStatus.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableStatus.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableStatus.TabIndex = 4;
+            this.tableStatus.Values.Text = "TRANG_THAI";
             // 
             // kryptonLabel3
             // 
@@ -105,15 +105,15 @@
             this.kryptonLabel3.TabIndex = 3;
             this.kryptonLabel3.Values.Text = "Trạng thái:";
             // 
-            // kryptonLabel4
+            // soMonDat
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(189, 79);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(177, 31);
-            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel4.TabIndex = 6;
-            this.kryptonLabel4.Values.Text = "SO_MON_DAT";
+            this.soMonDat.Location = new System.Drawing.Point(189, 79);
+            this.soMonDat.Name = "soMonDat";
+            this.soMonDat.Size = new System.Drawing.Size(177, 31);
+            this.soMonDat.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soMonDat.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soMonDat.TabIndex = 6;
+            this.soMonDat.Values.Text = "SO_MON_DAT";
             // 
             // kryptonLabel5
             // 
@@ -123,15 +123,15 @@
             this.kryptonLabel5.TabIndex = 5;
             this.kryptonLabel5.Values.Text = "Số món đã đặt:";
             // 
-            // kryptonLabel6
+            // tienThanhToan
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(189, 116);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(175, 31);
-            this.kryptonLabel6.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel6.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonLabel6.TabIndex = 8;
-            this.kryptonLabel6.Values.Text = "THANH_TOAN";
+            this.tienThanhToan.Location = new System.Drawing.Point(189, 116);
+            this.tienThanhToan.Name = "tienThanhToan";
+            this.tienThanhToan.Size = new System.Drawing.Size(175, 31);
+            this.tienThanhToan.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tienThanhToan.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tienThanhToan.TabIndex = 8;
+            this.tienThanhToan.Values.Text = "THANH_TOAN";
             // 
             // kryptonLabel7
             // 
@@ -148,6 +148,7 @@
             this.btn_Thanhtoan.Size = new System.Drawing.Size(107, 36);
             this.btn_Thanhtoan.TabIndex = 9;
             this.btn_Thanhtoan.Values.Text = "Thanh toán";
+            this.btn_Thanhtoan.Click += new System.EventHandler(this.btn_Thanhtoan_Click);
             // 
             // btn_xuatHoaDon
             // 
@@ -193,11 +194,11 @@
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox groupbox;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel tableId;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel tienThanhToan;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel soMonDat;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel tableStatus;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_xuatHoaDon;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_Thanhtoan;

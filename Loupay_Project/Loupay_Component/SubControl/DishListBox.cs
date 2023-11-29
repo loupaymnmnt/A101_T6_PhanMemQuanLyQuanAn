@@ -39,6 +39,8 @@ namespace Loupay_Component.SubControl
             {
                 Dish dish = new Dish();
                 dish.Mon = mons[i];
+                string filePath = mons[i].FileAnh;
+                dish.SetImage("..\\..\\Images\\" + filePath);
                 dishes.Add(dish);
                 dish.Top = currentTop;
                 dish.Left = 5;

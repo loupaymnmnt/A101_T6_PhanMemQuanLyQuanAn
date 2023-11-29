@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Toolkit;
+using Loupay_Service.Client.Table;
 using Loupay_Service.Database;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,9 @@ namespace Loupay_Component.SubControl
 {
     public partial class Table : UserControl
     {
+        private Color currentColor = DefaultBackColor;
         private Ban ban;
-        public Ban Ban { get => ban; set => ban = value; }
+        public Ban Ban { get { return ban; } set { ban = value; } }
 
         #region CONTROLS
         KryptonLabel label = new KryptonLabel();
@@ -33,7 +35,7 @@ namespace Loupay_Component.SubControl
 
         private void Table_MouseLeave(object sender, EventArgs e)
         {
-            this.BackColor = DefaultBackColor;
+            this.BackColor = currentColor;
         }
 
         private void Table_MouseHover(object sender, EventArgs e)
@@ -42,10 +44,24 @@ namespace Loupay_Component.SubControl
                 this.BackColor = Color.Aqua;
         }
 
+        public void SetBackColor(string status)
+        {
+            if (status == TableStatus.TRONG)
+            {
+                currentColor = DefaultBackColor;
+                this.BackColor = currentColor;
+            }
+            else
+            {
+                currentColor = Color.Red;
+                this.BackColor = currentColor;
+            }
+        }
+
         private void Table_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Hand;
-            this.BackColor = DefaultBackColor;
+            this.BackColor = currentColor;
             this.label.StateCommon.ShortText.Font = new Font("Arial", 10, FontStyle.Bold);
             this.label.StateCommon.ShortText.Color1 = Color.Black;
             this.label.Width = 50;

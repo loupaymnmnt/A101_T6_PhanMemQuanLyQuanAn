@@ -23,11 +23,18 @@ namespace Loupay_Component.SubControl
         public void Reload(Table table)
         {
             this.tableId.Text = table.Ban.IDBan;
+            this.tableStatus.Text = table.Ban.TrangThai;
         }
 
         private void TableMainBoard_Load(object sender, EventArgs e)
         {
             this.groupbox.Text = "Thông tin bàn";
+        }
+
+        private void btn_Thanhtoan_Click(object sender, EventArgs e)
+        {
+            MessageForm message = new MessageForm();
+            message.ShowMessage("Đăng nhập thành công!");
         }
     }
 }

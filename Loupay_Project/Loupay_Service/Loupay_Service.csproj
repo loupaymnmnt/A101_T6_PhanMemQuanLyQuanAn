@@ -45,6 +45,9 @@
     <Compile Include="Account\CurrentAccount.cs" />
     <Compile Include="Account\LoginProcessing.cs" />
     <Compile Include="Account\LoginResult.cs" />
+    <Compile Include="Client\Message\MessageResult.cs" />
+    <Compile Include="Client\Order\CurrentOrder.cs" />
+    <Compile Include="Client\Table\TableStatus.cs" />
     <Compile Include="Database\DatabaseHandler.cs" />
     <Compile Include="Database\LOUPAY.designer.cs">
       <AutoGen>True</AutoGen>

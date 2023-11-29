@@ -130,6 +130,8 @@
     <None Include="Resources\edit.png" />
     <None Include="Resources\remove.png" />
     <None Include="Resources\save.png" />
+    <Content Include="Images\gahamnam.jpg" />
+    <Content Include="Images\gahapsa.jpg" />
     <Content Include="Utils\ComponentFactory.Krypton.Design.dll" />
     <Content Include="Utils\ComponentFactory.Krypton.Docking.dll" />
     <Content Include="Utils\ComponentFactory.Krypton.Navigator.dll" />
