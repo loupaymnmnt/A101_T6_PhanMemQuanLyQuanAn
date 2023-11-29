@@ -52,5 +52,10 @@ namespace Loupay_Application.Forms.MainForms
         {
 
         }
+
+        private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

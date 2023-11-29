@@ -5,3 +5,9 @@ C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.csproj.CoreCompileInputs.cache
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.dll
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.pdb
+C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.csproj.CoreCompileInputs.cache
+C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.dll
+C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.pdb
+C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.dll.config
+C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.dll
+C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.pdb

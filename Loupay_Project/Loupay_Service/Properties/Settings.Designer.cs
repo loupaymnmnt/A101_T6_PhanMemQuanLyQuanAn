@@ -12,7 +12,7 @@ namespace Loupay_Service.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.3.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -53,6 +53,28 @@ namespace Loupay_Service.Properties {
         public string LOUPAYConnectionString1 {
             get {
                 return ((string)(this["LOUPAYConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-285MR5G\\PHAMHAIDANG;Initial Catalog=LOUPAY;User ID=sa;Passwor" +
+            "d=123")]
+        public string LOUPAYConnectionString2 {
+            get {
+                return ((string)(this["LOUPAYConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-285MR5G\\PHAMHAIDANG;Initial Catalog=LOUPAY;Integrated Securit" +
+            "y=True")]
+        public string LOUPAYConnectionString3 {
+            get {
+                return ((string)(this["LOUPAYConnectionString3"]));
             }
         }
     }
