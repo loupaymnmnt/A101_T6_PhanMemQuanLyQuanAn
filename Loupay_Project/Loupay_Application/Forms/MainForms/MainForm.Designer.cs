@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.giaoDiệnChínhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cài_đặt_tài_khoản = new System.Windows.Forms.ToolStripMenuItem();
             this.phân_quyền = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +46,6 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.giaoDiệnChínhToolStripMenuItem,
             this.quảnLýNgườiDùngToolStripMenuItem,
             this.quảnLýToolStripMenuItem,
             this.quảnLýToolStripMenuItem1,
@@ -59,13 +57,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1082, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // giaoDiệnChínhToolStripMenuItem
-            // 
-            this.giaoDiệnChínhToolStripMenuItem.Image = global::Loupay_Application.Properties.Resources.homeIcon;
-            this.giaoDiệnChínhToolStripMenuItem.Name = "giaoDiệnChínhToolStripMenuItem";
-            this.giaoDiệnChínhToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
-            this.giaoDiệnChínhToolStripMenuItem.Text = "Giao diện chính";
             // 
             // quảnLýNgườiDùngToolStripMenuItem
             // 
@@ -80,13 +71,13 @@
             // cài_đặt_tài_khoản
             // 
             this.cài_đặt_tài_khoản.Name = "cài_đặt_tài_khoản";
-            this.cài_đặt_tài_khoản.Size = new System.Drawing.Size(204, 26);
+            this.cài_đặt_tài_khoản.Size = new System.Drawing.Size(224, 26);
             this.cài_đặt_tài_khoản.Text = "Cài đặt tài khoản";
             // 
             // phân_quyền
             // 
             this.phân_quyền.Name = "phân_quyền";
-            this.phân_quyền.Size = new System.Drawing.Size(204, 26);
+            this.phân_quyền.Size = new System.Drawing.Size(224, 26);
             this.phân_quyền.Text = "Phân quyền";
             // 
             // quảnLýToolStripMenuItem
@@ -162,6 +153,5 @@
         private System.Windows.Forms.ToolStripMenuItem cài_đặt_tài_khoản;
         private System.Windows.Forms.ToolStripMenuItem phân_quyền;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem giaoDiệnChínhToolStripMenuItem;
     }
 }

@@ -110,6 +110,12 @@
     <Compile Include="SubControl\TableMainBoard.Designer.cs">
       <DependentUpon>TableMainBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubControl\TableOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubControl\TableOrder.Designer.cs">
+      <DependentUpon>TableOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="SubControl\TablesPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubControl\TableOrder.resx">
+      <DependentUpon>TableOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
