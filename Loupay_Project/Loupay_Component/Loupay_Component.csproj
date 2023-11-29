@@ -131,6 +131,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubControl\TableMainBoard.resx">
+      <DependentUpon>TableMainBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubControl\TableOrder.resx">
       <DependentUpon>TableOrder.cs</DependentUpon>
     </EmbeddedResource>

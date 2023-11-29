@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Configuration;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,16 +38,16 @@ namespace Loupay_Component.SubControl
         {
             ControlInit();
             ControlEventsInit();
+            SetEnableAllControls(false);
         }
 
         private void ControlInit()
         {
             this.BorderStyle = BorderStyle.FixedSingle;
-            this.Width = 430;
+            this.Width = 445;
             this.Height = 75;
             pictureBox.Top = 0;
             pictureBox.Size = new Size(75, 75);
-            pictureBox.Image = new Bitmap(Properties.Resources.noimage, new Size(75, 75));
             this.Controls.Add(pictureBox);
             dishIdLabel.Text = "Mã món";
             dishNameLabel.Text = "Tên món";
@@ -81,12 +82,56 @@ namespace Loupay_Component.SubControl
             this.Controls.Add(dishIdLabelMain);
             this.Controls.Add(dishNameLabelMain);
             this.Controls.Add(dishPriceLabelMain);
+
+            this.Cursor = Cursors.Hand;
+        }
+
+        public void SetImage(string path)
+        {
+            try
+            {
+                if (File.Exists(path))
+                {
+                    Bitmap bitmap = new Bitmap(path);
+                    bitmap = new Bitmap(bitmap, new Size(75, 75));
+                    pictureBox.Image = bitmap;
+                }
+                else
+                {
+                    pictureBox.Image = new Bitmap(Properties.Resources.noimage, new Size(75, 75));
+                }
+            }
+            catch
+            {
+                
+            }
+        }
+
+        private void SetEnableAllControls(bool value)
+        {
+            foreach (Control control in this.Controls)
+            {
+                control.Enabled = value;
+            }
         }
 
         private void ControlEventsInit()
         {
-
+            this.MouseEnter += Dish_MouseHover;
+            this.MouseLeave += Dish_MouseLeave;
         }
+
+        private void Dish_MouseLeave(object sender, EventArgs e)
+        {
+            this.BackColor = DefaultBackColor;
+        }
+
+        private void Dish_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Aqua;
+        }
+
+
 
         public void SetId(string id)
         {

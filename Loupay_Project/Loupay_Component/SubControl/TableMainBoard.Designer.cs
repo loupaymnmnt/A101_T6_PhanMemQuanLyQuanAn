@@ -28,10 +28,181 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.groupbox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tableId = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tableStatus = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.soMonDat = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tienThanhToan = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btn_Thanhtoan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_xuatHoaDon = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_lamMoi = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.tableOrder1 = new Loupay_Component.SubControl.TableOrder();
+            ((System.ComponentModel.ISupportInitialize)(this.groupbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupbox.Panel)).BeginInit();
+            this.groupbox.Panel.SuspendLayout();
+            this.groupbox.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // groupbox
+            // 
+            this.groupbox.Location = new System.Drawing.Point(0, 0);
+            this.groupbox.Name = "groupbox";
+            // 
+            // groupbox.Panel
+            // 
+            this.groupbox.Panel.Controls.Add(this.tableOrder1);
+            this.groupbox.Panel.Controls.Add(this.btn_lamMoi);
+            this.groupbox.Panel.Controls.Add(this.btn_xuatHoaDon);
+            this.groupbox.Panel.Controls.Add(this.btn_Thanhtoan);
+            this.groupbox.Panel.Controls.Add(this.tienThanhToan);
+            this.groupbox.Panel.Controls.Add(this.kryptonLabel7);
+            this.groupbox.Panel.Controls.Add(this.soMonDat);
+            this.groupbox.Panel.Controls.Add(this.kryptonLabel5);
+            this.groupbox.Panel.Controls.Add(this.tableStatus);
+            this.groupbox.Panel.Controls.Add(this.kryptonLabel3);
+            this.groupbox.Panel.Controls.Add(this.tableId);
+            this.groupbox.Panel.Controls.Add(this.kryptonLabel1);
+            this.groupbox.Size = new System.Drawing.Size(380, 615);
+            this.groupbox.TabIndex = 0;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(3, 12);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(66, 24);
+            this.kryptonLabel1.TabIndex = 1;
+            this.kryptonLabel1.Values.Text = "Mã bàn:";
+            // 
+            // tableId
+            // 
+            this.tableId.Location = new System.Drawing.Point(189, 5);
+            this.tableId.Name = "tableId";
+            this.tableId.Size = new System.Drawing.Size(111, 31);
+            this.tableId.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableId.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableId.TabIndex = 2;
+            this.tableId.Values.Text = "MA_BAN";
+            // 
+            // tableStatus
+            // 
+            this.tableStatus.Location = new System.Drawing.Point(189, 42);
+            this.tableStatus.Name = "tableStatus";
+            this.tableStatus.Size = new System.Drawing.Size(164, 31);
+            this.tableStatus.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableStatus.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableStatus.TabIndex = 4;
+            this.tableStatus.Values.Text = "TRANG_THAI";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(3, 49);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(84, 24);
+            this.kryptonLabel3.TabIndex = 3;
+            this.kryptonLabel3.Values.Text = "Trạng thái:";
+            // 
+            // soMonDat
+            // 
+            this.soMonDat.Location = new System.Drawing.Point(189, 79);
+            this.soMonDat.Name = "soMonDat";
+            this.soMonDat.Size = new System.Drawing.Size(177, 31);
+            this.soMonDat.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soMonDat.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.soMonDat.TabIndex = 6;
+            this.soMonDat.Values.Text = "SO_MON_DAT";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(3, 86);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(115, 24);
+            this.kryptonLabel5.TabIndex = 5;
+            this.kryptonLabel5.Values.Text = "Số món đã đặt:";
+            // 
+            // tienThanhToan
+            // 
+            this.tienThanhToan.Location = new System.Drawing.Point(189, 116);
+            this.tienThanhToan.Name = "tienThanhToan";
+            this.tienThanhToan.Size = new System.Drawing.Size(175, 31);
+            this.tienThanhToan.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tienThanhToan.StateDisabled.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tienThanhToan.TabIndex = 8;
+            this.tienThanhToan.Values.Text = "THANH_TOAN";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(3, 123);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(92, 24);
+            this.kryptonLabel7.TabIndex = 7;
+            this.kryptonLabel7.Values.Text = "Thanh toán:";
+            // 
+            // btn_Thanhtoan
+            // 
+            this.btn_Thanhtoan.Location = new System.Drawing.Point(3, 548);
+            this.btn_Thanhtoan.Name = "btn_Thanhtoan";
+            this.btn_Thanhtoan.Size = new System.Drawing.Size(107, 36);
+            this.btn_Thanhtoan.TabIndex = 9;
+            this.btn_Thanhtoan.Values.Text = "Thanh toán";
+            this.btn_Thanhtoan.Click += new System.EventHandler(this.btn_Thanhtoan_Click);
+            // 
+            // btn_xuatHoaDon
+            // 
+            this.btn_xuatHoaDon.Location = new System.Drawing.Point(116, 548);
+            this.btn_xuatHoaDon.Name = "btn_xuatHoaDon";
+            this.btn_xuatHoaDon.Size = new System.Drawing.Size(146, 36);
+            this.btn_xuatHoaDon.TabIndex = 10;
+            this.btn_xuatHoaDon.Values.Text = "Xuất hóa đơn";
+            // 
+            // btn_lamMoi
+            // 
+            this.btn_lamMoi.Location = new System.Drawing.Point(268, 548);
+            this.btn_lamMoi.Name = "btn_lamMoi";
+            this.btn_lamMoi.Size = new System.Drawing.Size(107, 36);
+            this.btn_lamMoi.TabIndex = 12;
+            this.btn_lamMoi.Values.Text = "Làm mới";
+            // 
+            // tableOrder1
+            // 
+            this.tableOrder1.Location = new System.Drawing.Point(7, 153);
+            this.tableOrder1.Name = "tableOrder1";
+            this.tableOrder1.Size = new System.Drawing.Size(366, 388);
+            this.tableOrder1.TabIndex = 13;
+            // 
+            // TableMainBoard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.groupbox);
+            this.Name = "TableMainBoard";
+            this.Size = new System.Drawing.Size(380, 615);
+            ((System.ComponentModel.ISupportInitialize)(this.groupbox.Panel)).EndInit();
+            this.groupbox.Panel.ResumeLayout(false);
+            this.groupbox.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupbox)).EndInit();
+            this.groupbox.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox groupbox;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel tableId;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel tienThanhToan;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel soMonDat;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel tableStatus;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_xuatHoaDon;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_Thanhtoan;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_lamMoi;
+        private TableOrder tableOrder1;
     }
 }

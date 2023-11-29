@@ -63,6 +63,7 @@ namespace Loupay_Component.SubControl
             {
                 Table table = new Table();
                 table.Ban = bans[i];
+                table.SetBackColor(bans[i].TrangThai);
                 table.Top = currentTop;
                 table.Left = currentLeft;
                 this.panel.Controls.Add(table);
