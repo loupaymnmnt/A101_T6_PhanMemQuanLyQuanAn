@@ -122,5 +122,139 @@ namespace Loupay_Service.Database
                 }
             }
         }
+
+        public static List<NguoiDung> GetAllNguoiDung()
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    List<NguoiDung> nguoidungs = new List<NguoiDung>();
+                    nguoidungs = (from nguoidung in dataContext.NguoiDungs
+                            select nguoidung).OrderBy(id => id.IDNguoiDung).ToList();
+                    return nguoidungs;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static NguoiDung GetNguoiDung(string IDNguoiDung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    NguoiDung nguoidung = new NguoiDung();
+                    nguoidung = (from nd in dataContext.NguoiDungs
+                                 where nd.IDNguoiDung == IDNguoiDung
+                                 select nd).FirstOrDefault();
+                    return nguoidung;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static List<PhanQuyen> GetAllPhanQuyen()
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    List<PhanQuyen> phanQuyens = new List<PhanQuyen>();
+                    phanQuyens = (from phanquyen in dataContext.PhanQuyens
+                                  select phanquyen).ToList();
+                    return phanQuyens;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static List<PhanQuyen> GetAllPhanQuyenOfQuyenNguoiDung(string IDQuyenNguoiDung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    List<PhanQuyen> phanQuyens = new List<PhanQuyen>();
+                    phanQuyens = (from phanquyen in dataContext.PhanQuyens
+                                  where phanquyen.IDQuyenNguoiDung == IDQuyenNguoiDung
+                                  select phanquyen).ToList();
+                    return phanQuyens;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static void InsertNguoiDung(NguoiDung nguoiDung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    dataContext.NguoiDungs.InsertOnSubmit(nguoiDung);
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        public static void UpdateNguoiDung(NguoiDung nguoiDung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    NguoiDung nguoiDungi = (from nD in dataContext.NguoiDungs
+                                           where nD.IDNguoiDung == nguoiDung.IDNguoiDung
+                                           select nD).FirstOrDefault();
+                    nguoiDungi.QuyenNguoiDung = nguoiDung.QuyenNguoiDung;
+                    nguoiDungi.TenNguoiDung = nguoiDung.TenNguoiDung;
+                    nguoiDungi.MatKhau = nguoiDung.MatKhau;
+                    nguoiDungi.BiKhoa = nguoiDung.BiKhoa;
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        public static void DeleteNguoiDung(NguoiDung nguoiDung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    NguoiDung nguoiDungi = (from nD in dataContext.NguoiDungs
+                                            where nD.IDNguoiDung == nguoiDung.IDNguoiDung
+                                            select nD).FirstOrDefault();
+                    nguoiDungi.QuyenNguoiDung = nguoiDung.QuyenNguoiDung;
+                    nguoiDungi.TenNguoiDung = nguoiDung.TenNguoiDung;
+                    nguoiDungi.MatKhau = nguoiDung.MatKhau;
+                    nguoiDungi.BiKhoa = nguoiDung.BiKhoa;
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
     }
 }

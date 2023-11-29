@@ -42,7 +42,7 @@ namespace Loupay_Component.SubControl
         private void ControlInit()
         {
             this.BorderStyle = BorderStyle.FixedSingle;
-            this.Width = 430;
+            this.Width = 445;
             this.Height = 75;
             pictureBox.Top = 0;
             pictureBox.Size = new Size(75, 75);

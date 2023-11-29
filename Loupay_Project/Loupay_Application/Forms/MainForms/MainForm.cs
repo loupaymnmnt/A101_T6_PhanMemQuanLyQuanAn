@@ -39,7 +39,7 @@ namespace Loupay_Application.Forms.MainForms
             tablePanel.TableMainBoard = board;
             tablePanel.Top = 35;
             this.Controls.Add(tablePanel);
-            board.Top = 55;
+            board.Top = 35;
             board.Left = 795;
             this.Controls.Add(board);
             orderPanel = new OrderPanel(DatabaseHandler.GetAllMon());
