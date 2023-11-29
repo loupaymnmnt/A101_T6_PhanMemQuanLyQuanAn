@@ -26,17 +26,6 @@ namespace Loupay_Service.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=VUTHANHDUONG\\D_DB_2012;Initial Catalog=LOUPAYDB;User ID=sa;Password=0" +
-            "9122002")]
-        public string LOUPAYDBConnectionString1 {
-            get {
-                return ((string)(this["LOUPAYDBConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=VUTHANHDUONG\\D_DB_2012;Initial Catalog=LOUPAY;User ID=sa;Password=091" +
             "22002")]
         public string LOUPAYConnectionString {
