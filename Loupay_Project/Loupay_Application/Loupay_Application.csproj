@@ -71,6 +71,12 @@
     <Compile Include="Forms\ActionForms\ConfigurationForm.Designer.cs">
       <DependentUpon>ConfigurationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ActionForms\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ActionForms\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +89,11 @@
     <Compile Include="Forms\MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ManagerForm\MonAnForm.cs">
+    <Compile Include="Forms\ManagerForm\MonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ManagerForm\MonAnForm.Designer.cs">
-      <DependentUpon>MonAnForm.cs</DependentUpon>
+    <Compile Include="Forms\ManagerForm\MonForm.Designer.cs">
+      <DependentUpon>MonForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ManagerForm\NhanVienForms.cs">
       <SubType>Form</SubType>
@@ -97,14 +103,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ActionForms\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ManagerForm\MonAnForm.resx">
-      <DependentUpon>MonAnForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ManagerForm\MonForm.resx">
+      <DependentUpon>MonForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerForm\NhanVienForms.resx">
       <DependentUpon>NhanVienForms.cs</DependentUpon>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LOUPAY" Class="LOUPAYDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-285MR5G\PHAMHAIDANG;Initial Catalog=LOUPAY;Integrated Security=True" SettingsObjectName="Loupay_Service.Properties.Settings" SettingsPropertyName="LOUPAYConnectionString3" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VUTHANHDUONG\D_DB_2012;Initial Catalog=LOUPAY;Integrated Security=True" SettingsObjectName="Loupay_Service.Properties.Settings" SettingsPropertyName="LOUPAYConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Form" Member="Forms">
     <Type Name="Form">
       <Column Name="IDForm" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
