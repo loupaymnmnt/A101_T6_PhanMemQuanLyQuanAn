@@ -33,8 +33,8 @@ namespace Loupay_Component.SubControl
 
         private void btn_Thanhtoan_Click(object sender, EventArgs e)
         {
-            MessageForm message = new MessageForm();
-            message.ShowMessage("Đăng nhập thành công!");
+            //MessageForm message = new MessageForm();
+            //message.ShowMessage("Đăng nhập thành công!");
         }
     }
 }

@@ -1,18 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LOUPAY" Class="LOUPAYDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-285MR5G\PHAMHAIDANG;Initial Catalog=LOUPAY;Integrated Security=True" SettingsObjectName="Loupay_Service.Properties.Settings" SettingsPropertyName="LOUPAYConnectionString3" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Form" Member="Forms">
-    <Type Name="Form">
-      <Column Name="IDForm" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Form_PhanQuyen" Member="PhanQuyens" ThisKey="IDForm" OtherKey="IDForm" Type="PhanQuyen" />
-    </Type>
-  </Table>
-  <Table Name="dbo.DatMon" Member="DatMons">
-    <Type Name="DatMon">
-      <Column Name="IDHoaDon" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="IDMon" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="HoaDon_DatMon" Member="HoaDon" ThisKey="IDHoaDon" OtherKey="IDHoaDon" Type="HoaDon" IsForeignKey="true" />
-      <Association Name="Mon_DatMon" Member="Mon" ThisKey="IDMon" OtherKey="IDMon" Type="Mon" IsForeignKey="true" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-285MR5G\PHAMHAIDANG;Initial Catalog=LOUPAY;User ID=sa" SettingsObjectName="Loupay_Service.Properties.Settings" SettingsPropertyName="LOUPAYConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Ban" Member="Bans">
+    <Type Name="Ban">
+      <Column Name="IDBan" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDKhuVuc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="Ban_HoaDon" Member="HoaDons" ThisKey="IDBan" OtherKey="IDBan" Type="HoaDon" />
+      <Association Name="KhuVuc_Ban" Member="KhuVuc" ThisKey="IDKhuVuc" OtherKey="IDKhuVuc" Type="KhuVuc" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DatHangHoaNhap" Member="DatHangHoaNhaps">
@@ -24,13 +18,19 @@
       <Association Name="HoaDonNhap_DatHangHoaNhap" Member="HoaDonNhap" ThisKey="IDHoaDonNhap" OtherKey="IDHoaDonNhap" Type="HoaDonNhap" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Ban" Member="Bans">
-    <Type Name="Ban">
-      <Column Name="IDBan" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="IDKhuVuc" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Association Name="Ban_HoaDon" Member="HoaDons" ThisKey="IDBan" OtherKey="IDBan" Type="HoaDon" />
-      <Association Name="KhuVuc_Ban" Member="KhuVuc" ThisKey="IDKhuVuc" OtherKey="IDKhuVuc" Type="KhuVuc" IsForeignKey="true" />
+  <Table Name="dbo.DatMon" Member="DatMons">
+    <Type Name="DatMon">
+      <Column Name="IDHoaDon" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDMon" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="HoaDon_DatMon" Member="HoaDon" ThisKey="IDHoaDon" OtherKey="IDHoaDon" Type="HoaDon" IsForeignKey="true" />
+      <Association Name="Mon_DatMon" Member="Mon" ThisKey="IDMon" OtherKey="IDMon" Type="Mon" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Form" Member="Forms">
+    <Type Name="Form">
+      <Column Name="IDForm" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Form_PhanQuyen" Member="PhanQuyens" ThisKey="IDForm" OtherKey="IDForm" Type="PhanQuyen" />
     </Type>
   </Table>
   <Table Name="dbo.HangHoaNhap" Member="HangHoaNhaps">
@@ -57,6 +57,13 @@
       <Association Name="NguoiDung_HoaDon" Member="NguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="NguoiDung" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.KhuVuc" Member="KhuVucs">
+    <Type Name="KhuVuc">
+      <Column Name="IDKhuVuc" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhuVuc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="KhuVuc_Ban" Member="Bans" ThisKey="IDKhuVuc" OtherKey="IDKhuVuc" Type="Ban" />
+    </Type>
+  </Table>
   <Table Name="dbo.HoaDonNhap" Member="HoaDonNhaps">
     <Type Name="HoaDonNhap">
       <Column Name="IDHoaDonNhap" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -66,13 +73,6 @@
       <Column Name="TenDonViCungCap" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="HoaDonNhap_DatHangHoaNhap" Member="DatHangHoaNhaps" ThisKey="IDHoaDonNhap" OtherKey="IDHoaDonNhap" Type="DatHangHoaNhap" />
       <Association Name="NguoiDung_HoaDonNhap" Member="NguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="NguoiDung" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KhuVuc" Member="KhuVucs">
-    <Type Name="KhuVuc">
-      <Column Name="IDKhuVuc" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenKhuVuc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Association Name="KhuVuc_Ban" Member="Bans" ThisKey="IDKhuVuc" OtherKey="IDKhuVuc" Type="Ban" />
     </Type>
   </Table>
   <Table Name="dbo.LoaiMon" Member="LoaiMons">

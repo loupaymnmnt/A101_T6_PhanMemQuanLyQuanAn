@@ -37,6 +37,7 @@ namespace Loupay_Service.Database
             {
                 try
                 {
+                    dataContext.DeferredLoadingEnabled = false;
                     List<KhuVuc> khuVucs = new List<KhuVuc>();
                     khuVucs = (from kv in dataContext.KhuVucs
                                select kv).OrderBy(id => id.IDKhuVuc).ToList();
@@ -49,12 +50,15 @@ namespace Loupay_Service.Database
             }
         }
 
+
+
         public static KhuVuc GetKhuVuc(string khuVucId)
         {
             using (dataContext = new LOUPAYDataContext())
             {
                 try
                 {
+                    
                     KhuVuc khuVucs = new KhuVuc();
                     khuVucs = (from kv in dataContext.KhuVucs
                                where kv.IDKhuVuc == khuVucId
@@ -68,14 +72,65 @@ namespace Loupay_Service.Database
             }
         }
 
+        public static void InsertKhuVuc(KhuVuc khuvuc)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    dataContext.KhuVucs.InsertOnSubmit(khuvuc);
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
         public static List<Ban> GetAllBan()
         {
             using (dataContext = new LOUPAYDataContext())
             {
                 try
                 {
+                    dataContext.DeferredLoadingEnabled = false;
                     List<Ban> bans = new List<Ban>();
                     bans = (from b in dataContext.Bans
+                            select b).OrderBy(id => id.IDBan).ToList();
+                    return bans;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static void InsertBan(Ban ban)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    dataContext.Bans.InsertOnSubmit(ban);
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        public static List<Ban> GetBanByKhuVuc(string IDKhuVuc)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    List<Ban> bans = new List<Ban>();
+                    bans = (from b in dataContext.Bans where b.IDKhuVuc == IDKhuVuc
                             select b).OrderBy(id => id.IDBan).ToList();
                     return bans;
                 }
@@ -152,6 +207,25 @@ namespace Loupay_Service.Database
                                  where nd.IDNguoiDung == IDNguoiDung
                                  select nd).FirstOrDefault();
                     return nguoidung;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static ThongTinNguoiDung GetThongTinNguoiDung(string IDNguoiDung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    ThongTinNguoiDung thongtinnguoidung = new ThongTinNguoiDung();
+                    thongtinnguoidung = (from ttnd in dataContext.ThongTinNguoiDungs
+                                 where ttnd.IDNguoiDung == IDNguoiDung
+                                 select ttnd).FirstOrDefault();
+                    return thongtinnguoidung;
                 }
                 catch
                 {
@@ -248,6 +322,92 @@ namespace Loupay_Service.Database
                     nguoiDungi.TenNguoiDung = nguoiDung.TenNguoiDung;
                     nguoiDungi.MatKhau = nguoiDung.MatKhau;
                     nguoiDungi.BiKhoa = nguoiDung.BiKhoa;
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        public static List<ThongTinNguoiDung> GetAllThongTinNguoiDung()
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    dataContext.DeferredLoadingEnabled = false;
+                    List<ThongTinNguoiDung> nguoidungs = new List<ThongTinNguoiDung>();
+                    nguoidungs = (from ttnd in dataContext.ThongTinNguoiDungs
+                                  select ttnd).OrderBy(id => id.IDNguoiDung).ToList();
+
+
+                    return nguoidungs;
+                }
+                catch
+                {
+                    return null;
+                }
+            }
+        }
+
+        public static void DeleteThongTinNguoiDung(string idnguoidung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+
+                    var ttnguoidung = (from ttnd in dataContext.ThongTinNguoiDungs
+                                       select ttnd).Where(t => t.IDNguoiDung == idnguoidung).FirstOrDefault();
+
+                    dataContext.ThongTinNguoiDungs.DeleteOnSubmit(ttnguoidung);
+                    dataContext.SubmitChanges();
+                    
+                }
+                catch 
+                {
+                    
+                }
+            }
+        }
+
+        public static void InsertThongTinNguoiDung(ThongTinNguoiDung thongtinnguoidung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    dataContext.ThongTinNguoiDungs.InsertOnSubmit(thongtinnguoidung);
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        public static void SuaThongTinNguoiDung(ThongTinNguoiDung thongtinnguoidung)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    var nd = (from ttnd in dataContext.ThongTinNguoiDungs select ttnd).Where(t => t.IDNguoiDung == thongtinnguoidung.IDNguoiDung).FirstOrDefault();
+
+
+                    nd.HoTen = thongtinnguoidung.HoTen;
+                    nd.DiaChi = thongtinnguoidung.DiaChi;
+                    nd.Email = thongtinnguoidung.Email;
+                    nd.SoDienThoai = thongtinnguoidung.SoDienThoai;
+                    nd.GioiTinh = thongtinnguoidung.GioiTinh;
+                    nd.NgaySinh = thongtinnguoidung.NgaySinh;
+                    nd.CanCuocCD = thongtinnguoidung.CanCuocCD;
+                    nd.FileAnh = thongtinnguoidung.FileAnh;
+
+                    
                     dataContext.SubmitChanges();
                 }
                 catch

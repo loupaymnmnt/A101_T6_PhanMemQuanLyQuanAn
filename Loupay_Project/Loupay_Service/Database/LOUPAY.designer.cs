@@ -30,27 +30,27 @@ namespace Loupay_Service.Database
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertForm(Form instance);
-    partial void UpdateForm(Form instance);
-    partial void DeleteForm(Form instance);
-    partial void InsertDatHangHoaNhap(DatHangHoaNhap instance);
-    partial void UpdateDatHangHoaNhap(DatHangHoaNhap instance);
-    partial void DeleteDatHangHoaNhap(DatHangHoaNhap instance);
     partial void InsertBan(Ban instance);
     partial void UpdateBan(Ban instance);
     partial void DeleteBan(Ban instance);
+    partial void InsertDatHangHoaNhap(DatHangHoaNhap instance);
+    partial void UpdateDatHangHoaNhap(DatHangHoaNhap instance);
+    partial void DeleteDatHangHoaNhap(DatHangHoaNhap instance);
+    partial void InsertForm(Form instance);
+    partial void UpdateForm(Form instance);
+    partial void DeleteForm(Form instance);
     partial void InsertHangHoaNhap(HangHoaNhap instance);
     partial void UpdateHangHoaNhap(HangHoaNhap instance);
     partial void DeleteHangHoaNhap(HangHoaNhap instance);
     partial void InsertHoaDon(HoaDon instance);
     partial void UpdateHoaDon(HoaDon instance);
     partial void DeleteHoaDon(HoaDon instance);
-    partial void InsertHoaDonNhap(HoaDonNhap instance);
-    partial void UpdateHoaDonNhap(HoaDonNhap instance);
-    partial void DeleteHoaDonNhap(HoaDonNhap instance);
     partial void InsertKhuVuc(KhuVuc instance);
     partial void UpdateKhuVuc(KhuVuc instance);
     partial void DeleteKhuVuc(KhuVuc instance);
+    partial void InsertHoaDonNhap(HoaDonNhap instance);
+    partial void UpdateHoaDonNhap(HoaDonNhap instance);
+    partial void DeleteHoaDonNhap(HoaDonNhap instance);
     partial void InsertLoaiMon(LoaiMon instance);
     partial void UpdateLoaiMon(LoaiMon instance);
     partial void DeleteLoaiMon(LoaiMon instance);
@@ -72,7 +72,7 @@ namespace Loupay_Service.Database
     #endregion
 		
 		public LOUPAYDataContext() : 
-				base(global::Loupay_Service.Properties.Settings.Default.LOUPAYConnectionString3, mappingSource)
+				base(global::Loupay_Service.Properties.Settings.Default.LOUPAYConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -101,19 +101,11 @@ namespace Loupay_Service.Database
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Form> Forms
+		public System.Data.Linq.Table<Ban> Bans
 		{
 			get
 			{
-				return this.GetTable<Form>();
-			}
-		}
-		
-		public System.Data.Linq.Table<DatMon> DatMons
-		{
-			get
-			{
-				return this.GetTable<DatMon>();
+				return this.GetTable<Ban>();
 			}
 		}
 		
@@ -125,11 +117,19 @@ namespace Loupay_Service.Database
 			}
 		}
 		
-		public System.Data.Linq.Table<Ban> Bans
+		public System.Data.Linq.Table<DatMon> DatMons
 		{
 			get
 			{
-				return this.GetTable<Ban>();
+				return this.GetTable<DatMon>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Form> Forms
+		{
+			get
+			{
+				return this.GetTable<Form>();
 			}
 		}
 		
@@ -149,19 +149,19 @@ namespace Loupay_Service.Database
 			}
 		}
 		
-		public System.Data.Linq.Table<HoaDonNhap> HoaDonNhaps
-		{
-			get
-			{
-				return this.GetTable<HoaDonNhap>();
-			}
-		}
-		
 		public System.Data.Linq.Table<KhuVuc> KhuVucs
 		{
 			get
 			{
 				return this.GetTable<KhuVuc>();
+			}
+		}
+		
+		public System.Data.Linq.Table<HoaDonNhap> HoaDonNhaps
+		{
+			get
+			{
+				return this.GetTable<HoaDonNhap>();
 			}
 		}
 		
@@ -214,60 +214,149 @@ namespace Loupay_Service.Database
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Form")]
-	public partial class Form : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ban")]
+	public partial class Ban : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _IDForm;
+		private string _IDBan;
 		
-		private EntitySet<PhanQuyen> _PhanQuyens;
+		private string _IDKhuVuc;
+		
+		private string _TrangThai;
+		
+		private EntitySet<HoaDon> _HoaDons;
+		
+		private EntityRef<KhuVuc> _KhuVuc;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDFormChanging(string value);
-    partial void OnIDFormChanged();
+    partial void OnIDBanChanging(string value);
+    partial void OnIDBanChanged();
+    partial void OnIDKhuVucChanging(string value);
+    partial void OnIDKhuVucChanged();
+    partial void OnTrangThaiChanging(string value);
+    partial void OnTrangThaiChanged();
     #endregion
 		
-		public Form()
+		public Ban()
 		{
-			this._PhanQuyens = new EntitySet<PhanQuyen>(new Action<PhanQuyen>(this.attach_PhanQuyens), new Action<PhanQuyen>(this.detach_PhanQuyens));
+			this._HoaDons = new EntitySet<HoaDon>(new Action<HoaDon>(this.attach_HoaDons), new Action<HoaDon>(this.detach_HoaDons));
+			this._KhuVuc = default(EntityRef<KhuVuc>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDForm", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string IDForm
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBan", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string IDBan
 		{
 			get
 			{
-				return this._IDForm;
+				return this._IDBan;
 			}
 			set
 			{
-				if ((this._IDForm != value))
+				if ((this._IDBan != value))
 				{
-					this.OnIDFormChanging(value);
+					this.OnIDBanChanging(value);
 					this.SendPropertyChanging();
-					this._IDForm = value;
-					this.SendPropertyChanged("IDForm");
-					this.OnIDFormChanged();
+					this._IDBan = value;
+					this.SendPropertyChanged("IDBan");
+					this.OnIDBanChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Form_PhanQuyen", Storage="_PhanQuyens", ThisKey="IDForm", OtherKey="IDForm")]
-		public EntitySet<PhanQuyen> PhanQuyens
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDKhuVuc", DbType="VarChar(10)")]
+		public string IDKhuVuc
 		{
 			get
 			{
-				return this._PhanQuyens;
+				return this._IDKhuVuc;
 			}
 			set
 			{
-				this._PhanQuyens.Assign(value);
+				if ((this._IDKhuVuc != value))
+				{
+					if (this._KhuVuc.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnIDKhuVucChanging(value);
+					this.SendPropertyChanging();
+					this._IDKhuVuc = value;
+					this.SendPropertyChanged("IDKhuVuc");
+					this.OnIDKhuVucChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="NVarChar(255)")]
+		public string TrangThai
+		{
+			get
+			{
+				return this._TrangThai;
+			}
+			set
+			{
+				if ((this._TrangThai != value))
+				{
+					this.OnTrangThaiChanging(value);
+					this.SendPropertyChanging();
+					this._TrangThai = value;
+					this.SendPropertyChanged("TrangThai");
+					this.OnTrangThaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ban_HoaDon", Storage="_HoaDons", ThisKey="IDBan", OtherKey="IDBan")]
+		public EntitySet<HoaDon> HoaDons
+		{
+			get
+			{
+				return this._HoaDons;
+			}
+			set
+			{
+				this._HoaDons.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhuVuc_Ban", Storage="_KhuVuc", ThisKey="IDKhuVuc", OtherKey="IDKhuVuc", IsForeignKey=true)]
+		public KhuVuc KhuVuc
+		{
+			get
+			{
+				return this._KhuVuc.Entity;
+			}
+			set
+			{
+				KhuVuc previousValue = this._KhuVuc.Entity;
+				if (((previousValue != value) 
+							|| (this._KhuVuc.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._KhuVuc.Entity = null;
+						previousValue.Bans.Remove(this);
+					}
+					this._KhuVuc.Entity = value;
+					if ((value != null))
+					{
+						value.Bans.Add(this);
+						this._IDKhuVuc = value.IDKhuVuc;
+					}
+					else
+					{
+						this._IDKhuVuc = default(string);
+					}
+					this.SendPropertyChanged("KhuVuc");
+				}
 			}
 		}
 		
@@ -291,79 +380,16 @@ namespace Loupay_Service.Database
 			}
 		}
 		
-		private void attach_PhanQuyens(PhanQuyen entity)
+		private void attach_HoaDons(HoaDon entity)
 		{
 			this.SendPropertyChanging();
-			entity.Form = this;
+			entity.Ban = this;
 		}
 		
-		private void detach_PhanQuyens(PhanQuyen entity)
+		private void detach_HoaDons(HoaDon entity)
 		{
 			this.SendPropertyChanging();
-			entity.Form = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DatMon")]
-	public partial class DatMon
-	{
-		
-		private string _IDHoaDon;
-		
-		private string _IDMon;
-		
-		private System.Nullable<int> _SoLuong;
-		
-		public DatMon()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDHoaDon", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string IDHoaDon
-		{
-			get
-			{
-				return this._IDHoaDon;
-			}
-			set
-			{
-				if ((this._IDHoaDon != value))
-				{
-					this._IDHoaDon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDMon", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string IDMon
-		{
-			get
-			{
-				return this._IDMon;
-			}
-			set
-			{
-				if ((this._IDMon != value))
-				{
-					this._IDMon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
-		public System.Nullable<int> SoLuong
-		{
-			get
-			{
-				return this._SoLuong;
-			}
-			set
-			{
-				if ((this._SoLuong != value))
-				{
-					this._SoLuong = value;
-				}
-			}
+			entity.Ban = null;
 		}
 	}
 	
@@ -559,149 +585,123 @@ namespace Loupay_Service.Database
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Ban")]
-	public partial class Ban : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DatMon")]
+	public partial class DatMon
+	{
+		
+		private string _IDHoaDon;
+		
+		private string _IDMon;
+		
+		private System.Nullable<int> _SoLuong;
+		
+		public DatMon()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDHoaDon", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string IDHoaDon
+		{
+			get
+			{
+				return this._IDHoaDon;
+			}
+			set
+			{
+				if ((this._IDHoaDon != value))
+				{
+					this._IDHoaDon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDMon", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string IDMon
+		{
+			get
+			{
+				return this._IDMon;
+			}
+			set
+			{
+				if ((this._IDMon != value))
+				{
+					this._IDMon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this._SoLuong = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Form")]
+	public partial class Form : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private string _IDBan;
+		private string _IDForm;
 		
-		private string _IDKhuVuc;
-		
-		private string _TrangThai;
-		
-		private EntitySet<HoaDon> _HoaDons;
-		
-		private EntityRef<KhuVuc> _KhuVuc;
+		private EntitySet<PhanQuyen> _PhanQuyens;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIDBanChanging(string value);
-    partial void OnIDBanChanged();
-    partial void OnIDKhuVucChanging(string value);
-    partial void OnIDKhuVucChanged();
-    partial void OnTrangThaiChanging(string value);
-    partial void OnTrangThaiChanged();
+    partial void OnIDFormChanging(string value);
+    partial void OnIDFormChanged();
     #endregion
 		
-		public Ban()
+		public Form()
 		{
-			this._HoaDons = new EntitySet<HoaDon>(new Action<HoaDon>(this.attach_HoaDons), new Action<HoaDon>(this.detach_HoaDons));
-			this._KhuVuc = default(EntityRef<KhuVuc>);
+			this._PhanQuyens = new EntitySet<PhanQuyen>(new Action<PhanQuyen>(this.attach_PhanQuyens), new Action<PhanQuyen>(this.detach_PhanQuyens));
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDBan", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string IDBan
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDForm", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string IDForm
 		{
 			get
 			{
-				return this._IDBan;
+				return this._IDForm;
 			}
 			set
 			{
-				if ((this._IDBan != value))
+				if ((this._IDForm != value))
 				{
-					this.OnIDBanChanging(value);
+					this.OnIDFormChanging(value);
 					this.SendPropertyChanging();
-					this._IDBan = value;
-					this.SendPropertyChanged("IDBan");
-					this.OnIDBanChanged();
+					this._IDForm = value;
+					this.SendPropertyChanged("IDForm");
+					this.OnIDFormChanged();
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDKhuVuc", DbType="VarChar(10)")]
-		public string IDKhuVuc
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Form_PhanQuyen", Storage="_PhanQuyens", ThisKey="IDForm", OtherKey="IDForm")]
+		public EntitySet<PhanQuyen> PhanQuyens
 		{
 			get
 			{
-				return this._IDKhuVuc;
+				return this._PhanQuyens;
 			}
 			set
 			{
-				if ((this._IDKhuVuc != value))
-				{
-					if (this._KhuVuc.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnIDKhuVucChanging(value);
-					this.SendPropertyChanging();
-					this._IDKhuVuc = value;
-					this.SendPropertyChanged("IDKhuVuc");
-					this.OnIDKhuVucChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="NVarChar(255)")]
-		public string TrangThai
-		{
-			get
-			{
-				return this._TrangThai;
-			}
-			set
-			{
-				if ((this._TrangThai != value))
-				{
-					this.OnTrangThaiChanging(value);
-					this.SendPropertyChanging();
-					this._TrangThai = value;
-					this.SendPropertyChanged("TrangThai");
-					this.OnTrangThaiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Ban_HoaDon", Storage="_HoaDons", ThisKey="IDBan", OtherKey="IDBan")]
-		public EntitySet<HoaDon> HoaDons
-		{
-			get
-			{
-				return this._HoaDons;
-			}
-			set
-			{
-				this._HoaDons.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhuVuc_Ban", Storage="_KhuVuc", ThisKey="IDKhuVuc", OtherKey="IDKhuVuc", IsForeignKey=true)]
-		public KhuVuc KhuVuc
-		{
-			get
-			{
-				return this._KhuVuc.Entity;
-			}
-			set
-			{
-				KhuVuc previousValue = this._KhuVuc.Entity;
-				if (((previousValue != value) 
-							|| (this._KhuVuc.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._KhuVuc.Entity = null;
-						previousValue.Bans.Remove(this);
-					}
-					this._KhuVuc.Entity = value;
-					if ((value != null))
-					{
-						value.Bans.Add(this);
-						this._IDKhuVuc = value.IDKhuVuc;
-					}
-					else
-					{
-						this._IDKhuVuc = default(string);
-					}
-					this.SendPropertyChanged("KhuVuc");
-				}
+				this._PhanQuyens.Assign(value);
 			}
 		}
 		
@@ -725,16 +725,16 @@ namespace Loupay_Service.Database
 			}
 		}
 		
-		private void attach_HoaDons(HoaDon entity)
+		private void attach_PhanQuyens(PhanQuyen entity)
 		{
 			this.SendPropertyChanging();
-			entity.Ban = this;
+			entity.Form = this;
 		}
 		
-		private void detach_HoaDons(HoaDon entity)
+		private void detach_PhanQuyens(PhanQuyen entity)
 		{
 			this.SendPropertyChanging();
-			entity.Ban = null;
+			entity.Form = null;
 		}
 	}
 	
@@ -1212,6 +1212,120 @@ namespace Loupay_Service.Database
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KhuVuc")]
+	public partial class KhuVuc : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _IDKhuVuc;
+		
+		private string _TenKhuVuc;
+		
+		private EntitySet<Ban> _Bans;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDKhuVucChanging(string value);
+    partial void OnIDKhuVucChanged();
+    partial void OnTenKhuVucChanging(string value);
+    partial void OnTenKhuVucChanged();
+    #endregion
+		
+		public KhuVuc()
+		{
+			this._Bans = new EntitySet<Ban>(new Action<Ban>(this.attach_Bans), new Action<Ban>(this.detach_Bans));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDKhuVuc", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string IDKhuVuc
+		{
+			get
+			{
+				return this._IDKhuVuc;
+			}
+			set
+			{
+				if ((this._IDKhuVuc != value))
+				{
+					this.OnIDKhuVucChanging(value);
+					this.SendPropertyChanging();
+					this._IDKhuVuc = value;
+					this.SendPropertyChanged("IDKhuVuc");
+					this.OnIDKhuVucChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKhuVuc", DbType="NVarChar(255)")]
+		public string TenKhuVuc
+		{
+			get
+			{
+				return this._TenKhuVuc;
+			}
+			set
+			{
+				if ((this._TenKhuVuc != value))
+				{
+					this.OnTenKhuVucChanging(value);
+					this.SendPropertyChanging();
+					this._TenKhuVuc = value;
+					this.SendPropertyChanged("TenKhuVuc");
+					this.OnTenKhuVucChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhuVuc_Ban", Storage="_Bans", ThisKey="IDKhuVuc", OtherKey="IDKhuVuc")]
+		public EntitySet<Ban> Bans
+		{
+			get
+			{
+				return this._Bans;
+			}
+			set
+			{
+				this._Bans.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Bans(Ban entity)
+		{
+			this.SendPropertyChanging();
+			entity.KhuVuc = this;
+		}
+		
+		private void detach_Bans(Ban entity)
+		{
+			this.SendPropertyChanging();
+			entity.KhuVuc = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.HoaDonNhap")]
 	public partial class HoaDonNhap : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1436,120 +1550,6 @@ namespace Loupay_Service.Database
 		{
 			this.SendPropertyChanging();
 			entity.HoaDonNhap = null;
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.KhuVuc")]
-	public partial class KhuVuc : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _IDKhuVuc;
-		
-		private string _TenKhuVuc;
-		
-		private EntitySet<Ban> _Bans;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDKhuVucChanging(string value);
-    partial void OnIDKhuVucChanged();
-    partial void OnTenKhuVucChanging(string value);
-    partial void OnTenKhuVucChanged();
-    #endregion
-		
-		public KhuVuc()
-		{
-			this._Bans = new EntitySet<Ban>(new Action<Ban>(this.attach_Bans), new Action<Ban>(this.detach_Bans));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDKhuVuc", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string IDKhuVuc
-		{
-			get
-			{
-				return this._IDKhuVuc;
-			}
-			set
-			{
-				if ((this._IDKhuVuc != value))
-				{
-					this.OnIDKhuVucChanging(value);
-					this.SendPropertyChanging();
-					this._IDKhuVuc = value;
-					this.SendPropertyChanged("IDKhuVuc");
-					this.OnIDKhuVucChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKhuVuc", DbType="NVarChar(255)")]
-		public string TenKhuVuc
-		{
-			get
-			{
-				return this._TenKhuVuc;
-			}
-			set
-			{
-				if ((this._TenKhuVuc != value))
-				{
-					this.OnTenKhuVucChanging(value);
-					this.SendPropertyChanging();
-					this._TenKhuVuc = value;
-					this.SendPropertyChanged("TenKhuVuc");
-					this.OnTenKhuVucChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="KhuVuc_Ban", Storage="_Bans", ThisKey="IDKhuVuc", OtherKey="IDKhuVuc")]
-		public EntitySet<Ban> Bans
-		{
-			get
-			{
-				return this._Bans;
-			}
-			set
-			{
-				this._Bans.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Bans(Ban entity)
-		{
-			this.SendPropertyChanging();
-			entity.KhuVuc = this;
-		}
-		
-		private void detach_Bans(Ban entity)
-		{
-			this.SendPropertyChanging();
-			entity.KhuVuc = null;
 		}
 	}
 	
