@@ -1,5 +1,6 @@
 ﻿using ComponentFactory.Krypton.Docking;
 using ComponentFactory.Krypton.Toolkit;
+using Loupay_Service.Client.Order;
 using Loupay_Service.Client.Table;
 using Loupay_Service.Database;
 using System;
@@ -18,7 +19,42 @@ namespace Loupay_Component.SubControl
     {
         private Color currentColor = DefaultBackColor;
         private Ban ban;
+        private List<CurrentOrder> _currentOrders = new List<CurrentOrder>();
+        public List<CurrentOrder> CurrentOrders { get { return _currentOrders; } set { _currentOrders = value; } }
         public Ban Ban { get { return ban; } set { ban = value; } }
+
+        public void Add(CurrentOrder newOrder)
+        {
+            CurrentOrder order = CurrentOrders.Find(d => d.MaMon == newOrder.MaMon);
+            if (order != null)
+            {
+                order.SoLuong += 1;
+            }
+            else
+            {
+                CurrentOrders.Add(newOrder);
+            }
+        }
+
+        public decimal GetTotalPrice()
+        {
+            decimal sum = 0;
+            foreach (CurrentOrder order in _currentOrders)
+            {
+                sum += order.GiaMon * order.SoLuong;
+            }
+            return sum;
+        }
+
+        public int GetTotalDishes()
+        {
+            int q = 0;
+            foreach (CurrentOrder order in _currentOrders)
+            {
+                q += order.SoLuong;
+            }
+            return q;
+        }
 
         #region CONTROLS
         KryptonLabel label = new KryptonLabel();

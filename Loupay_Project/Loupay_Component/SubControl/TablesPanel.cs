@@ -18,9 +18,10 @@ namespace Loupay_Component.SubControl
         private string _id = string.Empty;
         private TableMainBoard mainBoard;
         private List<Ban> bans;
-
+        private DishListBox listBox;
         public string Id { get => _id; set => _id = value; }
         public TableMainBoard TableMainBoard { get { return mainBoard; } set { mainBoard = value; } }
+        public DishListBox ListBox { get { return listBox; } set { listBox = value; } }
 
         Panel panel = new Panel();
         List<Table> tables = new List<Table>();
@@ -91,7 +92,8 @@ namespace Loupay_Component.SubControl
 
         private void Table_Click(object sender, EventArgs e)
         {
-            mainBoard.Reload((Table)sender);
+            CurrentSelectedTable.Table = (Table)sender;
+            mainBoard.Reload();
         }
     }
 }
