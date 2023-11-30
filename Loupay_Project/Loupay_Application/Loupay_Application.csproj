@@ -89,6 +89,12 @@
     <Compile Include="Forms\MainForms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ManagerForm\BanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManagerForm\BanForm.Designer.cs">
+      <DependentUpon>BanForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ManagerForm\MonForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManagerForm\BanForm.resx">
+      <DependentUpon>BanForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ManagerForm\MonForm.resx">
       <DependentUpon>MonForm.cs</DependentUpon>

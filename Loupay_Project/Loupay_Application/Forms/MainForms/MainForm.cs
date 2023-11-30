@@ -73,5 +73,11 @@ namespace Loupay_Application.Forms.MainForms
             ReportForm form = new ReportForm();
             form.ShowDialog();
         }
+
+        private void quảnLýToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BanForm form = new BanForm();
+            form.ShowDialog();
+        }
     }
 }
