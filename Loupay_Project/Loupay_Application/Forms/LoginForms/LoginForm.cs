@@ -28,6 +28,7 @@ namespace Loupay_Application.Forms.LoginForms
         public LoginForm()
         {
             InitializeComponent();
+            CenterToScreen();
             this.Load += LoginForm_Load;
         }
 

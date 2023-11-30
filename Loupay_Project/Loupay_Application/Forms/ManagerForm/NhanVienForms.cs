@@ -15,6 +15,7 @@ namespace Loupay_Application.Forms.ManagerForm
         public NhanVienForms()
         {
             InitializeComponent();
+            CenterToScreen();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Loupay_Application.Forms.MainForms
         public MainForm()
         {
             InitializeComponent();
+            CenterToScreen();
             this.Load += MainForm_Load;
         }
 
