@@ -32,11 +32,11 @@
             this.kryptonPage1 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonGroupBox5 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_huy_1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_luu_1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_xoa_1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_sua_1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_them_1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +45,19 @@
             this.tb_tenmon = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.tb_mamon = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonGroupBox3 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.cbbox_tt_tenloaimon_1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.btn_findimg = new System.Windows.Forms.Button();
+            this.kryptonLabel8 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tb_tt_hinhanh_1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tb_tt_donvitinh_1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tb_tt_giamon_1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tb_tt_tenmon_1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tb_tt_mamon_1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.datagridview_mon = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,21 +66,25 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kryptonPage2 = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tb_tenloaimon_2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonGroupBox4 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton7 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton8 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton9 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton10 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_huy_2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_luu_2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_xoa_2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_sua_2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btn_them_2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonGroupBox6 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tb_tt_tenloaimon_2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.tb_tt_maloaimon_2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_timkiem_2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tb_maloaimon_2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.datagridview_loaimon = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDockableNavigator1)).BeginInit();
             this.kryptonDockableNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage1)).BeginInit();
@@ -83,7 +100,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbbox_tenloaimon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).BeginInit();
+            this.kryptonGroupBox3.Panel.SuspendLayout();
             this.kryptonGroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbox_tt_tenloaimon_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_mon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).BeginInit();
             this.kryptonPage2.SuspendLayout();
@@ -97,6 +116,7 @@
             this.kryptonGroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6.Panel)).BeginInit();
+            this.kryptonGroupBox6.Panel.SuspendLayout();
             this.kryptonGroupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_loaimon)).BeginInit();
             this.SuspendLayout();
@@ -155,59 +175,64 @@
             // 
             // kryptonGroupBox5.Panel
             // 
-            this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonButton4);
-            this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonButton5);
-            this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonButton3);
-            this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonButton2);
-            this.kryptonGroupBox5.Panel.Controls.Add(this.kryptonButton1);
+            this.kryptonGroupBox5.Panel.Controls.Add(this.btn_huy_1);
+            this.kryptonGroupBox5.Panel.Controls.Add(this.btn_luu_1);
+            this.kryptonGroupBox5.Panel.Controls.Add(this.btn_xoa_1);
+            this.kryptonGroupBox5.Panel.Controls.Add(this.btn_sua_1);
+            this.kryptonGroupBox5.Panel.Controls.Add(this.btn_them_1);
             this.kryptonGroupBox5.Size = new System.Drawing.Size(374, 128);
             this.kryptonGroupBox5.TabIndex = 9;
             this.kryptonGroupBox5.Values.Heading = "Hành động";
             // 
-            // kryptonButton4
+            // btn_huy_1
             // 
-            this.kryptonButton4.Location = new System.Drawing.Point(130, 53);
-            this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton4.TabIndex = 4;
-            this.kryptonButton4.Values.Image = global::Loupay_Application.Properties.Resources.cancel;
-            this.kryptonButton4.Values.Text = "HỦY";
+            this.btn_huy_1.Location = new System.Drawing.Point(130, 53);
+            this.btn_huy_1.Name = "btn_huy_1";
+            this.btn_huy_1.Size = new System.Drawing.Size(111, 35);
+            this.btn_huy_1.TabIndex = 4;
+            this.btn_huy_1.Values.Image = global::Loupay_Application.Properties.Resources.cancel;
+            this.btn_huy_1.Values.Text = "HỦY";
+            this.btn_huy_1.Click += new System.EventHandler(this.btn_huy_1_Click);
             // 
-            // kryptonButton5
+            // btn_luu_1
             // 
-            this.kryptonButton5.Location = new System.Drawing.Point(6, 53);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton5.TabIndex = 3;
-            this.kryptonButton5.Values.Image = global::Loupay_Application.Properties.Resources.save;
-            this.kryptonButton5.Values.Text = "LƯU";
+            this.btn_luu_1.Location = new System.Drawing.Point(6, 53);
+            this.btn_luu_1.Name = "btn_luu_1";
+            this.btn_luu_1.Size = new System.Drawing.Size(111, 35);
+            this.btn_luu_1.TabIndex = 3;
+            this.btn_luu_1.Values.Image = global::Loupay_Application.Properties.Resources.save;
+            this.btn_luu_1.Values.Text = "LƯU";
+            this.btn_luu_1.Click += new System.EventHandler(this.btn_luu_1_Click);
             // 
-            // kryptonButton3
+            // btn_xoa_1
             // 
-            this.kryptonButton3.Location = new System.Drawing.Point(254, 12);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton3.TabIndex = 2;
-            this.kryptonButton3.Values.Image = global::Loupay_Application.Properties.Resources.remove;
-            this.kryptonButton3.Values.Text = "XÓA";
+            this.btn_xoa_1.Location = new System.Drawing.Point(254, 12);
+            this.btn_xoa_1.Name = "btn_xoa_1";
+            this.btn_xoa_1.Size = new System.Drawing.Size(111, 35);
+            this.btn_xoa_1.TabIndex = 2;
+            this.btn_xoa_1.Values.Image = global::Loupay_Application.Properties.Resources.remove;
+            this.btn_xoa_1.Values.Text = "XÓA";
+            this.btn_xoa_1.Click += new System.EventHandler(this.btn_xoa_1_Click);
             // 
-            // kryptonButton2
+            // btn_sua_1
             // 
-            this.kryptonButton2.Location = new System.Drawing.Point(130, 12);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton2.TabIndex = 1;
-            this.kryptonButton2.Values.Image = global::Loupay_Application.Properties.Resources.edit;
-            this.kryptonButton2.Values.Text = "SỬA";
+            this.btn_sua_1.Location = new System.Drawing.Point(130, 12);
+            this.btn_sua_1.Name = "btn_sua_1";
+            this.btn_sua_1.Size = new System.Drawing.Size(111, 35);
+            this.btn_sua_1.TabIndex = 1;
+            this.btn_sua_1.Values.Image = global::Loupay_Application.Properties.Resources.edit;
+            this.btn_sua_1.Values.Text = "SỬA";
+            this.btn_sua_1.Click += new System.EventHandler(this.btn_sua_1_Click);
             // 
-            // kryptonButton1
+            // btn_them_1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(6, 12);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton1.TabIndex = 0;
-            this.kryptonButton1.Values.Image = global::Loupay_Application.Properties.Resources.add;
-            this.kryptonButton1.Values.Text = "THÊM";
+            this.btn_them_1.Location = new System.Drawing.Point(6, 12);
+            this.btn_them_1.Name = "btn_them_1";
+            this.btn_them_1.Size = new System.Drawing.Size(111, 35);
+            this.btn_them_1.TabIndex = 0;
+            this.btn_them_1.Values.Image = global::Loupay_Application.Properties.Resources.add;
+            this.btn_them_1.Values.Text = "THÊM";
+            this.btn_them_1.Click += new System.EventHandler(this.btn_them_1_Click);
             // 
             // label3
             // 
@@ -243,6 +268,7 @@
             this.btn_timkiem.Size = new System.Drawing.Size(105, 32);
             this.btn_timkiem.TabIndex = 5;
             this.btn_timkiem.Values.Text = "Tìm";
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
             // 
             // cbbox_tenloaimon
             // 
@@ -270,9 +296,126 @@
             // 
             this.kryptonGroupBox3.Location = new System.Drawing.Point(690, 3);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
+            // 
+            // kryptonGroupBox3.Panel
+            // 
+            this.kryptonGroupBox3.Panel.Controls.Add(this.cbbox_tt_tenloaimon_1);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.btn_findimg);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel8);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel7);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.tb_tt_hinhanh_1);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel6);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.tb_tt_donvitinh_1);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel5);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.tb_tt_giamon_1);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel3);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.tb_tt_tenmon_1);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel4);
+            this.kryptonGroupBox3.Panel.Controls.Add(this.tb_tt_mamon_1);
             this.kryptonGroupBox3.Size = new System.Drawing.Size(374, 350);
             this.kryptonGroupBox3.TabIndex = 1;
             this.kryptonGroupBox3.Values.Heading = "Thông tin món";
+            // 
+            // cbbox_tt_tenloaimon_1
+            // 
+            this.cbbox_tt_tenloaimon_1.DropDownWidth = 170;
+            this.cbbox_tt_tenloaimon_1.Location = new System.Drawing.Point(195, 33);
+            this.cbbox_tt_tenloaimon_1.Name = "cbbox_tt_tenloaimon_1";
+            this.cbbox_tt_tenloaimon_1.Size = new System.Drawing.Size(170, 25);
+            this.cbbox_tt_tenloaimon_1.StateCommon.Item.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbox_tt_tenloaimon_1.TabIndex = 34;
+            // 
+            // btn_findimg
+            // 
+            this.btn_findimg.Location = new System.Drawing.Point(290, 290);
+            this.btn_findimg.Name = "btn_findimg";
+            this.btn_findimg.Size = new System.Drawing.Size(75, 27);
+            this.btn_findimg.TabIndex = 33;
+            this.btn_findimg.Text = "Chọn";
+            this.btn_findimg.UseVisualStyleBackColor = true;
+            // 
+            // kryptonLabel8
+            // 
+            this.kryptonLabel8.Location = new System.Drawing.Point(195, 3);
+            this.kryptonLabel8.Name = "kryptonLabel8";
+            this.kryptonLabel8.Size = new System.Drawing.Size(75, 24);
+            this.kryptonLabel8.TabIndex = 32;
+            this.kryptonLabel8.Values.Text = "Loại món";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(7, 260);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(73, 24);
+            this.kryptonLabel7.TabIndex = 30;
+            this.kryptonLabel7.Values.Text = "Hình ảnh";
+            // 
+            // tb_tt_hinhanh_1
+            // 
+            this.tb_tt_hinhanh_1.Location = new System.Drawing.Point(9, 290);
+            this.tb_tt_hinhanh_1.Name = "tb_tt_hinhanh_1";
+            this.tb_tt_hinhanh_1.Size = new System.Drawing.Size(275, 27);
+            this.tb_tt_hinhanh_1.TabIndex = 29;
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(9, 199);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(86, 24);
+            this.kryptonLabel6.TabIndex = 28;
+            this.kryptonLabel6.Values.Text = "Đơn vị tính";
+            // 
+            // tb_tt_donvitinh_1
+            // 
+            this.tb_tt_donvitinh_1.Location = new System.Drawing.Point(9, 229);
+            this.tb_tt_donvitinh_1.Name = "tb_tt_donvitinh_1";
+            this.tb_tt_donvitinh_1.Size = new System.Drawing.Size(358, 27);
+            this.tb_tt_donvitinh_1.TabIndex = 27;
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(8, 130);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(34, 24);
+            this.kryptonLabel5.TabIndex = 26;
+            this.kryptonLabel5.Values.Text = "Giá";
+            // 
+            // tb_tt_giamon_1
+            // 
+            this.tb_tt_giamon_1.Location = new System.Drawing.Point(8, 160);
+            this.tb_tt_giamon_1.Name = "tb_tt_giamon_1";
+            this.tb_tt_giamon_1.Size = new System.Drawing.Size(358, 27);
+            this.tb_tt_giamon_1.TabIndex = 25;
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(8, 66);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(72, 24);
+            this.kryptonLabel3.TabIndex = 24;
+            this.kryptonLabel3.Values.Text = "Tên món";
+            // 
+            // tb_tt_tenmon_1
+            // 
+            this.tb_tt_tenmon_1.Location = new System.Drawing.Point(8, 96);
+            this.tb_tt_tenmon_1.Name = "tb_tt_tenmon_1";
+            this.tb_tt_tenmon_1.Size = new System.Drawing.Size(358, 27);
+            this.tb_tt_tenmon_1.TabIndex = 23;
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(7, 3);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(69, 24);
+            this.kryptonLabel4.TabIndex = 22;
+            this.kryptonLabel4.Values.Text = "Mã món";
+            // 
+            // tb_tt_mamon_1
+            // 
+            this.tb_tt_mamon_1.Location = new System.Drawing.Point(7, 33);
+            this.tb_tt_mamon_1.Name = "tb_tt_mamon_1";
+            this.tb_tt_mamon_1.Size = new System.Drawing.Size(170, 27);
+            this.tb_tt_mamon_1.TabIndex = 21;
             // 
             // datagridview_mon
             // 
@@ -358,7 +501,7 @@
             // kryptonGroupBox2.Panel
             // 
             this.kryptonGroupBox2.Panel.Controls.Add(this.label4);
-            this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonTextBox1);
+            this.kryptonGroupBox2.Panel.Controls.Add(this.tb_tenloaimon_2);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonGroupBox4);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonGroupBox6);
             this.kryptonGroupBox2.Panel.Controls.Add(this.label5);
@@ -369,6 +512,22 @@
             this.kryptonGroupBox2.TabIndex = 1;
             this.kryptonGroupBox2.Values.Heading = "Danh sách loại món";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(139, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Tên loại món";
+            // 
+            // tb_tenloaimon_2
+            // 
+            this.tb_tenloaimon_2.Location = new System.Drawing.Point(142, 24);
+            this.tb_tenloaimon_2.Name = "tb_tenloaimon_2";
+            this.tb_tenloaimon_2.Size = new System.Drawing.Size(257, 27);
+            this.tb_tenloaimon_2.TabIndex = 12;
+            // 
             // kryptonGroupBox4
             // 
             this.kryptonGroupBox4.Location = new System.Drawing.Point(691, 352);
@@ -376,67 +535,109 @@
             // 
             // kryptonGroupBox4.Panel
             // 
-            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonButton6);
-            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonButton7);
-            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonButton8);
-            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonButton9);
-            this.kryptonGroupBox4.Panel.Controls.Add(this.kryptonButton10);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.btn_huy_2);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.btn_luu_2);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.btn_xoa_2);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.btn_sua_2);
+            this.kryptonGroupBox4.Panel.Controls.Add(this.btn_them_2);
             this.kryptonGroupBox4.Size = new System.Drawing.Size(374, 128);
             this.kryptonGroupBox4.TabIndex = 11;
             this.kryptonGroupBox4.Values.Heading = "Hành động";
             // 
-            // kryptonButton6
+            // btn_huy_2
             // 
-            this.kryptonButton6.Location = new System.Drawing.Point(130, 53);
-            this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton6.TabIndex = 4;
-            this.kryptonButton6.Values.Image = global::Loupay_Application.Properties.Resources.cancel;
-            this.kryptonButton6.Values.Text = "HỦY";
+            this.btn_huy_2.Location = new System.Drawing.Point(130, 53);
+            this.btn_huy_2.Name = "btn_huy_2";
+            this.btn_huy_2.Size = new System.Drawing.Size(111, 35);
+            this.btn_huy_2.TabIndex = 4;
+            this.btn_huy_2.Values.Image = global::Loupay_Application.Properties.Resources.cancel;
+            this.btn_huy_2.Values.Text = "HỦY";
+            this.btn_huy_2.Click += new System.EventHandler(this.btn_huy_2_Click);
             // 
-            // kryptonButton7
+            // btn_luu_2
             // 
-            this.kryptonButton7.Location = new System.Drawing.Point(6, 53);
-            this.kryptonButton7.Name = "kryptonButton7";
-            this.kryptonButton7.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton7.TabIndex = 3;
-            this.kryptonButton7.Values.Image = global::Loupay_Application.Properties.Resources.save;
-            this.kryptonButton7.Values.Text = "LƯU";
+            this.btn_luu_2.Location = new System.Drawing.Point(6, 53);
+            this.btn_luu_2.Name = "btn_luu_2";
+            this.btn_luu_2.Size = new System.Drawing.Size(111, 35);
+            this.btn_luu_2.TabIndex = 3;
+            this.btn_luu_2.Values.Image = global::Loupay_Application.Properties.Resources.save;
+            this.btn_luu_2.Values.Text = "LƯU";
+            this.btn_luu_2.Click += new System.EventHandler(this.btn_luu_2_Click);
             // 
-            // kryptonButton8
+            // btn_xoa_2
             // 
-            this.kryptonButton8.Location = new System.Drawing.Point(254, 12);
-            this.kryptonButton8.Name = "kryptonButton8";
-            this.kryptonButton8.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton8.TabIndex = 2;
-            this.kryptonButton8.Values.Image = global::Loupay_Application.Properties.Resources.remove;
-            this.kryptonButton8.Values.Text = "XÓA";
+            this.btn_xoa_2.Location = new System.Drawing.Point(254, 12);
+            this.btn_xoa_2.Name = "btn_xoa_2";
+            this.btn_xoa_2.Size = new System.Drawing.Size(111, 35);
+            this.btn_xoa_2.TabIndex = 2;
+            this.btn_xoa_2.Values.Image = global::Loupay_Application.Properties.Resources.remove;
+            this.btn_xoa_2.Values.Text = "XÓA";
+            this.btn_xoa_2.Click += new System.EventHandler(this.btn_xoa_2_Click);
             // 
-            // kryptonButton9
+            // btn_sua_2
             // 
-            this.kryptonButton9.Location = new System.Drawing.Point(130, 12);
-            this.kryptonButton9.Name = "kryptonButton9";
-            this.kryptonButton9.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton9.TabIndex = 1;
-            this.kryptonButton9.Values.Image = global::Loupay_Application.Properties.Resources.edit;
-            this.kryptonButton9.Values.Text = "SỬA";
+            this.btn_sua_2.Location = new System.Drawing.Point(130, 12);
+            this.btn_sua_2.Name = "btn_sua_2";
+            this.btn_sua_2.Size = new System.Drawing.Size(111, 35);
+            this.btn_sua_2.TabIndex = 1;
+            this.btn_sua_2.Values.Image = global::Loupay_Application.Properties.Resources.edit;
+            this.btn_sua_2.Values.Text = "SỬA";
+            this.btn_sua_2.Click += new System.EventHandler(this.btn_sua_2_Click);
             // 
-            // kryptonButton10
+            // btn_them_2
             // 
-            this.kryptonButton10.Location = new System.Drawing.Point(6, 12);
-            this.kryptonButton10.Name = "kryptonButton10";
-            this.kryptonButton10.Size = new System.Drawing.Size(111, 35);
-            this.kryptonButton10.TabIndex = 0;
-            this.kryptonButton10.Values.Image = global::Loupay_Application.Properties.Resources.add;
-            this.kryptonButton10.Values.Text = "THÊM";
+            this.btn_them_2.Location = new System.Drawing.Point(6, 12);
+            this.btn_them_2.Name = "btn_them_2";
+            this.btn_them_2.Size = new System.Drawing.Size(111, 35);
+            this.btn_them_2.TabIndex = 0;
+            this.btn_them_2.Values.Image = global::Loupay_Application.Properties.Resources.add;
+            this.btn_them_2.Values.Text = "THÊM";
+            this.btn_them_2.Click += new System.EventHandler(this.btn_them_2_Click);
             // 
             // kryptonGroupBox6
             // 
             this.kryptonGroupBox6.Location = new System.Drawing.Point(690, 3);
             this.kryptonGroupBox6.Name = "kryptonGroupBox6";
+            // 
+            // kryptonGroupBox6.Panel
+            // 
+            this.kryptonGroupBox6.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox6.Panel.Controls.Add(this.tb_tt_tenloaimon_2);
+            this.kryptonGroupBox6.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox6.Panel.Controls.Add(this.tb_tt_maloaimon_2);
             this.kryptonGroupBox6.Size = new System.Drawing.Size(374, 350);
             this.kryptonGroupBox6.TabIndex = 10;
             this.kryptonGroupBox6.Values.Heading = "Thông tin loại món";
+            // 
+            // kryptonLabel2
+            // 
+            this.kryptonLabel2.Location = new System.Drawing.Point(8, 66);
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Size = new System.Drawing.Size(100, 24);
+            this.kryptonLabel2.TabIndex = 20;
+            this.kryptonLabel2.Values.Text = "Tên loại món";
+            // 
+            // tb_tt_tenloaimon_2
+            // 
+            this.tb_tt_tenloaimon_2.Location = new System.Drawing.Point(8, 96);
+            this.tb_tt_tenloaimon_2.Name = "tb_tt_tenloaimon_2";
+            this.tb_tt_tenloaimon_2.Size = new System.Drawing.Size(358, 27);
+            this.tb_tt_tenloaimon_2.TabIndex = 19;
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(7, 3);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(97, 24);
+            this.kryptonLabel1.TabIndex = 18;
+            this.kryptonLabel1.Values.Text = "Mã loại món";
+            // 
+            // tb_tt_maloaimon_2
+            // 
+            this.tb_tt_maloaimon_2.Location = new System.Drawing.Point(7, 33);
+            this.tb_tt_maloaimon_2.Name = "tb_tt_maloaimon_2";
+            this.tb_tt_maloaimon_2.Size = new System.Drawing.Size(359, 27);
+            this.tb_tt_maloaimon_2.TabIndex = 14;
             // 
             // label5
             // 
@@ -454,6 +655,7 @@
             this.btn_timkiem_2.Size = new System.Drawing.Size(105, 32);
             this.btn_timkiem_2.TabIndex = 5;
             this.btn_timkiem_2.Values.Text = "Tìm";
+            this.btn_timkiem_2.Click += new System.EventHandler(this.btn_timkiem_2_Click);
             // 
             // tb_maloaimon_2
             // 
@@ -498,22 +700,6 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(139, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Tên loại món";
-            // 
-            // kryptonTextBox1
-            // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(142, 24);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Size = new System.Drawing.Size(257, 27);
-            this.kryptonTextBox1.TabIndex = 12;
-            // 
             // MonForm
             // 
             this.ClientSize = new System.Drawing.Size(1082, 553);
@@ -539,8 +725,11 @@
             this.kryptonGroupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cbbox_tenloaimon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3.Panel)).EndInit();
+            this.kryptonGroupBox3.Panel.ResumeLayout(false);
+            this.kryptonGroupBox3.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox3)).EndInit();
             this.kryptonGroupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbbox_tt_tenloaimon_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_mon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPage2)).EndInit();
             this.kryptonPage2.ResumeLayout(false);
@@ -554,6 +743,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox4)).EndInit();
             this.kryptonGroupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6.Panel)).EndInit();
+            this.kryptonGroupBox6.Panel.ResumeLayout(false);
+            this.kryptonGroupBox6.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox6)).EndInit();
             this.kryptonGroupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.datagridview_loaimon)).EndInit();
@@ -589,19 +780,36 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox5;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_huy_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_luu_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_xoa_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_sua_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_them_1;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton7;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton8;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton9;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton10;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_huy_2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_luu_2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_xoa_2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_sua_2;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btn_them_2;
         private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox6;
         private System.Windows.Forms.Label label4;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tenloaimon_2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tt_tenloaimon_2;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tt_maloaimon_2;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cbbox_tt_tenloaimon_1;
+        private System.Windows.Forms.Button btn_findimg;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel8;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tt_hinhanh_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tt_donvitinh_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tt_giamon_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tt_tenmon_1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox tb_tt_mamon_1;
     }
 }

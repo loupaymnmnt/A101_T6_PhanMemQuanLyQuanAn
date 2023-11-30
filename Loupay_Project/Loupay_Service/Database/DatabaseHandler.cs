@@ -122,6 +122,19 @@ namespace Loupay_Service.Database
             dataContext.SubmitChanges();
         }
 
+        public static string GetFileName(ThongTinNguoiDung thongTinNguoiDung)
+        {
+            return "";
+        }
+
+        public static string GetFileName(Mon mon)
+        {
+            Mon smon = (from m in dataContext.Mons
+                        where m.IDMon == mon.IDMon
+                        select m).FirstOrDefault();
+            return smon.FileAnh;
+        }
+
         public static void DeleteNguoiDung(NguoiDung nguoiDung)
         {
             NguoiDung nguoiDungi = (from nD in dataContext.NguoiDungs
@@ -131,6 +144,60 @@ namespace Loupay_Service.Database
             nguoiDungi.TenNguoiDung = nguoiDung.TenNguoiDung;
             nguoiDungi.MatKhau = nguoiDung.MatKhau;
             nguoiDungi.BiKhoa = nguoiDung.BiKhoa;
+            dataContext.SubmitChanges();
+        }
+
+        public static void InsertMon(Mon mon)
+        {
+            dataContext.Mons.InsertOnSubmit(mon);
+            dataContext.SubmitChanges();
+        }
+
+        public static void UpdateMon(Mon imon)
+        {
+            Mon mon = (from _mon in dataContext.Mons
+                       where _mon.IDMon == imon.IDMon
+                       select _mon).
+                       FirstOrDefault();
+            mon.TenMon = imon.TenMon;
+            mon.IDLoaiMon = imon.IDLoaiMon;
+            mon.GiaMon = imon.GiaMon;
+            mon.DonViTinh = imon.DonViTinh;
+            mon.FileAnh = imon.FileAnh;
+            dataContext.SubmitChanges();
+        }
+
+        public static void DeleteMon(Mon mon)
+        {
+            Mon dmon = (from _mon in dataContext.Mons
+                       where _mon.IDMon == mon.IDMon
+                       select _mon).
+                       FirstOrDefault();
+            dataContext.Mons.DeleteOnSubmit(dmon);
+            dataContext.SubmitChanges();
+        }
+
+        public static void InsertLoaiMon(LoaiMon lmon)
+        {
+            dataContext.LoaiMons.InsertOnSubmit(lmon);
+            dataContext.SubmitChanges();
+        }
+
+        public static void UpdateLoaiMon(LoaiMon lmon)
+        {
+            LoaiMon lm = (from l in dataContext.LoaiMons
+                          where l.IDLoaiMon == lmon.IDLoaiMon
+                          select l).FirstOrDefault();
+            lm.TenLoaiMon = lmon.TenLoaiMon;
+            dataContext.SubmitChanges();
+        }
+
+        public static void DeleteLoaiMon(LoaiMon lmon)
+        {
+            LoaiMon lm = (from l in dataContext.LoaiMons
+                          where l.IDLoaiMon == lmon.IDLoaiMon
+                          select l).FirstOrDefault();
+            dataContext.LoaiMons.DeleteOnSubmit(lm);
             dataContext.SubmitChanges();
         }
     }
