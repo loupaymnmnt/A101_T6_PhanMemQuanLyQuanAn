@@ -485,5 +485,89 @@ namespace Loupay_Service.Database
                 }
             }
         }
+
+        public static List<ThongTinNguoiDung> GetAllThongTinNguoiDung()
+        {
+            List<ThongTinNguoiDung> nguoidungs = new List<ThongTinNguoiDung>();
+            nguoidungs = (from ttnd in dataContext.ThongTinNguoiDungs
+                          select ttnd).OrderBy(id => id.IDNguoiDung).ToList();
+            return nguoidungs;
+        }
+
+        public static void DeleteThongTinNguoiDung(string idnguoidung)
+        {
+            var ttnguoidung = (from ttnd in dataContext.ThongTinNguoiDungs
+                                select ttnd).Where(t => t.IDNguoiDung == idnguoidung).FirstOrDefault();
+
+            dataContext.ThongTinNguoiDungs.DeleteOnSubmit(ttnguoidung);
+            dataContext.SubmitChanges();
+        }
+
+        public static void InsertThongTinNguoiDung(ThongTinNguoiDung thongtinnguoidung)
+        {
+            dataContext.ThongTinNguoiDungs.InsertOnSubmit(thongtinnguoidung);
+            dataContext.SubmitChanges();
+        }
+
+        public static void SuaThongTinNguoiDung(ThongTinNguoiDung thongtinnguoidung)
+        {
+            var nd = (from ttnd in dataContext.ThongTinNguoiDungs select ttnd).Where(t => t.IDNguoiDung == thongtinnguoidung.IDNguoiDung).FirstOrDefault();
+
+
+            nd.HoTen = thongtinnguoidung.HoTen;
+            nd.DiaChi = thongtinnguoidung.DiaChi;
+            nd.Email = thongtinnguoidung.Email;
+            nd.SoDienThoai = thongtinnguoidung.SoDienThoai;
+            nd.GioiTinh = thongtinnguoidung.GioiTinh;
+            nd.NgaySinh = thongtinnguoidung.NgaySinh;
+            nd.CanCuocCD = thongtinnguoidung.CanCuocCD;
+            nd.FileAnh = thongtinnguoidung.FileAnh;
+
+
+            dataContext.SubmitChanges();
+        }
+
+        public static void InsertKhuVuc(KhuVuc khuvuc)
+        {
+            dataContext.KhuVucs.InsertOnSubmit(khuvuc);
+            dataContext.SubmitChanges();
+        }
+        public static void DeleteKhuVuc(string IDKhuVuc)
+        {
+            KhuVuc kv = (from KV in dataContext.KhuVucs select KV).Where(t => t.IDKhuVuc == IDKhuVuc).FirstOrDefault();
+            dataContext.KhuVucs.DeleteOnSubmit(kv);
+            dataContext.SubmitChanges();
+        }
+
+        public static void UpdateKhuVuc(KhuVuc khuvuc)
+        {
+            KhuVuc kv = (from KV in dataContext.KhuVucs select KV).Where(t => t.IDKhuVuc == khuvuc.IDKhuVuc).FirstOrDefault();
+            kv.TenKhuVuc = khuvuc.TenKhuVuc;
+            dataContext.SubmitChanges();
+        }
+
+        public static void InsertBan(Ban ban)
+        {
+            dataContext.Bans.InsertOnSubmit(ban);
+            dataContext.SubmitChanges();
+        }
+
+        public static void DeleteBan(string IDBan)
+        {
+            Ban ban = (from b in dataContext.Bans select b).Where(t => t.IDBan == IDBan).FirstOrDefault();
+            dataContext.Bans.DeleteOnSubmit(ban);
+            dataContext.SubmitChanges();
+        }
+
+
+        public static void UpdateBan(Ban ban)
+        {
+            Ban item = (from b in dataContext.Bans select b).Where(t => t.IDBan == ban.IDBan).FirstOrDefault();
+            item.IDKhuVuc = ban.IDKhuVuc;
+            item.TrangThai = ban.TrangThai;
+            dataContext.SubmitChanges();
+
+        }
+
     }
 }

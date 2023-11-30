@@ -131,8 +131,6 @@ namespace Loupay_Component.SubControl
             this.BackColor = Color.Aqua;
         }
 
-
-
         public void SetId(string id)
         {
             dishIdLabelMain.Text = id;

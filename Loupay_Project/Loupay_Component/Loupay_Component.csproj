@@ -71,6 +71,9 @@
       <DependentUpon>BaseFormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="ComponentHandler.cs" />
+    <Compile Include="CurrentSelectedTable.cs" />
+    <Compile Include="CurrentTableMainBoard.cs" />
+    <Compile Include="CurrentTableOrder.cs" />
     <Compile Include="FormComponentSize.cs" />
     <Compile Include="FormSize.cs" />
     <Compile Include="Global.cs" />
@@ -92,6 +95,12 @@
     </Compile>
     <Compile Include="SubControl\DishListBox.Designer.cs">
       <DependentUpon>DishListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubControl\OrderedDish.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SubControl\OrderedDish.Designer.cs">
+      <DependentUpon>OrderedDish.cs</DependentUpon>
     </Compile>
     <Compile Include="SubControl\OrderPanel.cs">
       <SubType>UserControl</SubType>
@@ -132,6 +141,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubControl\OrderedDish.resx">
+      <DependentUpon>OrderedDish.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SubControl\TableMainBoard.resx">
       <DependentUpon>TableMainBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,9 +157,7 @@
   <ItemGroup>
     <None Include="Resources\diningTable.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MenuControl\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\gear.png" />
   </ItemGroup>

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Loupay_Service;
 using ComponentFactory.Krypton.Toolkit;
 using Loupay_Service.Database;
+
 namespace Loupay_Application.Forms.ManagerForm
 {
     public partial class NhanVienForms : Loupay_Component.BaseFormMain
@@ -21,10 +22,6 @@ namespace Loupay_Application.Forms.ManagerForm
         {
             InitializeComponent();
             CenterToScreen();
-
-            lstTTND = DatabaseHandler.GetAllThongTinNguoiDung();
-
-
 
         }
 
@@ -45,14 +42,9 @@ namespace Loupay_Application.Forms.ManagerForm
             lstTTND = DatabaseHandler.GetAllThongTinNguoiDung();
             dgvNhanVien.DataSource = lstTTND;
             dgvNhanVien.Columns["NguoiDung"].Visible = false;
-
-
         }
-
         bool CheckDataInput()
         {
-
-
             foreach (Control txt in gbNhanVien.Panel.Controls)
             {
                 if (txt is KryptonTextBox)

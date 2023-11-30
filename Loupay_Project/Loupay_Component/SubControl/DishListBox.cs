@@ -1,4 +1,5 @@
-﻿using Loupay_Service.Database;
+﻿using Loupay_Service.Client.Order;
+using Loupay_Service.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace Loupay_Component.SubControl
     {
         List<Dish> dishes = new List<Dish>();
         List<Mon> mons = new List<Mon>();
+
         public DishListBox(List<Mon> mons)
         {
             InitializeComponent();
@@ -44,11 +46,24 @@ namespace Loupay_Component.SubControl
                 dishes.Add(dish);
                 dish.Top = currentTop;
                 dish.Left = 5;
+                dish.Click += Dish_Click;
                 dish.SetId(mons[i].IDMon);
                 dish.SetName(mons[i].TenMon);
                 dish.SetPrice(mons[i].GiaMon.ToString());
                 this.Controls.Add(dish);
                 currentTop += 80;
+            }
+        }
+
+        private void Dish_Click(object sender, EventArgs e)
+        {
+            Dish dish = (Dish)sender;
+            if (CurrentSelectedTable.Table != null)
+            {
+                CurrentOrder newOrder = new CurrentOrder(dish.Mon.IDMon, dish.Mon.TenMon, 1, (decimal)dish.Mon.GiaMon, dish.Mon.FileAnh);
+                CurrentSelectedTable.Table.Add(newOrder);
+                CurrentTableOrder.TableOrder.Reload(CurrentSelectedTable.Table);
+                CurrentTableMainBoard.TableMainBoard.Reload();
             }
         }
 
