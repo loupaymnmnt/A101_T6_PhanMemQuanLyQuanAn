@@ -87,6 +87,39 @@ namespace Loupay_Service.Database
                 }
             }
         }
+        public static void DeleteKhuVuc(string IDKhuVuc)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    KhuVuc kv = (from KV in dataContext.KhuVucs select KV).Where(t => t.IDKhuVuc == IDKhuVuc).FirstOrDefault();
+                    dataContext.KhuVucs.DeleteOnSubmit(kv);
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        public static void UpdateKhuVuc(KhuVuc khuvuc)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    KhuVuc kv = (from KV in dataContext.KhuVucs select KV).Where(t => t.IDKhuVuc == khuvuc.IDKhuVuc).FirstOrDefault();
+                    kv.TenKhuVuc = khuvuc.TenKhuVuc;
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
 
         public static List<Ban> GetAllBan()
         {
@@ -114,6 +147,42 @@ namespace Loupay_Service.Database
                 try
                 {
                     dataContext.Bans.InsertOnSubmit(ban);
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        public static void DeleteBan(string IDBan)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    Ban ban = (from b in dataContext.Bans select b).Where(t => t.IDBan == IDBan).FirstOrDefault();
+                    dataContext.Bans.DeleteOnSubmit(ban);
+                    dataContext.SubmitChanges();
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+
+        public static void UpdateBan(Ban ban)
+        {
+            using (dataContext = new LOUPAYDataContext())
+            {
+                try
+                {
+                    Ban item = (from b in dataContext.Bans select b).Where(t => t.IDBan == ban.IDBan).FirstOrDefault();
+                    item.IDKhuVuc = ban.IDKhuVuc;
+                    item.TrangThai = ban.TrangThai;
                     dataContext.SubmitChanges();
                 }
                 catch

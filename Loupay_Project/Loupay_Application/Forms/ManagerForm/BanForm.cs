@@ -120,7 +120,48 @@ namespace Loupay_Application.Forms.ManagerForm
 
                 }
             }
-            catch { }
+            catch { 
+            
+            
+            
+            }
+        }
+
+        private void contextDGVBan_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try {
+
+                DatabaseHandler.DeleteBan(dgvBan.CurrentRow.Cells[0].Value.ToString());
+                LoadDGVBan();
+                MessageBox.Show("Xóa thành công");
+            
+            }
+            catch {
+
+                MessageBox.Show("Xóa thất bại");
+            }
+        }
+
+        private void xóaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DatabaseHandler.DeleteKhuVuc(dgvKV.CurrentRow.Cells[0].Value.ToString());
+                LoadDGVKV();
+                MessageBox.Show("Xóa thành công");
+
+            }
+            catch
+            {
+
+                MessageBox.Show("Xóa thất bại");
+            }
         }
     }
 }

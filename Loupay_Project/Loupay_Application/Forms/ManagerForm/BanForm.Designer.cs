@@ -29,39 +29,45 @@ namespace Loupay_Application.Forms.ManagerForm
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlLeft = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
             this.kryptonGroupBox2 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cboTrangThai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.btnAddBan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.cboKV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.txtIDBan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.btnAddKV = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtTKV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.txtMKV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtTKV = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.btnAddKV = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.cboKV = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtIDBan = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.btnAddBan = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.dgvKV = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.dgvBan = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.cboTrangThai = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.contextDGVBan = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
-            this.contextDGVKhuVuc = new ComponentFactory.Krypton.Toolkit.KryptonContextMenu();
+            this.kryptonContextMenuHeading1 = new ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading();
+            this.contextBan = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextKhuVuc = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.xóaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).BeginInit();
             this.pnlLeft.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
-            this.kryptonGroupBox1.Panel.SuspendLayout();
-            this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).BeginInit();
             this.kryptonGroupBox2.Panel.SuspendLayout();
             this.kryptonGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cboTrangThai)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboKV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboTrangThai)).BeginInit();
+            this.contextBan.SuspendLayout();
+            this.contextKhuVuc.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -72,23 +78,6 @@ namespace Loupay_Application.Forms.ManagerForm
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Size = new System.Drawing.Size(442, 548);
             this.pnlLeft.TabIndex = 0;
-            // 
-            // kryptonGroupBox1
-            // 
-            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitlePanel;
-            this.kryptonGroupBox1.Location = new System.Drawing.Point(3, 3);
-            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
-            // 
-            // kryptonGroupBox1.Panel
-            // 
-            this.kryptonGroupBox1.Panel.Controls.Add(this.btnAddKV);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txtTKV);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.txtMKV);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
-            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
-            this.kryptonGroupBox1.Size = new System.Drawing.Size(436, 260);
-            this.kryptonGroupBox1.TabIndex = 4;
-            this.kryptonGroupBox1.Values.Heading = "Khu vực";
             // 
             // kryptonGroupBox2
             // 
@@ -109,13 +98,103 @@ namespace Loupay_Application.Forms.ManagerForm
             this.kryptonGroupBox2.TabIndex = 5;
             this.kryptonGroupBox2.Values.Heading = "Bàn";
             // 
-            // kryptonLabel1
+            // cboTrangThai
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(52, 34);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(74, 20);
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "Mã khu vực";
+            this.cboTrangThai.DropDownWidth = 127;
+            this.cboTrangThai.Location = new System.Drawing.Point(228, 141);
+            this.cboTrangThai.Name = "cboTrangThai";
+            this.cboTrangThai.Size = new System.Drawing.Size(127, 21);
+            this.cboTrangThai.TabIndex = 3;
+            // 
+            // btnAddBan
+            // 
+            this.btnAddBan.Location = new System.Drawing.Point(166, 182);
+            this.btnAddBan.Name = "btnAddBan";
+            this.btnAddBan.Size = new System.Drawing.Size(90, 50);
+            this.btnAddBan.TabIndex = 2;
+            this.btnAddBan.Values.ImageStates.ImageCheckedNormal = null;
+            this.btnAddBan.Values.ImageStates.ImageCheckedPressed = null;
+            this.btnAddBan.Values.ImageStates.ImageCheckedTracking = null;
+            this.btnAddBan.Values.ImageStates.ImagePressed = global::Loupay_Application.Properties.Resources.add;
+            this.btnAddBan.Values.Text = "Thêm bàn";
+            this.btnAddBan.Click += new System.EventHandler(this.btnAddBan_Click);
+            // 
+            // cboKV
+            // 
+            this.cboKV.DropDownWidth = 127;
+            this.cboKV.Location = new System.Drawing.Point(228, 33);
+            this.cboKV.Name = "cboKV";
+            this.cboKV.Size = new System.Drawing.Size(127, 21);
+            this.cboKV.TabIndex = 1;
+            // 
+            // txtIDBan
+            // 
+            this.txtIDBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.txtIDBan.Location = new System.Drawing.Point(228, 90);
+            this.txtIDBan.Name = "txtIDBan";
+            this.txtIDBan.Size = new System.Drawing.Size(127, 23);
+            this.txtIDBan.TabIndex = 1;
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(52, 142);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(52, 20);
+            this.kryptonLabel5.TabIndex = 0;
+            this.kryptonLabel5.Values.Text = "Mã bàn";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(52, 90);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(52, 20);
+            this.kryptonLabel4.TabIndex = 0;
+            this.kryptonLabel4.Values.Text = "Mã bàn";
+            // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(52, 33);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(54, 20);
+            this.kryptonLabel3.TabIndex = 0;
+            this.kryptonLabel3.Values.Text = "Khu vực";
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitlePanel;
+            this.kryptonGroupBox1.Location = new System.Drawing.Point(3, 3);
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.btnAddKV);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtTKV);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.txtMKV);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel2);
+            this.kryptonGroupBox1.Panel.Controls.Add(this.kryptonLabel1);
+            this.kryptonGroupBox1.Size = new System.Drawing.Size(436, 260);
+            this.kryptonGroupBox1.TabIndex = 4;
+            this.kryptonGroupBox1.Values.Heading = "Khu vực";
+            // 
+            // btnAddKV
+            // 
+            this.btnAddKV.Location = new System.Drawing.Point(166, 162);
+            this.btnAddKV.Name = "btnAddKV";
+            this.btnAddKV.Size = new System.Drawing.Size(90, 50);
+            this.btnAddKV.TabIndex = 2;
+            this.btnAddKV.Values.ImageStates.ImageCheckedNormal = null;
+            this.btnAddKV.Values.ImageStates.ImageCheckedPressed = null;
+            this.btnAddKV.Values.ImageStates.ImageCheckedTracking = null;
+            this.btnAddKV.Values.ImageStates.ImagePressed = global::Loupay_Application.Properties.Resources.add;
+            this.btnAddKV.Values.Text = "Thêm khu vực";
+            this.btnAddKV.Click += new System.EventHandler(this.btnAddKV_Click);
+            // 
+            // txtTKV
+            // 
+            this.txtTKV.Location = new System.Drawing.Point(228, 87);
+            this.txtTKV.Name = "txtTKV";
+            this.txtTKV.Size = new System.Drawing.Size(127, 23);
+            this.txtTKV.TabIndex = 1;
             // 
             // txtMKV
             // 
@@ -132,74 +211,18 @@ namespace Loupay_Application.Forms.ManagerForm
             this.kryptonLabel2.TabIndex = 0;
             this.kryptonLabel2.Values.Text = "Tên khu vực";
             // 
-            // txtTKV
+            // kryptonLabel1
             // 
-            this.txtTKV.Location = new System.Drawing.Point(228, 87);
-            this.txtTKV.Name = "txtTKV";
-            this.txtTKV.Size = new System.Drawing.Size(127, 23);
-            this.txtTKV.TabIndex = 1;
-            // 
-            // btnAddKV
-            // 
-            this.btnAddKV.Location = new System.Drawing.Point(166, 162);
-            this.btnAddKV.Name = "btnAddKV";
-            this.btnAddKV.Size = new System.Drawing.Size(90, 50);
-            this.btnAddKV.TabIndex = 2;
-            this.btnAddKV.Values.ImageStates.ImageCheckedNormal = null;
-            this.btnAddKV.Values.ImageStates.ImageCheckedPressed = null;
-            this.btnAddKV.Values.ImageStates.ImageCheckedTracking = null;
-            this.btnAddKV.Values.ImageStates.ImagePressed = global::Loupay_Application.Properties.Resources.add;
-            this.btnAddKV.Values.Text = "Thêm khu vực";
-            this.btnAddKV.Click += new System.EventHandler(this.btnAddKV_Click);
-            // 
-            // kryptonLabel3
-            // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(52, 33);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(54, 20);
-            this.kryptonLabel3.TabIndex = 0;
-            this.kryptonLabel3.Values.Text = "Khu vực";
-            // 
-            // cboKV
-            // 
-            this.cboKV.DropDownWidth = 127;
-            this.cboKV.Location = new System.Drawing.Point(228, 33);
-            this.cboKV.Name = "cboKV";
-            this.cboKV.Size = new System.Drawing.Size(127, 21);
-            this.cboKV.TabIndex = 1;
-            // 
-            // kryptonLabel4
-            // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(52, 90);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(52, 20);
-            this.kryptonLabel4.TabIndex = 0;
-            this.kryptonLabel4.Values.Text = "Mã bàn";
-            // 
-            // txtIDBan
-            // 
-            this.txtIDBan.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.txtIDBan.Location = new System.Drawing.Point(228, 90);
-            this.txtIDBan.Name = "txtIDBan";
-            this.txtIDBan.Size = new System.Drawing.Size(127, 23);
-            this.txtIDBan.TabIndex = 1;
-            // 
-            // btnAddBan
-            // 
-            this.btnAddBan.Location = new System.Drawing.Point(166, 182);
-            this.btnAddBan.Name = "btnAddBan";
-            this.btnAddBan.Size = new System.Drawing.Size(90, 50);
-            this.btnAddBan.TabIndex = 2;
-            this.btnAddBan.Values.ImageStates.ImageCheckedNormal = null;
-            this.btnAddBan.Values.ImageStates.ImageCheckedPressed = null;
-            this.btnAddBan.Values.ImageStates.ImageCheckedTracking = null;
-            this.btnAddBan.Values.ImageStates.ImagePressed = global::Loupay_Application.Properties.Resources.add;
-            this.btnAddBan.Values.Text = "Thêm bàn";
-            this.btnAddBan.Click += new System.EventHandler(this.btnAddBan_Click);
+            this.kryptonLabel1.Location = new System.Drawing.Point(52, 34);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel1.TabIndex = 0;
+            this.kryptonLabel1.Values.Text = "Mã khu vực";
             // 
             // dgvKV
             // 
             this.dgvKV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKV.ContextMenuStrip = this.contextKhuVuc;
             this.dgvKV.Location = new System.Drawing.Point(460, 1);
             this.dgvKV.Name = "dgvKV";
             this.dgvKV.Size = new System.Drawing.Size(260, 548);
@@ -208,26 +231,45 @@ namespace Loupay_Application.Forms.ManagerForm
             // dgvBan
             // 
             this.dgvBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBan.ContextMenuStrip = this.contextBan;
             this.dgvBan.Location = new System.Drawing.Point(726, 1);
             this.dgvBan.Name = "dgvBan";
             this.dgvBan.Size = new System.Drawing.Size(346, 548);
             this.dgvBan.TabIndex = 1;
             // 
-            // kryptonLabel5
+            // kryptonContextMenuHeading1
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(52, 142);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(52, 20);
-            this.kryptonLabel5.TabIndex = 0;
-            this.kryptonLabel5.Values.Text = "Mã bàn";
+            this.kryptonContextMenuHeading1.ExtraText = "";
             // 
-            // cboTrangThai
+            // contextBan
             // 
-            this.cboTrangThai.DropDownWidth = 127;
-            this.cboTrangThai.Location = new System.Drawing.Point(228, 141);
-            this.cboTrangThai.Name = "cboTrangThai";
-            this.cboTrangThai.Size = new System.Drawing.Size(127, 21);
-            this.cboTrangThai.TabIndex = 3;
+            this.contextBan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextBan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xóaToolStripMenuItem});
+            this.contextBan.Name = "contextBan";
+            this.contextBan.Size = new System.Drawing.Size(95, 26);
+            // 
+            // xóaToolStripMenuItem
+            // 
+            this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.xóaToolStripMenuItem.Text = "Xóa";
+            this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
+            // 
+            // contextKhuVuc
+            // 
+            this.contextKhuVuc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextKhuVuc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.xóaToolStripMenuItem1});
+            this.contextKhuVuc.Name = "contextKhuVuc";
+            this.contextKhuVuc.Size = new System.Drawing.Size(181, 48);
+            // 
+            // xóaToolStripMenuItem1
+            // 
+            this.xóaToolStripMenuItem1.Name = "xóaToolStripMenuItem1";
+            this.xóaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.xóaToolStripMenuItem1.Text = "Xóa";
+            this.xóaToolStripMenuItem1.Click += new System.EventHandler(this.xóaToolStripMenuItem1_Click);
             // 
             // BanForm
             // 
@@ -246,20 +288,22 @@ namespace Loupay_Application.Forms.ManagerForm
             this.Load += new System.EventHandler(this.BanForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pnlLeft)).EndInit();
             this.pnlLeft.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
-            this.kryptonGroupBox1.Panel.ResumeLayout(false);
-            this.kryptonGroupBox1.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
-            this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2.Panel)).EndInit();
             this.kryptonGroupBox2.Panel.ResumeLayout(false);
             this.kryptonGroupBox2.Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox2)).EndInit();
             this.kryptonGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cboTrangThai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cboKV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            this.kryptonGroupBox1.Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cboTrangThai)).EndInit();
+            this.contextBan.ResumeLayout(false);
+            this.contextKhuVuc.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -283,7 +327,10 @@ namespace Loupay_Application.Forms.ManagerForm
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dgvBan;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cboTrangThai;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu contextDGVBan;
-        private ComponentFactory.Krypton.Toolkit.KryptonContextMenu contextDGVKhuVuc;
+        private System.Windows.Forms.ContextMenuStrip contextKhuVuc;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextBan;
+        private System.Windows.Forms.ToolStripMenuItem xóaToolStripMenuItem;
+        private ComponentFactory.Krypton.Toolkit.KryptonContextMenuHeading kryptonContextMenuHeading1;
     }
 }
