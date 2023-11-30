@@ -44,3 +44,4 @@ C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupa
 C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.exe
 C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.pdb
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.Forms.ManagerForm.NhanVienForms.resources
+C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Application\obj\Debug\Loupay_Application.Forms.ManagerForm.MonAnForm.resources

@@ -60,5 +60,11 @@ namespace Loupay_Application.Forms.MainForms
             NhanVienForms form = new NhanVienForms();
             form.ShowDialog();
         }
+
+        private void quảnLýMónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MonAnForm form = new MonAnForm();
+            form.ShowDialog();
+        }
     }
 }

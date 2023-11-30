@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.button1 = new System.Windows.Forms.Button();
             this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.báoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.càiĐặtỨngDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,15 @@
             this.menuStrip1.Size = new System.Drawing.Size(1082, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(305, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(8, 8);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // quảnLýNgườiDùngToolStripMenuItem
             // 
@@ -84,6 +93,7 @@
             this.quảnLýMónToolStripMenuItem.Name = "quảnLýMónToolStripMenuItem";
             this.quảnLýMónToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.quảnLýMónToolStripMenuItem.Text = "Quản lý món";
+            this.quảnLýMónToolStripMenuItem.Click += new System.EventHandler(this.quảnLýMónToolStripMenuItem_Click);
             // 
             // báoCáoToolStripMenuItem
             // 
@@ -98,15 +108,6 @@
             this.càiĐặtỨngDụngToolStripMenuItem.Name = "càiĐặtỨngDụngToolStripMenuItem";
             this.càiĐặtỨngDụngToolStripMenuItem.Size = new System.Drawing.Size(158, 24);
             this.càiĐặtỨngDụngToolStripMenuItem.Text = "Cài đặt ứng dụng";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(305, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(8, 8);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
