@@ -11,6 +11,7 @@ using Loupay_Component.SubControl;
 using Loupay_Component;
 using Loupay_Service.Database;
 using Loupay_Application.Forms.ManagerForm;
+using Loupay_Application.Forms.ActionForms;
 
 namespace Loupay_Application.Forms.MainForms
 {
@@ -63,7 +64,13 @@ namespace Loupay_Application.Forms.MainForms
 
         private void quảnLýMónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MonAnForm form = new MonAnForm();
+            MonForm form = new MonForm();
+            form.ShowDialog();
+        }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportForm form = new ReportForm();
             form.ShowDialog();
         }
 

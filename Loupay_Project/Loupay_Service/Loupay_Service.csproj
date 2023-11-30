@@ -62,6 +62,7 @@
     </Compile>
     <Compile Include="Security\DataCryption.cs" />
     <Compile Include="Security\InputValidation.cs" />
+    <Compile Include="Security\StandardInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

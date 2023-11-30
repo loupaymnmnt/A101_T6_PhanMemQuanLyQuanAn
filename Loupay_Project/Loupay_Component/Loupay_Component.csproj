@@ -70,6 +70,7 @@
     <Compile Include="BaseFormMain.Designer.cs">
       <DependentUpon>BaseFormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentHandler.cs" />
     <Compile Include="FormComponentSize.cs" />
     <Compile Include="FormSize.cs" />
     <Compile Include="Global.cs" />
@@ -136,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SubControl\TableOrder.resx">
       <DependentUpon>TableOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubControl\TablesPanel.resx">
+      <DependentUpon>TablesPanel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

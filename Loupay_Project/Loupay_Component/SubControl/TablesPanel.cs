@@ -20,7 +20,7 @@ namespace Loupay_Component.SubControl
         private List<Ban> bans;
 
         public string Id { get => _id; set => _id = value; }
-        public TableMainBoard TableMainBoard { get => mainBoard; set => mainBoard = value; }
+        public TableMainBoard TableMainBoard { get { return mainBoard; } set { mainBoard = value; } }
 
         Panel panel = new Panel();
         List<Table> tables = new List<Table>();
@@ -56,8 +56,10 @@ namespace Loupay_Component.SubControl
             this.Controls.Add(this.panel);
             this.panel.AutoScroll = true;
 
+            
+
             int position = 0;
-            int currentTop = 5;
+            int currentTop = 55;
             int currentLeft = 5;
             for (int i = 0; i < bans.Count; ++i)
             {
