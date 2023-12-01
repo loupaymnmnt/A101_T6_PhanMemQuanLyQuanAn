@@ -18,3 +18,9 @@ C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\De
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.exe
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.pdb
 C:\Stuff\Codespace\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.TestForm.resources
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.csproj.AssemblyReference.cache
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.csproj.SuggestedBindingRedirects.cache
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.Properties.Resources.resources
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.TestForm.resources
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.csproj.GenerateResource.cache
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Test\obj\Debug\Loupay_Test.csproj.CoreCompileInputs.cache

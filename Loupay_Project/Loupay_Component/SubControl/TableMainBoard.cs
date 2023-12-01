@@ -4,6 +4,7 @@ using Loupay_Service.Account;
 using Loupay_Service.Client.Order;
 using Loupay_Service.Client.Table;
 using Loupay_Service.Database;
+using Loupay_Service.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +32,7 @@ namespace Loupay_Component.SubControl
             this.tableStatus.Text = CurrentSelectedTable.Table.Ban.TrangThai;
             this.tienThanhToan.Text = CurrentSelectedTable.Table.GetTotalPrice().ToString();
             this.soMonDat.Text = CurrentSelectedTable.Table.GetTotalDishes().ToString();
-            
+
             if (CurrentSelectedTable.Table.Ban.TrangThai == TableStatus.TRONG)
             {
                 ComponentHandler.SetEnabled(false, btn_Thanhtoan, btn_lamMoi);
@@ -40,7 +41,6 @@ namespace Loupay_Component.SubControl
             {
                 ComponentHandler.SetEnabled(true, btn_Thanhtoan, btn_lamMoi);
             }
-
             CurrentTableOrder.TableOrder.Reload(CurrentSelectedTable.Table);
         }
 
@@ -87,7 +87,9 @@ namespace Loupay_Component.SubControl
 
                 if (r1 == DialogResult.Yes)
                 {
-
+                    string file = "x";
+                    ExcelExport ee = new ExcelExport();
+                    ee.ExportHoaDon(CurrentSelectedTable.Table.CurrentOrders, ref file, true);
                 }
                 CurrentSelectedTable.Table.CurrentOrders.Clear();
                 CurrentSelectedTable.Table.SetBackColor(TableStatus.TRONG);
@@ -102,11 +104,18 @@ namespace Loupay_Component.SubControl
             DialogResult r = MessageBox.Show("Bạn có chắc chắn muốn Reset bàn này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (r == DialogResult.Yes)
             {
-                CurrentSelectedTable.Table.CurrentOrders.Clear();
-                CurrentSelectedTable.Table.SetBackColor(TableStatus.TRONG);
-                CurrentSelectedTable.Table.Ban.TrangThai = TableStatus.TRONG;
-                DatabaseHandler.UpdateBan(CurrentSelectedTable.Table.Ban);
-                Reload();
+                try
+                {
+                    CurrentSelectedTable.Table.CurrentOrders.Clear();
+                    CurrentSelectedTable.Table.SetBackColor(TableStatus.TRONG);
+                    CurrentSelectedTable.Table.Ban.TrangThai = TableStatus.TRONG;
+                    DatabaseHandler.UpdateBan(CurrentSelectedTable.Table.Ban);
+                    Reload();
+                }
+                catch
+                {
+
+                }
             }
         }
     }

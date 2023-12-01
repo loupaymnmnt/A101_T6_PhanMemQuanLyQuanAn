@@ -81,14 +81,11 @@ namespace Loupay_Application.Forms.ManagerForm
         void LoadCBOTrangThai()
         {
             Dictionary<string, string> test = new Dictionary<string, string>();
-            test.Add("Còn trống", "Còn trống");
-            test.Add("Bàn đang sử dụng", "Bàn đang sử dụng");
+            test.Add("Trống", "Trống");
+            test.Add("Đã đặt", "Đã đặt");
             cboTrangThai.DataSource = new BindingSource(test, null);
-
             cboTrangThai.DisplayMember = "Key";
             cboTrangThai.ValueMember = "Key";
-
-
         }
         private void btnAddKV_Click(object sender, EventArgs e)
         {
@@ -100,6 +97,8 @@ namespace Loupay_Application.Forms.ManagerForm
                     kv.IDKhuVuc = txtMKV.Text.Trim();
                     kv.TenKhuVuc = txtTKV.Text.Trim();                  
                     DatabaseHandler.InsertKhuVuc(kv);
+                    LoadCBOKV();
+                    
 
                 }
             }
@@ -117,6 +116,7 @@ namespace Loupay_Application.Forms.ManagerForm
                     ban.IDKhuVuc = cboKV.SelectedValue.ToString();
                     ban.TrangThai = cboTrangThai.SelectedValue.ToString();
                     DatabaseHandler.InsertBan(ban);
+                    LoadDGVBan();
 
                 }
             }

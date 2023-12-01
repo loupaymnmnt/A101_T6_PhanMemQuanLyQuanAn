@@ -20,6 +20,7 @@ namespace Loupay_Service.Client.Order
         public int SoLuong { get { return _SoLuong; } set { _SoLuong = value; } }
         public string ImagePath { get { return _ImagePath; } set { _ImagePath = value; } }
         public decimal GiaMon { get { return _GiaMon; } set { _GiaMon = value; } }
+        public decimal TongGia { get { return _GiaMon * _SoLuong; } }
 
         private CurrentOrder()
         {

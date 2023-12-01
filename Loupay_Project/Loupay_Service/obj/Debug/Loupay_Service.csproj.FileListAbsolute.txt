@@ -12,3 +12,15 @@ C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupa
 C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.dll
 C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.pdb
 C:\Users\phamh\OneDrive\Desktop\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.csproj.AssemblyReference.cache
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.dll.config
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.dll
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Loupay_Service.pdb
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Syncfusion.Compression.Base.dll
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Syncfusion.DocIO.Base.dll
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Syncfusion.OfficeChart.Base.dll
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\bin\Debug\Syncfusion.XlsIO.Base.dll
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.csproj.AssemblyReference.cache
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.csproj.CoreCompileInputs.cache
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.csproj.CopyComplete
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.dll
+C:\Stuff\Codespace\N_MAIN\A101_T6_PhanMemQuanLyQuanAn\Loupay_Project\Loupay_Service\obj\Debug\Loupay_Service.pdb

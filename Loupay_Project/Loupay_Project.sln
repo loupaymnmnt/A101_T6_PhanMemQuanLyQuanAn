@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loupay_Component", "Loupay_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loupay_Service", "Loupay_Service\Loupay_Service.csproj", "{FE2015AD-A036-4B25-A9C7-98D8F900383A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loupay_Test", "Loupay_Test\Loupay_Test.csproj", "{E4CA66A4-FCF8-4C07-AC0F-158708A1899B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{FE2015AD-A036-4B25-A9C7-98D8F900383A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE2015AD-A036-4B25-A9C7-98D8F900383A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE2015AD-A036-4B25-A9C7-98D8F900383A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E4CA66A4-FCF8-4C07-AC0F-158708A1899B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4CA66A4-FCF8-4C07-AC0F-158708A1899B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4CA66A4-FCF8-4C07-AC0F-158708A1899B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4CA66A4-FCF8-4C07-AC0F-158708A1899B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

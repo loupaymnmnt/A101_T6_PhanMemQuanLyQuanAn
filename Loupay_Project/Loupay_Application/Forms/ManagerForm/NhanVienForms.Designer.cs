@@ -33,6 +33,8 @@ namespace Loupay_Application.Forms.ManagerForm
             this.pageNV = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.dgvNhanVien = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.gbNhanVien = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnDeleteImage = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnChooseImage = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pbImage = new System.Windows.Forms.PictureBox();
@@ -105,7 +107,8 @@ namespace Loupay_Application.Forms.ManagerForm
             // 
             // kryptonDockableNavigator1
             // 
-            this.kryptonDockableNavigator1.Location = new System.Drawing.Point(0, 31);
+            this.kryptonDockableNavigator1.Location = new System.Drawing.Point(0, 38);
+            this.kryptonDockableNavigator1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonDockableNavigator1.Name = "kryptonDockableNavigator1";
             this.kryptonDockableNavigator1.Pages.AddRange(new ComponentFactory.Krypton.Navigator.KryptonPage[] {
             this.pageNV,
@@ -124,9 +127,10 @@ namespace Loupay_Application.Forms.ManagerForm
             this.pageNV.Controls.Add(this.btnImg);
             this.pageNV.Flags = 65534;
             this.pageNV.LastVisibleSet = true;
-            this.pageNV.MinimumSize = new System.Drawing.Size(50, 50);
+            this.pageNV.Margin = new System.Windows.Forms.Padding(4);
+            this.pageNV.MinimumSize = new System.Drawing.Size(67, 62);
             this.pageNV.Name = "pageNV";
-            this.pageNV.Size = new System.Drawing.Size(1080, 494);
+            this.pageNV.Size = new System.Drawing.Size(1080, 490);
             this.pageNV.Text = "Nhân viên";
             this.pageNV.ToolTipTitle = "Page ToolTip";
             this.pageNV.UniqueName = "BAD232EB73C24186A18A940B3F11CD02";
@@ -136,20 +140,25 @@ namespace Loupay_Application.Forms.ManagerForm
             // dgvNhanVien
             // 
             this.dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNhanVien.Location = new System.Drawing.Point(11, 278);
+            this.dgvNhanVien.Location = new System.Drawing.Point(15, 342);
+            this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNhanVien.Name = "dgvNhanVien";
-            this.dgvNhanVien.Size = new System.Drawing.Size(1058, 206);
+            this.dgvNhanVien.RowHeadersWidth = 51;
+            this.dgvNhanVien.Size = new System.Drawing.Size(1411, 254);
             this.dgvNhanVien.TabIndex = 1;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
             // gbNhanVien
             // 
             this.gbNhanVien.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitlePanel;
-            this.gbNhanVien.Location = new System.Drawing.Point(11, 3);
+            this.gbNhanVien.Location = new System.Drawing.Point(15, 4);
+            this.gbNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.gbNhanVien.Name = "gbNhanVien";
             // 
             // gbNhanVien.Panel
             // 
+            this.gbNhanVien.Panel.Controls.Add(this.kryptonButton1);
+            this.gbNhanVien.Panel.Controls.Add(this.kryptonButton2);
             this.gbNhanVien.Panel.Controls.Add(this.btnDeleteImage);
             this.gbNhanVien.Panel.Controls.Add(this.btnChooseImage);
             this.gbNhanVien.Panel.Controls.Add(this.pbImage);
@@ -172,42 +181,64 @@ namespace Loupay_Application.Forms.ManagerForm
             this.gbNhanVien.Panel.Controls.Add(this.kryptonLabel2);
             this.gbNhanVien.Panel.Controls.Add(this.kryptonLabel7);
             this.gbNhanVien.Panel.Controls.Add(this.kryptonLabel1);
-            this.gbNhanVien.Size = new System.Drawing.Size(1058, 269);
+            this.gbNhanVien.Size = new System.Drawing.Size(1411, 331);
             this.gbNhanVien.TabIndex = 0;
             this.gbNhanVien.Values.Heading = "Thông tin nhân viên";
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(471, 208);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(224, 55);
+            this.kryptonButton1.TabIndex = 10;
+            this.kryptonButton1.Values.Text = "Quyết định khen thưởng";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click_1);
+            // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(701, 208);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(224, 55);
+            this.kryptonButton2.TabIndex = 9;
+            this.kryptonButton2.Values.Text = "Quyết định kỷ luật";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // btnDeleteImage
             // 
-            this.btnDeleteImage.Location = new System.Drawing.Point(19, 200);
+            this.btnDeleteImage.Location = new System.Drawing.Point(25, 246);
+            this.btnDeleteImage.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteImage.Name = "btnDeleteImage";
-            this.btnDeleteImage.Size = new System.Drawing.Size(100, 25);
+            this.btnDeleteImage.Size = new System.Drawing.Size(133, 31);
             this.btnDeleteImage.TabIndex = 7;
             this.btnDeleteImage.Values.Text = "Xóa ảnh";
             this.btnDeleteImage.Click += new System.EventHandler(this.btnDeleteImage_Click);
             // 
             // btnChooseImage
             // 
-            this.btnChooseImage.Location = new System.Drawing.Point(19, 169);
+            this.btnChooseImage.Location = new System.Drawing.Point(25, 208);
+            this.btnChooseImage.Margin = new System.Windows.Forms.Padding(4);
             this.btnChooseImage.Name = "btnChooseImage";
-            this.btnChooseImage.Size = new System.Drawing.Size(100, 25);
+            this.btnChooseImage.Size = new System.Drawing.Size(133, 31);
             this.btnChooseImage.TabIndex = 7;
             this.btnChooseImage.Values.Text = "Chọn ảnh";
             this.btnChooseImage.Click += new System.EventHandler(this.btnChooseImage_Click);
             // 
             // pbImage
             // 
-            this.pbImage.Location = new System.Drawing.Point(19, 20);
+            this.pbImage.Location = new System.Drawing.Point(25, 25);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(4);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(100, 122);
+            this.pbImage.Size = new System.Drawing.Size(133, 150);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 6;
             this.pbImage.TabStop = false;
             // 
             // btnDeleteNV
             // 
-            this.btnDeleteNV.Location = new System.Drawing.Point(533, 169);
+            this.btnDeleteNV.Location = new System.Drawing.Point(343, 208);
+            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnDeleteNV.Name = "btnDeleteNV";
-            this.btnDeleteNV.Size = new System.Drawing.Size(90, 45);
+            this.btnDeleteNV.Size = new System.Drawing.Size(120, 55);
             this.btnDeleteNV.TabIndex = 5;
             this.btnDeleteNV.Values.Image = global::Loupay_Application.Properties.Resources.remove;
             this.btnDeleteNV.Values.Text = "Xóa";
@@ -215,9 +246,10 @@ namespace Loupay_Application.Forms.ManagerForm
             // 
             // btnEditNV
             // 
-            this.btnEditNV.Location = new System.Drawing.Point(818, 169);
+            this.btnEditNV.Location = new System.Drawing.Point(1091, 208);
+            this.btnEditNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditNV.Name = "btnEditNV";
-            this.btnEditNV.Size = new System.Drawing.Size(90, 45);
+            this.btnEditNV.Size = new System.Drawing.Size(120, 55);
             this.btnEditNV.TabIndex = 5;
             this.btnEditNV.Values.Image = global::Loupay_Application.Properties.Resources.edit;
             this.btnEditNV.Values.Text = "Sửa";
@@ -225,9 +257,10 @@ namespace Loupay_Application.Forms.ManagerForm
             // 
             // btnAddNV
             // 
-            this.btnAddNV.Location = new System.Drawing.Point(254, 169);
+            this.btnAddNV.Location = new System.Drawing.Point(215, 208);
+            this.btnAddNV.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNV.Name = "btnAddNV";
-            this.btnAddNV.Size = new System.Drawing.Size(90, 45);
+            this.btnAddNV.Size = new System.Drawing.Size(120, 55);
             this.btnAddNV.TabIndex = 5;
             this.btnAddNV.Values.ImageStates.ImageCheckedNormal = null;
             this.btnAddNV.Values.ImageStates.ImageCheckedPressed = null;
@@ -239,130 +272,147 @@ namespace Loupay_Application.Forms.ManagerForm
             // dtpBorn
             // 
             this.dtpBorn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBorn.Location = new System.Drawing.Point(273, 117);
+            this.dtpBorn.Location = new System.Drawing.Point(364, 144);
+            this.dtpBorn.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBorn.Name = "dtpBorn";
-            this.dtpBorn.Size = new System.Drawing.Size(140, 21);
+            this.dtpBorn.Size = new System.Drawing.Size(187, 25);
             this.dtpBorn.TabIndex = 4;
             // 
             // cboGT
             // 
             this.cboGT.DropDownWidth = 140;
-            this.cboGT.Location = new System.Drawing.Point(878, 68);
+            this.cboGT.Location = new System.Drawing.Point(1171, 84);
+            this.cboGT.Margin = new System.Windows.Forms.Padding(4);
             this.cboGT.Name = "cboGT";
-            this.cboGT.Size = new System.Drawing.Size(140, 21);
+            this.cboGT.Size = new System.Drawing.Size(187, 25);
             this.cboGT.TabIndex = 2;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(878, 20);
+            this.txtAddress.Location = new System.Drawing.Point(1171, 25);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(140, 23);
+            this.txtAddress.Size = new System.Drawing.Size(187, 27);
             this.txtAddress.TabIndex = 1;
             // 
             // txtCCCD
             // 
-            this.txtCCCD.Location = new System.Drawing.Point(583, 114);
+            this.txtCCCD.Location = new System.Drawing.Point(777, 140);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(4);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(140, 23);
+            this.txtCCCD.Size = new System.Drawing.Size(187, 27);
             this.txtCCCD.TabIndex = 1;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(583, 20);
+            this.txtName.Location = new System.Drawing.Point(777, 25);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(140, 23);
+            this.txtName.Size = new System.Drawing.Size(187, 27);
             this.txtName.TabIndex = 1;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(583, 68);
+            this.txtPhone.Location = new System.Drawing.Point(777, 84);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(140, 23);
+            this.txtPhone.Size = new System.Drawing.Size(187, 27);
             this.txtPhone.TabIndex = 1;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(273, 71);
+            this.txtEmail.Location = new System.Drawing.Point(364, 87);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(140, 23);
+            this.txtEmail.Size = new System.Drawing.Size(187, 27);
             this.txtEmail.TabIndex = 1;
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(273, 20);
+            this.txtID.Location = new System.Drawing.Point(364, 25);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(140, 23);
+            this.txtID.Size = new System.Drawing.Size(187, 27);
             this.txtID.TabIndex = 1;
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(754, 23);
+            this.kryptonLabel4.Location = new System.Drawing.Point(1005, 28);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(48, 20);
+            this.kryptonLabel4.Size = new System.Drawing.Size(58, 24);
             this.kryptonLabel4.TabIndex = 0;
             this.kryptonLabel4.Values.Text = "Địa chỉ";
             // 
             // kryptonLabel11
             // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(459, 117);
+            this.kryptonLabel11.Location = new System.Drawing.Point(612, 144);
+            this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel11.Name = "kryptonLabel11";
-            this.kryptonLabel11.Size = new System.Drawing.Size(115, 20);
+            this.kryptonLabel11.Size = new System.Drawing.Size(143, 24);
             this.kryptonLabel11.TabIndex = 0;
             this.kryptonLabel11.Values.Text = "Căn cước công dân";
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(459, 23);
+            this.kryptonLabel3.Location = new System.Drawing.Point(612, 28);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(98, 20);
+            this.kryptonLabel3.Size = new System.Drawing.Size(120, 24);
             this.kryptonLabel3.TabIndex = 0;
             this.kryptonLabel3.Values.Text = "Tên người dùng";
             // 
             // kryptonLabel6
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(754, 71);
+            this.kryptonLabel6.Location = new System.Drawing.Point(1005, 87);
+            this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(57, 20);
+            this.kryptonLabel6.Size = new System.Drawing.Size(70, 24);
             this.kryptonLabel6.TabIndex = 0;
             this.kryptonLabel6.Values.Text = "Giới tính";
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(459, 71);
+            this.kryptonLabel5.Location = new System.Drawing.Point(612, 87);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(83, 20);
+            this.kryptonLabel5.Size = new System.Drawing.Size(102, 24);
             this.kryptonLabel5.TabIndex = 0;
             this.kryptonLabel5.Values.Text = "Số điện thoại";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(149, 74);
+            this.kryptonLabel2.Location = new System.Drawing.Point(199, 91);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(40, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(48, 24);
             this.kryptonLabel2.TabIndex = 0;
             this.kryptonLabel2.Values.Text = "Email";
             // 
             // kryptonLabel7
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(149, 122);
+            this.kryptonLabel7.Location = new System.Drawing.Point(199, 150);
+            this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(65, 20);
+            this.kryptonLabel7.Size = new System.Drawing.Size(80, 24);
             this.kryptonLabel7.TabIndex = 0;
             this.kryptonLabel7.Values.Text = "Ngày sinh";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(149, 23);
+            this.kryptonLabel1.Location = new System.Drawing.Point(199, 28);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(95, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(117, 24);
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Mã người dùng";
             // 
             // btnImg
             // 
-            this.btnImg.Location = new System.Drawing.Point(540, 313);
+            this.btnImg.Location = new System.Drawing.Point(720, 385);
+            this.btnImg.Margin = new System.Windows.Forms.Padding(4);
             this.btnImg.Name = "btnImg";
-            this.btnImg.Size = new System.Drawing.Size(99, 25);
+            this.btnImg.Size = new System.Drawing.Size(132, 31);
             this.btnImg.TabIndex = 3;
             this.btnImg.Values.Text = "Chọn ảnh";
             // 
@@ -375,9 +425,10 @@ namespace Loupay_Application.Forms.ManagerForm
             this.pageTK.Controls.Add(this.kryptonGroupBox2);
             this.pageTK.Flags = 65534;
             this.pageTK.LastVisibleSet = true;
-            this.pageTK.MinimumSize = new System.Drawing.Size(50, 50);
+            this.pageTK.Margin = new System.Windows.Forms.Padding(4);
+            this.pageTK.MinimumSize = new System.Drawing.Size(67, 62);
             this.pageTK.Name = "pageTK";
-            this.pageTK.Size = new System.Drawing.Size(1080, 494);
+            this.pageTK.Size = new System.Drawing.Size(1080, 490);
             this.pageTK.Text = "Tài khoản";
             this.pageTK.ToolTipTitle = "Page ToolTip";
             this.pageTK.UniqueName = "1561C0E6AAA548A87DBD8B3AE252F175";
@@ -385,23 +436,28 @@ namespace Loupay_Application.Forms.ManagerForm
             // dgvRule
             // 
             this.dgvRule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRule.Location = new System.Drawing.Point(546, 292);
+            this.dgvRule.Location = new System.Drawing.Point(728, 359);
+            this.dgvRule.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRule.Name = "dgvRule";
-            this.dgvRule.Size = new System.Drawing.Size(523, 191);
+            this.dgvRule.RowHeadersWidth = 51;
+            this.dgvRule.Size = new System.Drawing.Size(697, 235);
             this.dgvRule.TabIndex = 1;
             // 
             // dgvAccount
             // 
             this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Location = new System.Drawing.Point(11, 293);
+            this.dgvAccount.Location = new System.Drawing.Point(15, 361);
+            this.dgvAccount.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.Size = new System.Drawing.Size(523, 191);
+            this.dgvAccount.RowHeadersWidth = 51;
+            this.dgvAccount.Size = new System.Drawing.Size(697, 235);
             this.dgvAccount.TabIndex = 1;
             // 
             // kryptonGroupBox3
             // 
             this.kryptonGroupBox3.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitlePanel;
-            this.kryptonGroupBox3.Location = new System.Drawing.Point(546, 3);
+            this.kryptonGroupBox3.Location = new System.Drawing.Point(728, 4);
+            this.kryptonGroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonGroupBox3.Name = "kryptonGroupBox3";
             // 
             // kryptonGroupBox3.Panel
@@ -411,15 +467,16 @@ namespace Loupay_Application.Forms.ManagerForm
             this.kryptonGroupBox3.Panel.Controls.Add(this.choAccount);
             this.kryptonGroupBox3.Panel.Controls.Add(this.kryptonLabel13);
             this.kryptonGroupBox3.Panel.Controls.Add(this.cboRule);
-            this.kryptonGroupBox3.Size = new System.Drawing.Size(523, 283);
+            this.kryptonGroupBox3.Size = new System.Drawing.Size(697, 348);
             this.kryptonGroupBox3.TabIndex = 0;
             this.kryptonGroupBox3.Values.Heading = "Phân quyền tài khoản";
             // 
             // btnAddRule
             // 
-            this.btnAddRule.Location = new System.Drawing.Point(190, 190);
+            this.btnAddRule.Location = new System.Drawing.Point(253, 234);
+            this.btnAddRule.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRule.Name = "btnAddRule";
-            this.btnAddRule.Size = new System.Drawing.Size(164, 45);
+            this.btnAddRule.Size = new System.Drawing.Size(219, 55);
             this.btnAddRule.TabIndex = 6;
             this.btnAddRule.Values.ImageStates.ImageCheckedNormal = null;
             this.btnAddRule.Values.ImageStates.ImageCheckedPressed = null;
@@ -429,40 +486,45 @@ namespace Loupay_Application.Forms.ManagerForm
             // 
             // kryptonLabel14
             // 
-            this.kryptonLabel14.Location = new System.Drawing.Point(106, 91);
+            this.kryptonLabel14.Location = new System.Drawing.Point(141, 112);
+            this.kryptonLabel14.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel14.Name = "kryptonLabel14";
-            this.kryptonLabel14.Size = new System.Drawing.Size(63, 20);
+            this.kryptonLabel14.Size = new System.Drawing.Size(78, 24);
             this.kryptonLabel14.TabIndex = 0;
             this.kryptonLabel14.Values.Text = "Tài khoản";
             // 
             // choAccount
             // 
             this.choAccount.DropDownWidth = 121;
-            this.choAccount.Location = new System.Drawing.Point(273, 90);
+            this.choAccount.Location = new System.Drawing.Point(364, 111);
+            this.choAccount.Margin = new System.Windows.Forms.Padding(4);
             this.choAccount.Name = "choAccount";
-            this.choAccount.Size = new System.Drawing.Size(121, 21);
+            this.choAccount.Size = new System.Drawing.Size(161, 25);
             this.choAccount.TabIndex = 1;
             // 
             // kryptonLabel13
             // 
-            this.kryptonLabel13.Location = new System.Drawing.Point(106, 39);
+            this.kryptonLabel13.Location = new System.Drawing.Point(141, 48);
+            this.kryptonLabel13.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel13.Name = "kryptonLabel13";
-            this.kryptonLabel13.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel13.Size = new System.Drawing.Size(56, 24);
             this.kryptonLabel13.TabIndex = 0;
             this.kryptonLabel13.Values.Text = "Quyền";
             // 
             // cboRule
             // 
             this.cboRule.DropDownWidth = 121;
-            this.cboRule.Location = new System.Drawing.Point(273, 38);
+            this.cboRule.Location = new System.Drawing.Point(364, 47);
+            this.cboRule.Margin = new System.Windows.Forms.Padding(4);
             this.cboRule.Name = "cboRule";
-            this.cboRule.Size = new System.Drawing.Size(121, 21);
+            this.cboRule.Size = new System.Drawing.Size(161, 25);
             this.cboRule.TabIndex = 1;
             // 
             // kryptonGroupBox2
             // 
             this.kryptonGroupBox2.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitlePanel;
-            this.kryptonGroupBox2.Location = new System.Drawing.Point(11, 3);
+            this.kryptonGroupBox2.Location = new System.Drawing.Point(15, 4);
+            this.kryptonGroupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonGroupBox2.Name = "kryptonGroupBox2";
             // 
             // kryptonGroupBox2.Panel
@@ -474,15 +536,16 @@ namespace Loupay_Application.Forms.ManagerForm
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel10);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel9);
             this.kryptonGroupBox2.Panel.Controls.Add(this.kryptonLabel8);
-            this.kryptonGroupBox2.Size = new System.Drawing.Size(523, 283);
+            this.kryptonGroupBox2.Size = new System.Drawing.Size(697, 348);
             this.kryptonGroupBox2.TabIndex = 0;
             this.kryptonGroupBox2.Values.Heading = "Tài khoản người dùng";
             // 
             // btnAddAcc
             // 
-            this.btnAddAcc.Location = new System.Drawing.Point(180, 190);
+            this.btnAddAcc.Location = new System.Drawing.Point(240, 234);
+            this.btnAddAcc.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddAcc.Name = "btnAddAcc";
-            this.btnAddAcc.Size = new System.Drawing.Size(164, 45);
+            this.btnAddAcc.Size = new System.Drawing.Size(219, 55);
             this.btnAddAcc.TabIndex = 6;
             this.btnAddAcc.Values.ImageStates.ImageCheckedNormal = null;
             this.btnAddAcc.Values.ImageStates.ImageCheckedPressed = null;
@@ -492,47 +555,53 @@ namespace Loupay_Application.Forms.ManagerForm
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(268, 143);
+            this.txtPassword.Location = new System.Drawing.Point(357, 176);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(121, 23);
+            this.txtPassword.Size = new System.Drawing.Size(161, 27);
             this.txtPassword.TabIndex = 2;
             // 
             // txtAccount
             // 
-            this.txtAccount.Location = new System.Drawing.Point(268, 91);
+            this.txtAccount.Location = new System.Drawing.Point(357, 112);
+            this.txtAccount.Margin = new System.Windows.Forms.Padding(4);
             this.txtAccount.Name = "txtAccount";
-            this.txtAccount.Size = new System.Drawing.Size(121, 23);
+            this.txtAccount.Size = new System.Drawing.Size(161, 27);
             this.txtAccount.TabIndex = 2;
             // 
             // cboID
             // 
             this.cboID.DropDownWidth = 121;
-            this.cboID.Location = new System.Drawing.Point(268, 38);
+            this.cboID.Location = new System.Drawing.Point(357, 47);
+            this.cboID.Margin = new System.Windows.Forms.Padding(4);
             this.cboID.Name = "cboID";
-            this.cboID.Size = new System.Drawing.Size(121, 21);
+            this.cboID.Size = new System.Drawing.Size(161, 25);
             this.cboID.TabIndex = 1;
             // 
             // kryptonLabel10
             // 
-            this.kryptonLabel10.Location = new System.Drawing.Point(99, 143);
+            this.kryptonLabel10.Location = new System.Drawing.Point(132, 176);
+            this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(62, 20);
+            this.kryptonLabel10.Size = new System.Drawing.Size(76, 24);
             this.kryptonLabel10.TabIndex = 0;
             this.kryptonLabel10.Values.Text = "Mật khẩu";
             // 
             // kryptonLabel9
             // 
-            this.kryptonLabel9.Location = new System.Drawing.Point(99, 91);
+            this.kryptonLabel9.Location = new System.Drawing.Point(132, 112);
+            this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(63, 20);
+            this.kryptonLabel9.Size = new System.Drawing.Size(78, 24);
             this.kryptonLabel9.TabIndex = 0;
             this.kryptonLabel9.Values.Text = "Tài khoản";
             // 
             // kryptonLabel8
             // 
-            this.kryptonLabel8.Location = new System.Drawing.Point(99, 39);
+            this.kryptonLabel8.Location = new System.Drawing.Point(132, 48);
+            this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(95, 20);
+            this.kryptonLabel8.Size = new System.Drawing.Size(117, 24);
             this.kryptonLabel8.TabIndex = 0;
             this.kryptonLabel8.Values.Text = "Mã người dùng";
             // 
@@ -541,19 +610,21 @@ namespace Loupay_Application.Forms.ManagerForm
             this.pagePhanQuyen.AutoHiddenSlideSize = new System.Drawing.Size(200, 200);
             this.pagePhanQuyen.Flags = 65534;
             this.pagePhanQuyen.LastVisibleSet = true;
-            this.pagePhanQuyen.MinimumSize = new System.Drawing.Size(50, 50);
+            this.pagePhanQuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.pagePhanQuyen.MinimumSize = new System.Drawing.Size(67, 62);
             this.pagePhanQuyen.Name = "pagePhanQuyen";
-            this.pagePhanQuyen.Size = new System.Drawing.Size(1080, 494);
+            this.pagePhanQuyen.Size = new System.Drawing.Size(1080, 490);
             this.pagePhanQuyen.Text = "Phân quyền";
             this.pagePhanQuyen.ToolTipTitle = "Page ToolTip";
             this.pagePhanQuyen.UniqueName = "8694FB86640443FFDE94A5A1A0B8D652";
             // 
             // NhanVienForms
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 561);
+            this.ClientSize = new System.Drawing.Size(1445, 690);
             this.Controls.Add(this.kryptonDockableNavigator1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NhanVienForms";
             this.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -640,5 +711,7 @@ namespace Loupay_Application.Forms.ManagerForm
         private System.Windows.Forms.PictureBox pbImage;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnChooseImage;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnDeleteImage;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

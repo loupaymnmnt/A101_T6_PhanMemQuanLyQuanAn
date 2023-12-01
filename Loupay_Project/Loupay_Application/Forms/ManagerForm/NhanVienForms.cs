@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Loupay_Service;
 using ComponentFactory.Krypton.Toolkit;
 using Loupay_Service.Database;
+using Loupay_Service.Report;
+using Loupay_Application.Forms.ActionForms;
 
 namespace Loupay_Application.Forms.ManagerForm
 {
@@ -107,7 +109,7 @@ namespace Loupay_Application.Forms.ManagerForm
                         ttnd.DiaChi = txtAddress.Text.Trim();
                         ttnd.Email = txtEmail.Text.Trim();
                         ttnd.SoDienThoai = txtPhone.Text.Trim();
-                        ttnd.GioiTinh = cboGT.SelectedItem.ToString();
+                        ttnd.GioiTinh = cboGT.SelectedValue.ToString();
                         ttnd.NgaySinh = dtpBorn.Value.Date;
                         ttnd.CanCuocCD = txtCCCD.Text.Trim();
                         ttnd.FileAnh = nameImage;
@@ -126,6 +128,7 @@ namespace Loupay_Application.Forms.ManagerForm
 
                         DatabaseHandler.InsertNguoiDung(nd);
                         DatabaseHandler.InsertThongTinNguoiDung(ttnd);
+                        LoadDGVNhanVien();
                     }
                     else {
                         MessageBox.Show("Người dùng này đã tồn tại");
@@ -260,6 +263,24 @@ namespace Loupay_Application.Forms.ManagerForm
 
             }
             catch{}
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            WordExport we = new WordExport();
+            string ngay = DateTime.Now.Day.ToString();
+            string thang = DateTime.Now.Month.ToString();
+            string nam = DateTime.Now.Year.ToString();
+            we.QuyetDinhKyLuat(ngay, thang, nam, txtName.Text, "06", txtCCCD.Text);
+        }
+
+        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        {
+            WordExport we = new WordExport();
+            string ngay = DateTime.Now.Day.ToString();
+            string thang = DateTime.Now.Month.ToString();
+            string nam = DateTime.Now.Year.ToString();
+            we.QuyetDinhKhenThuong(ngay, thang, nam, txtName.Text, "05", txtCCCD.Text);
         }
     }
 }
