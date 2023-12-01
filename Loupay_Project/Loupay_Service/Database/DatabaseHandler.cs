@@ -281,7 +281,18 @@ namespace Loupay_Service.Database
             item.IDKhuVuc = ban.IDKhuVuc;
             item.TrangThai = ban.TrangThai;
             dataContext.SubmitChanges();
+        }
 
+        public static void InsertHoaDon(HoaDon hoaDon)
+        {
+            dataContext.HoaDons.InsertOnSubmit(hoaDon);
+            dataContext.SubmitChanges();
+        }
+
+        public static void InsertDatMon(DatMon dm)
+        {
+            dataContext.DatMons.InsertOnSubmit(dm);
+            dataContext.SubmitChanges();
         }
 
     }

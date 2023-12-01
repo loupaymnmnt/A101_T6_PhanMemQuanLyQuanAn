@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LOUPAY" Class="LOUPAYDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-285MR5G\PHAMHAIDANG;Initial Catalog=LOUPAY;User ID=sa" SettingsObjectName="Loupay_Service.Properties.Settings" SettingsPropertyName="LOUPAYConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=VUTHANHDUONG\D_DB_2012;Initial Catalog=LOUPAY;Integrated Security=True" SettingsObjectName="Loupay_Service.Properties.Settings" SettingsPropertyName="LOUPAYConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Ban" Member="Bans">
     <Type Name="Ban">
       <Column Name="IDBan" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -7,6 +7,20 @@
       <Column Name="TrangThai" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="Ban_HoaDon" Member="HoaDons" ThisKey="IDBan" OtherKey="IDBan" Type="HoaDon" />
       <Association Name="KhuVuc_Ban" Member="KhuVuc" ThisKey="IDKhuVuc" OtherKey="IDKhuVuc" Type="KhuVuc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ThongTinNguoiDung" Member="ThongTinNguoiDungs">
+    <Type Name="ThongTinNguoiDung">
+      <Column Name="IDNguoiDung" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CanCuocCD" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FileAnh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="NguoiDung_ThongTinNguoiDung" Member="NguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="NguoiDung" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DatHangHoaNhap" Member="DatHangHoaNhaps">
@@ -20,8 +34,8 @@
   </Table>
   <Table Name="dbo.DatMon" Member="DatMons">
     <Type Name="DatMon">
-      <Column Name="IDHoaDon" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="IDMon" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="IDHoaDon" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IDMon" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="HoaDon_DatMon" Member="HoaDon" ThisKey="IDHoaDon" OtherKey="IDHoaDon" Type="HoaDon" IsForeignKey="true" />
       <Association Name="Mon_DatMon" Member="Mon" ThisKey="IDMon" OtherKey="IDMon" Type="Mon" IsForeignKey="true" />
@@ -49,19 +63,10 @@
       <Column Name="IDNguoiDung" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
       <Column Name="ThanhTien" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="GiamGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TienKhachDua" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="TienTraLai" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="NgayLap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Association Name="HoaDon_DatMon" Member="DatMons" ThisKey="IDHoaDon" OtherKey="IDHoaDon" Type="DatMon" />
       <Association Name="Ban_HoaDon" Member="Ban" ThisKey="IDBan" OtherKey="IDBan" Type="Ban" IsForeignKey="true" />
       <Association Name="NguoiDung_HoaDon" Member="NguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="NguoiDung" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.KhuVuc" Member="KhuVucs">
-    <Type Name="KhuVuc">
-      <Column Name="IDKhuVuc" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenKhuVuc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Association Name="KhuVuc_Ban" Member="Bans" ThisKey="IDKhuVuc" OtherKey="IDKhuVuc" Type="Ban" />
     </Type>
   </Table>
   <Table Name="dbo.HoaDonNhap" Member="HoaDonNhaps">
@@ -73,6 +78,13 @@
       <Column Name="TenDonViCungCap" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Association Name="HoaDonNhap_DatHangHoaNhap" Member="DatHangHoaNhaps" ThisKey="IDHoaDonNhap" OtherKey="IDHoaDonNhap" Type="DatHangHoaNhap" />
       <Association Name="NguoiDung_HoaDonNhap" Member="NguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="NguoiDung" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhuVuc" Member="KhuVucs">
+    <Type Name="KhuVuc">
+      <Column Name="IDKhuVuc" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenKhuVuc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="KhuVuc_Ban" Member="Bans" ThisKey="IDKhuVuc" OtherKey="IDKhuVuc" Type="Ban" />
     </Type>
   </Table>
   <Table Name="dbo.LoaiMon" Member="LoaiMons">
@@ -101,9 +113,9 @@
       <Column Name="TenNguoiDung" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="MatKhau" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="BiKhoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="NguoiDung_ThongTinNguoiDung" Member="ThongTinNguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="ThongTinNguoiDung" Cardinality="One" />
       <Association Name="NguoiDung_HoaDon" Member="HoaDons" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="HoaDon" />
       <Association Name="NguoiDung_HoaDonNhap" Member="HoaDonNhaps" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="HoaDonNhap" />
-      <Association Name="NguoiDung_ThongTinNguoiDung" Member="ThongTinNguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="ThongTinNguoiDung" Cardinality="One" />
       <Association Name="QuyenNguoiDung_NguoiDung" Member="QuyenNguoiDung" ThisKey="IDQuyenNguoiDung" OtherKey="IDQuyenNguoiDung" Type="QuyenNguoiDung" IsForeignKey="true" />
     </Type>
   </Table>
@@ -121,20 +133,6 @@
       <Column Name="IDQuyenNguoiDung" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="QuyenNguoiDung_NguoiDung" Member="NguoiDungs" ThisKey="IDQuyenNguoiDung" OtherKey="IDQuyenNguoiDung" Type="NguoiDung" />
       <Association Name="QuyenNguoiDung_PhanQuyen" Member="PhanQuyens" ThisKey="IDQuyenNguoiDung" OtherKey="IDQuyenNguoiDung" Type="PhanQuyen" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ThongTinNguoiDung" Member="ThongTinNguoiDungs">
-    <Type Name="ThongTinNguoiDung">
-      <Column Name="IDNguoiDung" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
-      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="CanCuocCD" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="FileAnh" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Association Name="NguoiDung_ThongTinNguoiDung" Member="NguoiDung" ThisKey="IDNguoiDung" OtherKey="IDNguoiDung" Type="NguoiDung" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

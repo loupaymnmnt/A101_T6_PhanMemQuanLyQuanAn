@@ -32,6 +32,7 @@ namespace Loupay_Component.SubControl
                 dish.SetName(order.TenMon);
                 dish.SetPrice(order.SoLuong * order.GiaMon);
                 dish.SetNudValue(order.SoLuong);
+                dish.MAMON = order.MaMon;
                 dish.Top = currentTop;
                 dish.Left = left;
                 this.Controls.Add(dish);

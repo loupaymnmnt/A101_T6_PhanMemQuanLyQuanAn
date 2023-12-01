@@ -12,6 +12,7 @@ namespace Loupay_Component.SubControl
 {
     public partial class OrderedDish : UserControl
     {
+        public string MAMON;
         public OrderedDish()
         {
             InitializeComponent();
@@ -44,6 +45,16 @@ namespace Loupay_Component.SubControl
         public void SetNudValue(int value)
         {
             this.nud_soluong.Value = value;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult r = MessageBox.Show("Xóa món này khỏi hóa đơn?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                CurrentSelectedTable.Table.CurrentOrders.RemoveAll(d => d.MaMon == this.MAMON);
+                CurrentTableMainBoard.TableMainBoard.Reload();
+            }
         }
     }
 }
