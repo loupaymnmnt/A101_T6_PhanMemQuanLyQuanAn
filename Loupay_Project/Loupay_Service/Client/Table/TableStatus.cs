@@ -10,5 +10,6 @@ namespace Loupay_Service.Client.Table
     {
         public static string TRONG = "Trống";
         public static string DADAT = "Đã đặt";
+        public static string BANGOP = "Bàn gộp";
     }
 }

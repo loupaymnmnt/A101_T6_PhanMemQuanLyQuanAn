@@ -44,6 +44,29 @@ namespace Loupay_Component.SubControl
             CurrentTableOrder.TableOrder.Reload(CurrentSelectedTable.Table);
         }
 
+        public void ReloadBanGop()
+        {
+            string s = string.Empty;
+
+            foreach (string str in CurrentSelectedTable.Table.states)
+            {
+                s += str + " ";
+            }
+
+            this.tableId.Text = s; 
+            this.tableStatus.Text = CurrentSelectedTable.Table.Ban.TrangThai;
+            this.tienThanhToan.Text = CurrentSelectedTable.Table.GetTotalPrice().ToString();
+            if (CurrentSelectedTable.Table.Ban.TrangThai == TableStatus.TRONG)
+            {
+                ComponentHandler.SetEnabled(false, btn_Thanhtoan, btn_lamMoi);
+            }
+            else
+            {
+                ComponentHandler.SetEnabled(true, btn_Thanhtoan, btn_lamMoi);
+            }
+            CurrentTableOrder.TableOrder.Reload(CurrentSelectedTable.Table);
+        }
+
         private void TableMainBoard_Load(object sender, EventArgs e)
         {
             CurrentTableMainBoard.TableMainBoard = this;
@@ -117,6 +140,29 @@ namespace Loupay_Component.SubControl
 
                 }
             }
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            PickBan form = new PickBan();
+            form.ShowDialog();
+            string MaBan = form.GetSelected();
+
+            Table t = CurrentTablePanel.TablesPanel.Tables.Find(i => i.Ban.IDBan == MaBan);
+            t.CurrentOrders = new List<CurrentOrder>(CurrentSelectedTable.Table.CurrentOrders);
+            t.SetBackColor(TableStatus.DADAT);
+            t.Ban.TrangThai = TableStatus.DADAT;
+            CurrentSelectedTable.Table.CurrentOrders.Clear();
+            CurrentSelectedTable.Table.SetBackColor(TableStatus.TRONG);
+            CurrentSelectedTable.Table.Ban.TrangThai = TableStatus.TRONG;
+            DatabaseHandler.UpdateBan(t.Ban);
+            DatabaseHandler.UpdateBan(CurrentSelectedTable.Table.Ban);
+
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

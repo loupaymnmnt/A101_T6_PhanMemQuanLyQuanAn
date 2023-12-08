@@ -40,6 +40,8 @@
             this.tableId = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.tableOrder1 = new Loupay_Component.SubControl.TableOrder();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupbox.Panel)).BeginInit();
             this.groupbox.Panel.SuspendLayout();
@@ -53,6 +55,8 @@
             // 
             // groupbox.Panel
             // 
+            this.groupbox.Panel.Controls.Add(this.kryptonButton1);
+            this.groupbox.Panel.Controls.Add(this.kryptonButton2);
             this.groupbox.Panel.Controls.Add(this.tableOrder1);
             this.groupbox.Panel.Controls.Add(this.btn_lamMoi);
             this.groupbox.Panel.Controls.Add(this.btn_Thanhtoan);
@@ -69,9 +73,9 @@
             // 
             // btn_lamMoi
             // 
-            this.btn_lamMoi.Location = new System.Drawing.Point(189, 548);
+            this.btn_lamMoi.Location = new System.Drawing.Point(279, 548);
             this.btn_lamMoi.Name = "btn_lamMoi";
-            this.btn_lamMoi.Size = new System.Drawing.Size(186, 36);
+            this.btn_lamMoi.Size = new System.Drawing.Size(96, 36);
             this.btn_lamMoi.TabIndex = 12;
             this.btn_lamMoi.Values.Text = "Làm mới";
             this.btn_lamMoi.Click += new System.EventHandler(this.btn_lamMoi_Click);
@@ -80,7 +84,7 @@
             // 
             this.btn_Thanhtoan.Location = new System.Drawing.Point(3, 548);
             this.btn_Thanhtoan.Name = "btn_Thanhtoan";
-            this.btn_Thanhtoan.Size = new System.Drawing.Size(173, 36);
+            this.btn_Thanhtoan.Size = new System.Drawing.Size(104, 36);
             this.btn_Thanhtoan.TabIndex = 9;
             this.btn_Thanhtoan.Values.Text = "Thanh toán";
             this.btn_Thanhtoan.Click += new System.EventHandler(this.btn_Thanhtoan_Click);
@@ -165,6 +169,24 @@
             this.tableOrder1.Size = new System.Drawing.Size(366, 388);
             this.tableOrder1.TabIndex = 13;
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(196, 548);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(77, 36);
+            this.kryptonButton2.TabIndex = 15;
+            this.kryptonButton2.Values.Text = "Gộp";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(113, 547);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(77, 36);
+            this.kryptonButton1.TabIndex = 16;
+            this.kryptonButton1.Values.Text = "Chuyển";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
             // TableMainBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,5 +217,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_Thanhtoan;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btn_lamMoi;
         private TableOrder tableOrder1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

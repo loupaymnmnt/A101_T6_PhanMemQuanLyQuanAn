@@ -21,6 +21,8 @@ namespace Loupay_Component.SubControl
         private Ban ban;
         private List<CurrentOrder> _currentOrders = new List<CurrentOrder>();
         public List<CurrentOrder> CurrentOrders { get { return _currentOrders; } set { _currentOrders = value; } }
+        public List<string> states = new List<string>();
+
         public Ban Ban { get { return ban; } set { ban = value; } }
 
         public void Add(CurrentOrder newOrder)
@@ -86,10 +88,16 @@ namespace Loupay_Component.SubControl
             {
                 currentColor = DefaultBackColor;
                 this.BackColor = currentColor;
+                
+            }
+            else if (status == TableStatus.DADAT)
+            {
+                currentColor = Color.Red;
+                this.BackColor = currentColor;
             }
             else
             {
-                currentColor = Color.Red;
+                currentColor = Color.Yellow;
                 this.BackColor = currentColor;
             }
         }

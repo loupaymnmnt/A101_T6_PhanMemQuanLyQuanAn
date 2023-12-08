@@ -1,0 +1,164 @@
+﻿{
+  "Scenario": "Forecasting",
+  "DataSource": {
+    "Type": "TabularFile",
+    "Version": 1,
+    "FilePath": "C:\\Stuff\\Codespace\\N_MAIN\\A101_T6_PhanMemQuanLyQuanAn\\Loupay_Project\\Loupay_Application\\bin\\Debug\\data.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "Month",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      },
+      {
+        "ColumnName": "Sale",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 4
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 29604052.780686766,
+        "RuntimeInSeconds": 0.338,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 2,
+            "SeriesLength": 10,
+            "TrainSize": 12,
+            "Horizon": 10,
+            "OutputColumnName": "Sale",
+            "InputColumnName": "Sale",
+            "ConfidenceLowerBoundColumn": "Sale_LB",
+            "ConfidenceUpperBoundColumn": "Sale_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 29604052.780686766,
+        "RuntimeInSeconds": 0.003,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 2,
+            "SeriesLength": 1223,
+            "TrainSize": 12,
+            "Horizon": 10,
+            "OutputColumnName": "Sale",
+            "InputColumnName": "Sale",
+            "ConfidenceLowerBoundColumn": "Sale_LB",
+            "ConfidenceUpperBoundColumn": "Sale_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 29604052.780686766,
+        "RuntimeInSeconds": 0.004,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 2,
+            "SeriesLength": 697,
+            "TrainSize": 12,
+            "Horizon": 10,
+            "OutputColumnName": "Sale",
+            "InputColumnName": "Sale",
+            "ConfidenceLowerBoundColumn": "Sale_LB",
+            "ConfidenceUpperBoundColumn": "Sale_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 29604052.780686766,
+        "RuntimeInSeconds": 0.003,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 2,
+            "SeriesLength": 737,
+            "TrainSize": 12,
+            "Horizon": 10,
+            "OutputColumnName": "Sale",
+            "InputColumnName": "Sale",
+            "ConfidenceLowerBoundColumn": "Sale_LB",
+            "ConfidenceUpperBoundColumn": "Sale_UB"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "ForecastBySsa",
+        "Score": 29604052.780686766,
+        "RuntimeInSeconds": 0.003,
+        "Parameter": {
+          "_SCHEMA_": "e0",
+          "e0": {
+            "WindowSize": 2,
+            "SeriesLength": 41,
+            "TrainSize": 12,
+            "Horizon": 10,
+            "OutputColumnName": "Sale",
+            "InputColumnName": "Sale",
+            "ConfidenceLowerBoundColumn": "Sale_LB",
+            "ConfidenceUpperBoundColumn": "Sale_UB"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ForecastBySsa"
+    },
+    "Schema": "e0",
+    "MetricName": "RMSE",
+    "ModelFilePath": "C:\\Stuff\\Codespace\\N_MAIN\\A101_T6_PhanMemQuanLyQuanAn\\Loupay_Project\\Loupay_Service\\MLModel.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 3,
+    "OptimizeMetric": "RMSE",
+    "Subsampling": false,
+    "Type": "ForecastingTrainingOption",
+    "TrainingTime": 10,
+    "UseCrossValidation": false,
+    "Horizon": 10,
+    "TimeColumn": "Month",
+    "LabelColumn": "Sale",
+    "UseDefaultIndex": false,
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}

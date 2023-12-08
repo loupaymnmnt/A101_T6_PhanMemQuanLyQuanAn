@@ -74,10 +74,17 @@
     <Compile Include="CurrentSelectedTable.cs" />
     <Compile Include="CurrentTableMainBoard.cs" />
     <Compile Include="CurrentTableOrder.cs" />
+    <Compile Include="CurrentTablePanel.cs" />
     <Compile Include="FormComponentSize.cs" />
     <Compile Include="FormSize.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Interfaces\IUserContainer.cs" />
+    <Compile Include="PickBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickBan.Designer.cs">
+      <DependentUpon>PickBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -136,6 +143,9 @@
   <ItemGroup>
     <EmbeddedResource Include="BaseFormMain.resx">
       <DependentUpon>BaseFormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickBan.resx">
+      <DependentUpon>PickBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
