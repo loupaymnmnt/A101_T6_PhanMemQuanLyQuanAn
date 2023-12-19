@@ -1,4 +1,4 @@
-## Phần mềm quản lý quán ăn
+## Phần mềm quản lý quán ăn (CLOSED)
 
 ### Thành viên:
 <table>
